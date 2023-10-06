@@ -12,6 +12,23 @@
 </head>
 
 <body onload="loop()">
+    <div class="cursor">
+        <script>
+            const cursor = document.querySelector('.cursor');
+
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+            })
+
+            document.addEventListener('click', () => {
+                cursor.classList.add("expand");
+
+                setTimeout(() => {
+                    cursor.classList.remove("expand");
+                }, 500)
+            })
+        </script>
+    </div>
     <video src="/content/video1.mp4" autoplay loop muted></video>
     <header>
         <div class="navigation">
@@ -57,7 +74,6 @@
             </button>
         </div>
     </footer>
-
 </body>
 </html>
 

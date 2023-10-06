@@ -1,19 +1,29 @@
 @font-face {
- font-family:'Poppins';
-src:url(/style/Poppins-Light.otf) format(otf); 
+ font-family:'Library3am';
+src:url(/style/fonts/library3am/library3am-5v3z-webfont.woff); 
 }
+@font-face {
+    font-family: 'Pro-Pixie';
+    src: url(/style/fonts/pro-pixie/ProcrastinatingPixie-WyVOO.ttf);
+}
+@font-face {
+    font-family: 'Salma-Pro';
+    src: url(/style/fonts/salma-pro/salmapromedium-yw9ad-webfont.woff);
+}
+
 
 * {
  margin:0;
 padding:0;
 color:#fff;
 width:auto;
-height: auto;
-font-family:'Poppins', Tahoma, Arial;
+height:auto;
+cursor: none;
 }
 
 body {
  background-color:#000;
+ font-family:'Library3am', Tahoma, Arial; 
 }
 
 video {
@@ -22,6 +32,68 @@ z-index:-1;
 height:100%;
 position:fixed;
 object-fit:cover; 
+}
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 150ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cursor::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border: 8px solid white;
+    border-radius: 50%;
+    opacity: .3;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .8s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid white;
 }
 
 /* Header */
@@ -36,10 +108,6 @@ background-image:linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 img {
  width:250px;
 height:250px; 
-}
-
-a,button {
- cursor:pointer; 
 }
 
 .hamburger,.bar {
@@ -121,55 +189,55 @@ border-bottom:1px solid #fff;
 
 main {
  display:flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 350px 0px;
+text-align:center;
+padding:350px 0px;
+align-items:center;
+justify-content:center; 
 }
 
 .welcome-word {
-    font-size: 40px;
+ font-size:40px; 
 }
 
 .loop {
-    font-size: 60px;
+ font-size:60px; 
 }
 
-/* Footer */
-
 footer {
-    height: 250px;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
+ height:250px;
+display:flex;
+align-items:end;
+justify-content:space-between;
+font-family:'Pro-Pixie', Tahoma, Arial; 
 }
 
 .footer-button img {
-    height: 50px;
-    width: 50px;
+ width:50px;
+height:50px; 
 }
 
 .footer-button .link1 img {
-    height: 62.5px;
-    width: 62.5px;
+ width:62.5px;
+height:62.5px; 
 }
 
 .footer-button button {
-    background: none;
-    border: none;
-    z-index: 2;
+ z-index:0;
+border:none;
+background:none; 
 }
 
 .footer-button {
-    padding-right: 50px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
+ display:flex;
+padding-right:50px;
+padding-bottom:10px;
+flex-direction:column; 
 }
 
 .copyright {
-    padding-left: 50px;
-    padding-bottom: 10px;
+ padding-left:50px;
+padding-bottom:10px;
 }
+
 
 
