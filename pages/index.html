@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Accueil</title>
+    <title>Portfolio - Jérémie Bayon</title>
     <link rel="stylesheet" href="/style/style.css">
     <script src="/style/script.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
@@ -13,21 +13,7 @@
 
 <body onload="loop()">
     <div class="cursor">
-        <script>
-            const cursor = document.querySelector('.cursor');
-
-            document.addEventListener('mousemove', e => {
-                cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-            })
-
-            document.addEventListener('click', () => {
-                cursor.classList.add("expand");
-
-                setTimeout(() => {
-                    cursor.classList.remove("expand");
-                }, 500)
-            })
-        </script>
+        <script>cursor()</script>
     </div>
     <video src="/content/video1.mp4" autoplay loop muted></video>
     <header>
@@ -39,11 +25,11 @@
             </button>
             <nav>
                 <ul>
-                    <li><a>Accueil</a></li>
-                    <li><a>À propos</a></li>
-                    <li><a>Projets</a></li>
-                    <li><a>Compétences</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a href="index.html#home">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="projects.html">Projets</a></li>
+                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -60,7 +46,7 @@
             </div>
         </div>
     </main>
-
+    
     <footer>
         <div class="copyright">
             <p>Copyright 2023 J. BAYON</p>
