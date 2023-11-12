@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio - Jérémie Bayon</title>
-    <link rel="stylesheet" href="/style/style.css">
-    <script defer src="/style/script.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../style/scriptCursor.js"></script>
+    <script defer src="../style/script.js"></script>
+    <script defer src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
 </head>
-
 <body onload="loop()">
-    <!-- <div class="cursor">
-        <script>cursor()</script>
-    </div> -->
     <video src="/content/video1.mp4" autoplay loop muted></video>
-
     <header>
-        <div class="logo">
-            <a href="#home"><img src="/content/logo.gif" alt="logo"></a>
-        </div>
-        <div class="navbar">
+        <a href="#home"><img src="/content/logo.gif" alt="logo"></a>
+        <div class="laptop-navigation laptop-navigation-hidden">
             <nav>
                 <ul>
                     <li><a class="active" href="#about">À propos</a></li>
                     <li><a class="active" href="#projects">Projets</a></li>
+                    <li><a class="active" href="#skills">Compétences</a></li>
                     <li><a class="active" href="#technology-watch">Veille</a></li>
                     <li><a class="active" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="mobile-navigation mobile-navigation-hidden">  
+            <nav>
+                <button class="hamburger" onclick="showMobileNavigation()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </button>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#technology-watch">Veille</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
     <main>
-        <section id="home" class="home">
+        <section class="home" id="home">
             <div class="welcome">
-                <div class="welcome-word">
-                    <p>Bienvenue</p>
-                </div>
+                <h2>Bienvenue</h2>
                 <div class="loop">
                     <p>Je <span id="element"></span></p>
                 </div>
             </div>
         </section>
-
         <section id="about" class="about">
             <div class="about-box hidden">
-                <div class="about-title hidden">
-                    <h2>À propos de moi</h2>
-                </div>
-                <div class="about-info hidden">
-                    <div class="about-picture">
-                        <img src="../content/photo.JPG" alt="photo">
+                <div class="scrollable-div-content hidden">
+                    <div class="about-title">
+                        <h2>À propos de moi</h2>
                     </div>
-                    <div class="about-resume">
-                        <p>
-                            Actuellement étudiant en informatique à Maestris BTS (Campus Sciences U Lyon), je prépare un Brevet de Technicien Supérieur - Services Informatiques aux Organisations (Option Solutions Logicielles et Applications Métiers) depuis septembre 2022. 
-                            <br>
-                            <br> 
-                            J'ai également étudié les langues étrangères en préparant une Licence Langues Étrangères Appliquées (Anglais et Russe) à l'Université Jean Moulin - Lyon 3 pendant quatre ans, et obtenue en juin 2022.
-                            <br>
-                            <br>
-                            Après le BTS, j'envisage de continuer mes études en intégrant un Bachelor puis un Mastère en Ingénierie du Web à l'ESGI, dans le cadre de mon projet, c'est-à-dire devenir développeur web et mobile. J'envisage aussi de préparer un double diplôme durant ma dernière année de Mastère en partant étudier à l'étranger de façon à élargir les opportunités professionnelles.
-                            <br>
-                            <br>
-                            Pour en savoir plus, n'hésitez pas à consulter mon <a href="/files/curriculum-vitae-fr.pdf">CV</a>.
-                        </p>
+                    <div class="about-info">
+                        <div class="about-picture">
+                            <img src="../content/photo.JPG" alt="photo">
+                        </div>
+                        <div class="about-resume">
+                            <p>
+                                Actuellement étudiant en informatique à Maestris BTS (Campus Sciences U Lyon), je prépare un Brevet de Technicien Supérieur - Services Informatiques aux Organisations (Option Solutions Logicielles et Applications Métiers) depuis septembre 2022. 
+                                <br>
+                                <br> 
+                                J'ai également étudié les langues étrangères en préparant une Licence Langues Étrangères Appliquées (Anglais et Russe) à l'Université Jean Moulin - Lyon 3 pendant quatre ans, et obtenue en juin 2022.
+                                <br>
+                                <br>
+                                Après le BTS, j'envisage de continuer mes études en intégrant un Bachelor puis un Mastère en Ingénierie du Web à l'ESGI, dans le cadre de mon projet, c'est-à-dire devenir développeur web et mobile. J'envisage aussi de préparer un double diplôme durant ma dernière année de Mastère en partant étudier à l'étranger de façon à élargir les opportunités professionnelles.
+                                <br>
+                                <br>
+                                Pour en savoir plus, n'hésitez pas à consulter mon <a href="../files/curriculum-vitae-fr.pdf">CV</a>.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -96,7 +104,6 @@
         </section>
     
     </main>
-
     <footer>
         <div class="copyright">
             <p>Copyright 2023 J. BAYON</p>
@@ -110,7 +117,5 @@
             </button>
         </div>
     </footer>
-    <script>dynamic_url()</script>
 </body>
 </html>
-

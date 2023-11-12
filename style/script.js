@@ -1,18 +1,27 @@
-// function cursor(){
-//     const cursor = document.querySelector('.cursor');
+function showMobileNavigation(){
+  const hamburger = document.querySelector('.hamburger').classList.toggle('open');
+  const mobileNav = document.querySelector('.mobile-navigation').classList.toggle('active');
+}
 
-//     document.addEventListener('mousemove', e => {
-//         cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-//     })
+function closeMobileNavigation() {
+  const hamburger = document.querySelector('.hamburger').classList.remove('open');
+  const mobileNav = document.querySelector('.mobile-navigation').classList.remove('active');
+}
 
-//     document.addEventListener('click', () => {
-//         cursor.classList.add("expand");
+const navLinks = document.querySelectorAll('.mobile-navigation nav a');
+  
+navLinks.forEach(link => {
+    link.addEventListener('click', closeMobileNavigation);
+});
 
-//         setTimeout(() => {
-//             cursor.classList.remove("expand");
-//         }, 500)
-//     })
-// }
+function loop(){
+  var typed = new Typed("#element", {
+      strings: ["m'appelle Jérémie Bayon.", "suis étudiant en informatique.", "suis développeur."],
+      typeSpeed: 75,
+      backSpeed: 20,
+      loop: true,
+      });
+}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -34,18 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   
   const options = {
-    threshold: 0.5, // Adjust this threshold as needed
+    threshold: 0.5,
   };
 
-function loop(){
-  var typed = new Typed("#element", {
-      strings: ["m'appelle Jérémie Bayon.", "suis étudiant en informatique.", "suis développeur."],
-      typeSpeed: 75,
-      backSpeed: 20,
-      loop: true,
-      });
-}
-  
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
