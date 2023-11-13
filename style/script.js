@@ -16,7 +16,7 @@ navLinks.forEach(link => {
 
 function loop(){
   var typed = new Typed("#element", {
-      strings: ["m'appelle Jérémie Bayon.", "suis étudiant en informatique.", "suis développeur."],
+      strings: ["m'appelle<br>Jérémie Bayon.", "suis étudiant<br>en informatique.", "suis développeur."],
       typeSpeed: 75,
       backSpeed: 20,
       loop: true,

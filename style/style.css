@@ -11,13 +11,18 @@
   src: url(/style/fonts/salma-pro/salmapromedium-yw9ad-webfont.woff);
 }
 * {
+  -ms-overflow-style: none;   /*Edge & Firefox*/
   box-sizing: border-box;
   color: #fff;
   list-style: none;
   margin: 0;
   overflow: hidden;
   padding: 0;
+  scrollbar-width: none;   /*Edge & Firefox*/
   text-decoration: none;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 body {
   background-color: #000;
@@ -40,6 +45,7 @@ video {
   opacity: 1;
   transform: translateX(0);
 }
+
 /* Header */
 header {
   align-items: center;
@@ -97,7 +103,7 @@ header img {
   transform: rotate(-45deg) translate(6px, -5px);
 }
 .mobile-navigation {
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.9);
   height: 100%;
   position: fixed;
   right: -101%;
@@ -117,18 +123,14 @@ header img {
   width: 100%;
 }
 .mobile-navigation nav ul li {
-  background-color: rgba(200, 200, 200, 0.1);
+  background-color: rgb(0, 0, 0);
+  border-bottom: solid 1px #000;
   border-left: solid 3px #ffffff;
   font-family: "Library3am", Tahoma, Arial;
   font-size: 4vw;
-  margin: 4px 0;
   padding: 40px;
   text-align: justify;
   text-transform: uppercase;
-
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .laptop-navigation nav ul {
   display: flex;
@@ -139,6 +141,7 @@ header img {
   padding: 0 20px;
   text-transform: uppercase;
 }
+
 /* Main */
 main {
   height: 100vh;
@@ -161,7 +164,7 @@ section {
 }
 .home .welcome .loop {
   font-size: 3vw;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 .about-box {
   align-items: center;
@@ -174,7 +177,6 @@ section {
   overflow: hidden;
   position: relative;
   width: 75%;
-
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
     rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -248,6 +250,7 @@ section {
     transition: none;
   }
 }
+
 /* Footer */
 footer {
   align-items: end;
@@ -264,25 +267,27 @@ footer {
   width: 50px;
 }
 .footer-button .link1 img {
-  height: 62.5px;
-  width: 62.5px;
+  height: 60px;
+  width: 60px;
 }
 .footer-button button {
   background: none;
   border: none;
-  z-index: 0;
+  z-index: 1;
 }
 .footer-button {
   display: flex;
   flex-direction: column;
-  padding-bottom: 10px;
-  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 40px;
 }
 .copyright {
-  padding-bottom: 10px;
-  padding-left: 50px;
+  font-size: 1rem;
+  padding-bottom: 20px;
+  padding-left: 40px;
 }
-/* Extra small devices (phones, 600px and down) */
+
+/* Extra small devices */
 @media only screen and (max-width: 600px) {
   header img {
     height: 125px;
@@ -316,7 +321,7 @@ footer {
     display: block;
   }
   .about-title {
-    font-size: 4vw;
+    font-size: 5vw;
   }
   .about-picture {
     display: none;
@@ -331,27 +336,27 @@ footer {
     width: 40px;
   }
   .footer-button .link1 img {
-    height: 50.5px;
-    width: 50.5px;
-  }
-  .footer-button button {
-    background: none;
-    border: none;
-    z-index: 1;
+    height: 50px;
+    width: 50px;
   }
   .footer-button {
     display: flex;
     flex-direction: row;
-    padding-bottom: 10px;
-    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-right: 30px;
   }
   .copyright {
     padding-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 30px;
   }
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
+
+/* Small devices */
 @media only screen and (min-width: 600px) {
+  header img {
+    height: 150px;
+    width: 150px;
+  }
   .laptop-navigation-hidden {
     display: none;
   }
@@ -367,7 +372,7 @@ footer {
   }
   .home .welcome .loop {
     font-size: 6vw;
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .about-box {
     border-radius: 10px;
@@ -380,41 +385,33 @@ footer {
     display: block;
   }
   .about-title {
-    font-size: 4vw;
+    font-size: 3.75vw;
   }
   .about-picture {
     display: none;
   }
   .about-resume {
-    font-size: 3vw;
+    font-size: 2.75vw;
     margin-left: 0;
-    width: 80vw;
-  }
-  .footer-button img {
-    height: 50px;
-    width: 50px;
-  }
-  .footer-button .link1 img {
-    height: 60.5px;
-    width: 60.5px;
-  }
-  .footer-button button {
-    background: none;
-    border: none;
-    z-index: 1;
+    width: 70vw;
   }
   .footer-button {
     display: flex;
-    padding-bottom: 20px;
-    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-right: 30px;
   }
   .copyright {
-    padding-bottom: 20px;
-    padding-left: 40px;
+    padding-bottom: 10px;
+    padding-left: 30px;
   }
 }
-/* Medium devices (landscape tablets, 768px and up) */
+
+/* Medium-min devices */
 @media only screen and (min-width: 768px) {
+  header img {
+    height: 175px;
+    width: 175px;
+  }
   .laptop-navigation-hidden {
     display: none;
   }
@@ -426,11 +423,10 @@ footer {
     outline: none !important;
   }
   .home .welcome h2 {
-    font-size: 4vw;
+    font-size: 3vw;
   }
   .home .welcome .loop {
-    font-size: 5vw;
-    padding: 0 20px;
+    font-size: 4vw;
   }
   .about-box {
     border-radius: 15px;
@@ -443,40 +439,22 @@ footer {
     display: block;
   }
   .about-title {
-    font-size: 3.5vw;
+    font-size: 3.25vw;
   }
   .about-picture {
     display: none;
   }
   .about-resume {
-    font-size: 2.5vw;
+    font-size: 2.25vw;
     margin-left: 0;
-    width: 70vw;
-  }
-  .footer-button img {
-    height: 50px;
-    width: 50px;
-  }
-  .footer-button .link1 img {
-    height: 60.5px;
-    width: 60.5px;
-  }
-  .footer-button button {
-    background: none;
-    border: none;
-    z-index: 1;
+    width: 60vw;
   }
   .footer-button {
     display: flex;
-    padding-bottom: 20px;
-    padding-right: 40px;
-  }
-  .copyright {
-    padding-bottom: 20px;
-    padding-left: 40px;
   }
 }
-/* Large devices (laptops/desktops, 992px and up) */
+
+/* Medium-max devices */
 @media only screen and (min-width: 992px) {
   .laptop-navigation-hidden {
     display: block;
@@ -485,10 +463,10 @@ footer {
     display: none;
   }
   .home .welcome h2 {
-    font-size: 3vw;
+    font-size: 2.75vw;
   }
   .home .welcome .loop {
-    font-size: 4vw;
+    font-size: 3.75vw;
   }
   .about-box {
     border-radius: 15px;
@@ -513,37 +491,20 @@ footer {
   }
   .about-picture img {
     border: solid rgb(255, 255, 255);
-    height: 450px;
-    width: 350px;
+    height: 400px;
+    width: 300px;
   }
   .about-resume {
     font-size: 1.5vw;
     margin-left: 20px;
     width: 30vw;
   }
-  .footer-button img {
-    height: 50px;
-    width: 50px;
-  }
-  .footer-button .link1 img {
-    height: 60.5px;
-    width: 60.5px;
-  }
-  .footer-button button {
-    background: none;
-    border: none;
-    z-index: 1;
-  }
   .footer-button {
     display: flex;
-    padding-bottom: 20px;
-    padding-right: 40px;
-  }
-  .copyright {
-    padding-bottom: 20px;
-    padding-left: 40px;
   }
 }
+
+/*Medium-extra devices*/
 @media only screen and (min-width: 1080px) {
   .laptop-navigation-hidden {
     display: block;
@@ -552,17 +513,13 @@ footer {
     display: none;
   }
   .laptop-navigation nav ul li {
-    font-family: "Library3am", Tahoma, Arial;
     font-size: 1.25vw;
-    padding: 0 20px;
-    text-transform: uppercase;
   }
   .home .welcome h2 {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   .home .welcome .loop {
-    font-size: 3vw;
-    padding: 0 60px;
+    font-size: 4vw;
   }
   .about-box {
     border-radius: 15px;
@@ -586,38 +543,20 @@ footer {
   }
   .about-picture img {
     border: solid rgb(255, 255, 255);
-    height: 450px;
-    width: 350px;
+    height: 425px;
+    width: 325px;
   }
   .about-resume {
     font-size: 1.25vw;
     margin-left: 20px;
     width: 30vw;
   }
-  .footer-button img {
-    height: 50px;
-    width: 50px;
-  }
-  .footer-button .link1 img {
-    height: 60.5px;
-    width: 60.5px;
-  }
-  .footer-button button {
-    background: none;
-    border: none;
-    z-index: 1;
-  }
   .footer-button {
     display: flex;
-    padding-bottom: 20px;
-    padding-right: 40px;
-  }
-  .copyright {
-    padding-bottom: 20px;
-    padding-left: 40px;
   }
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+/* Large devices */
 @media only screen and (min-width: 1200px) {
   .laptop-navigation-hidden {
     display: block;
@@ -626,10 +565,7 @@ footer {
     display: none;
   }
   .laptop-navigation nav ul li {
-    font-family: "Library3am", Tahoma, Arial;
     font-size: 1.25vw;
-    padding: 0 20px;
-    text-transform: uppercase;
   }
   .home .welcome h2 {
     font-size: 2vw;
@@ -640,7 +576,65 @@ footer {
   }
   .about-box {
     border-radius: 20px;
-    width: 75%;
+    width: 70%;
+  }
+  .about-box::after {
+    border-radius: 20px;
+  }
+  .scrollable-div-content {
+    display: block;
+  }
+  .about-title {
+    font-size: 38px;
+  }
+  .about-picture {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    z-index: 1;
+  }
+  .about-picture img {
+    border: solid rgb(255, 255, 255);
+    height: 450px;
+    width: 350px;
+  }
+  .about-resume {
+    font-size: 18px;
+    margin-left: 20px;
+    width: 30vw;
+  }
+  .footer-button {
+    display: flex;
+    padding-bottom: 30px;
+    padding-right: 50px;
+  }
+  .copyright {
+    padding-bottom: 30px;
+    padding-left: 50px;
+  }
+}
+
+/*Extra large devices*/
+@media only screen and (min-width: 1600px) {
+  .laptop-navigation-hidden {
+    display: block;
+  }
+  .mobile-navigation-hidden {
+    display: none;
+  }
+  .laptop-navigation nav ul li {
+    font-size: 1vw;
+  }
+  .home .welcome h2 {
+    font-size: 1.75vw;
+  }
+  .home .welcome .loop {
+    font-size: 2.75vw;
+  }
+  .about-box {
+    border-radius: 20px;
+    width: 60%;
   }
   .about-box::after {
     border-radius: 20px;
@@ -669,25 +663,20 @@ footer {
     width: 30vw;
   }
   .footer-button img {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
   }
   .footer-button .link1 img {
-    height: 60.5px;
-    width: 60.5px;
-  }
-  .footer-button button {
-    background: none;
-    border: none;
-    z-index: 1;
+    height: 70px;
+    width: 70px;
   }
   .footer-button {
     display: flex;
-    padding-bottom: 20px;
-    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-right: 60px;
   }
   .copyright {
-    padding-bottom: 20px;
-    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-left: 60px;
   }
 }
