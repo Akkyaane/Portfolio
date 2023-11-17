@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio - Jérémie Bayon</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="style/script.js"></script>
+    <script defer src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+</head>
+<body onload="loop()">
+    <video autoplay loop muted playsinline poster="/content/video.mp4">
+        <source src="content/video.mp4" type="video/mp4"/>
+        <source src="content/video.webm" type="video/webm"/>  
+    </video>
+    <header>
+        <a href="#home"><img src="content/logo.gif" alt="logo"></a>
+        <div class="laptop-navigation laptop-navigation-hidden">
+            <nav>
+                <ul>
+                    <li><a class="active" href="#about">À propos</a></li>
+                    <li><a class="active" href="#projects">Projets</a></li>
+                    <li><a class="active" href="#skills">Compétences</a></li>
+                    <li><a class="active" href="#technology-watch">Veille</a></li>
+                    <li><a class="active" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-navigation mobile-navigation-hidden">  
+            <nav>
+                <button class="hamburger" onclick="showMobileNavigation()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </button>
+                <ul>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#technology-watch">Veille</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <div class="welcome">
+                <h2>Bienvenue</h2>
+                <div class="loop">
+                    <p>Je <span id="element"></span></p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="about-box hidden-x">
+                <div class="scrollable-div-content hidden-x">
+                    <div class="about-title">
+                        <h2>À propos de moi</h2>
+                    </div>
+                    <div class="about-info">
+                        <div class="about-picture">
+                            <img src="content/photo.JPG" alt="photo">
+                        </div>
+                        <div class="about-resume">
+                            <p>
+                                Actuellement étudiant en informatique à Maestris BTS (Campus Sciences U Lyon), je prépare un Brevet de Technicien Supérieur - Services Informatiques aux Organisations (Option Solutions Logicielles et Applications Métiers) depuis septembre 2022. 
+                                <br>
+                                <br> 
+                                J'ai également étudié les langues étrangères en préparant une Licence Langues Étrangères Appliquées (Anglais et Russe) à l'Université Jean Moulin - Lyon 3 pendant quatre ans, et obtenue en juin 2022.
+                                <br>
+                                <br>
+                                Après le BTS, j'envisage de continuer mes études en intégrant un Bachelor puis un Mastère en Ingénierie du Web à l'ESGI, dans le cadre de mon projet, c'est-à-dire devenir développeur web et mobile. J'envisage aussi de préparer un double diplôme durant ma dernière année de Mastère en partant étudier à l'étranger de façon à élargir les opportunités professionnelles.
+                                <br>
+                                <br>
+                                Pour en savoir plus, n'hésitez pas à consulter mon <a href="files/curriculum-vitae-fr.pdf">CV</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="projects-box">
+                <h2>Mes projets</h2>
+                <div class="projects-box-2">
+                    <div class="carousel hidden-y" data-carousel>
+                        <button class="carousel-button previous" data-carousel-button="previous"><</button>
+                        <button class="carousel-button next" data-carousel-button="next">></button>
+                        <ul data-slides>
+                            <li class="slide" data-active>
+                            <div class="card">
+                                <img src="content/projet-1.jpg" alt="projet-1">
+                                <div class="content">
+                                    <h2>ChatBot TARS</h2>
+                                    <div class="line"></div>
+                                    <p>Conception d'un chatbot pour l'entreprise Kozea Group dans le cadre du stage de première année de BTS SIO</p>
+                                    <button data-modal-target="#modal">En savoir plus</button>
+                                </div>
+                                <div class="modal" id="modal">
+                                    <div class="modal-header">
+                                      <div class="title">Example Modal</div>
+                                      <button data-close-button class="close-button">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+                                    </div>
+                                </div>
+                                <div id="overlay"></div>
+                            </div>
+                            </li>
+                            <li class="slide">
+                            <div class="card">
+                                <img src="content/projet-2.jpg" alt="projet-2">
+                                <div class="content">
+                                    <h2>Some Title</h2>
+                                    <div class="line"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam.</p>
+                                    <button>Subscribe!</button>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="slide">
+                            <div class="card">
+                                <img src="content/projet-2.jpg" alt="projet-3">
+                                <div class="content">
+                                    <h2>Some Title</h2>
+                                    <div class="line"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam.</p>
+                                    <button>Subscribe!</button>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="slide">
+                            <div class="card">
+                                <img src="content/project-4.avif" alt="projet-4">
+                                <div class="content">
+                                    <h2>Some Title</h2>
+                                    <div class="line"></div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam.</p>
+                                    <button>Subscribe!</button>
+                                </div>
+                            </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="technology-watch" id="technology-watch">
+            <div class="technology-watch-background">
+                <h2>Article</h2>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact-background">
+                <h2>Formulaire de contact</h2>
+            </div>
+        </section>
+    
+    </main>
+    <footer>
+        <div class="copyright">
+            <p>Copyright 2023 J. BAYON</p>
+        </div>
+        <div class="footer-button">
+            <button class="link1">
+                <a href="https://www.linkedin.com/in/jeremiebayon/"><img src="content/logo-linkedin.webp" alt="logo linkedin"></a>
+            </button>
+            <button class="link2">
+                <a href="https://github.com/Akkyaane"><img src="content/logo-github.png" alt="logo github"></a>
+            </button>
+        </div>
+    </footer>
+</body>
+</html>

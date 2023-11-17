@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Library3am";
-  src: url(/style/fonts/library3am/library3am-5v3z-webfont.woff);
+  src: url(fonts/library3am/library3am-5v3z-webfont.woff);
 }
 @font-face {
   font-family: "Pro-Pixie";
-  src: url(/style/fonts/pro-pixie/ProcrastinatingPixie-WyVOO.ttf);
+  src: url(fonts/pro-pixie/ProcrastinatingPixie-WyVOO.ttf);
 }
 @font-face {
   font-family: "Salma-Pro";
-  src: url(/style/fonts/salma-pro/salmapromedium-yw9ad-webfont.woff);
+  src: url(fonts/salma-pro/salmapromedium-yw9ad-webfont.woff);
 }
 * {
   -ms-overflow-style: none;   /*Edge & Firefox*/
@@ -34,10 +34,16 @@ video {
   width: 100%;
   z-index: -1;
 }
-.hidden {
+.hidden-x {
   filter: blur(5px);
   opacity: 0;
   transform: translateX(-100%);
+  transition: all 1.5s;
+}
+.hidden-y {
+  filter: blur(5px);
+  opacity: 0;
+  transform: translateY(-100%);
   transition: all 1.5s;
 }
 .show {
@@ -680,3 +686,216 @@ footer {
     padding-left: 60px;
   }
 }
+
+.projects-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: #fc00ff;
+  background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);
+  background: linear-gradient(to right, #00dbde, #fc00ff); */
+  background-color: rgba(0, 0, 0, 0.6);
+  border: solid rgb(0, 0, 0);
+  width: 80%;
+  height: 65%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: visible;
+}
+
+.projects h2 {
+  font-family: "Library3am", Tahoma, Arial;
+  font-size: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.projects-box-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid white;
+  width: 80%;
+  height: 60%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: visible;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+  rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+  rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+  display: grid;
+  place-items: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: rgb(255, 255, 255);
+}
+
+.carousel-button.previous {
+  left: -5rem;
+}
+
+.carousel-button.next {
+  right: -5rem;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 200ms ease-in-out transform,
+              200ms ease-in-out filter;
+}
+
+.content {
+  position: absolute;
+  top: 79%;
+  width: 100%;
+  transform: translate(200%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  color: rgba(0, 0, 0, 0.9);
+  text-align: left;
+  transition: 200ms ease-in-out transform;
+}
+.card h2 {
+  font-size: 20px;
+}
+.line {
+  width: 30%;
+  height: 5px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+.card p {
+  font-size: .9rem;
+  margin-bottom: 1rem;
+  font-family: "Pro-Pixie", Tahoma, Arial;
+  font-size: 20px;
+}
+.card button {
+  padding: .3rem 1.5rem;
+  background-color: transparent;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 200ms ease-in-out background-color,
+              200ms ease-in-out color;
+}
+.card button:hover {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 1);
+}
+.card:hover .content {
+  transform: translate(0, -50%);
+}
+.card:hover img {
+  transform: scale(1.2);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 1);
+  width: 125%;
+  color: #000;
+  height: 160%;
+  overflow: visible;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  color: #000;
+}
+
+/* #overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+} */
