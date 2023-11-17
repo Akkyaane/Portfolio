@@ -65,7 +65,7 @@
                         </div>
                         <div class="about-resume">
                             <p>
-                                Actuellement étudiant en informatique à Maestris BTS (Campus Sciences U Lyon), je prépare un Brevet de Technicien Supérieur - Services Informatiques aux Organisations (Option Solutions Logicielles et Applications Métiers) depuis septembre 2022. 
+                                Actuellement étudiant en informatique à Maestris BTS (Campus Sciences U Lyon), je prépare un Brevet de Technicien Supérieur - Services Informatiques aux Organisations (Option Solutions Logicielles et Applications Métiers) depuis septembre 2022. Durant cette formation, j'ai eu l'opportuntié de réaliser un stage en développement web chez Kozea Group, en tant que développeur back-end, pour un projet de chatbot. 
                                 <br>
                                 <br> 
                                 J'ai également étudié les langues étrangères en préparant une Licence Langues Étrangères Appliquées (Anglais et Russe) à l'Université Jean Moulin - Lyon 3 pendant quatre ans, et obtenue en juin 2022.
@@ -84,71 +84,56 @@
 
         <section class="projects" id="projects">
             <div class="projects-box">
-                <h2>Mes projets</h2>
-                <div class="projects-box-2">
-                    <div class="carousel hidden-y" data-carousel>
-                        <button class="carousel-button previous" data-carousel-button="previous"><</button>
-                        <button class="carousel-button next" data-carousel-button="next">></button>
-                        <ul data-slides>
-                            <li class="slide" data-active>
-                            <div class="card">
-                                <img src="content/projet-1.jpg" alt="projet-1">
-                                <div class="content">
-                                    <h2>ChatBot TARS</h2>
-                                    <div class="line"></div>
-                                    <p>Conception d'un chatbot pour l'entreprise Kozea Group dans le cadre du stage de première année de BTS SIO</p>
-                                    <button data-modal-target="#modal">En savoir plus</button>
-                                </div>
-                                <div class="modal" id="modal">
-                                    <div class="modal-header">
-                                      <div class="title">Example Modal</div>
-                                      <button data-close-button class="close-button">&times;</button>
-                                    </div>
-                                    <div class="modal-body">
-                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
-                                    </div>
-                                </div>
-                                <div id="overlay"></div>
+                <div class="slider-wrapper">
+                  <button id="previous-slide" class="slide-button material-symbols-rounded"><</button>
+                  <ul class="image-list">
+                    <div class="card">
+                        <img class="image-item" src="content/projet-1.jpg" alt="projet-1">
+                        <div class="content">
+                            <h2>ChatBot TARS</h2>
+                            <div class="line"></div>
+                            <p>Conception d'un chatbot pour l'entreprise Kozea Group dans le cadre du stage de première année de BTS SIO</p>
+                            <button data-modal-target="#modal">En savoir plus</button>
+                        </div>
+                        <div class="modal" id="modal">
+                            <div class="modal-header">
+                              <div class="title">Example Modal</div>
+                              <button data-close-button class="close-button">&times;</button>
                             </div>
-                            </li>
-                            <li class="slide">
-                            <div class="card">
-                                <img src="content/projet-2.jpg" alt="projet-2">
-                                <div class="content">
-                                    <h2>Some Title</h2>
-                                    <div class="line"></div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam.</p>
-                                    <button>Subscribe!</button>
-                                </div>
+                            <div class="modal-body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
                             </div>
-                            </li>
-                            <li class="slide">
-                            <div class="card">
-                                <img src="content/projet-2.jpg" alt="projet-3">
-                                <div class="content">
-                                    <h2>Some Title</h2>
-                                    <div class="line"></div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam.</p>
-                                    <button>Subscribe!</button>
-                                </div>
-                            </div>
-                            </li>
-                            <li class="slide">
-                            <div class="card">
-                                <img src="content/project-4.avif" alt="projet-4">
-                                <div class="content">
-                                    <h2>Some Title</h2>
-                                    <div class="line"></div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, veniam.</p>
-                                    <button>Subscribe!</button>
-                                </div>
-                            </div>
-                            </li>
-                        </ul>
+                        </div>
+                        <div id="overlay"></div>
+                    </div>
+                    <img class="image-item" src="content/projet-1.jpg" alt="projet-1" />
+                    <img class="image-item" src="content/projet-1.jpg" alt="projet-1" />
+                    <img class="image-item" src="content/projet-1.jpg" alt="projet-1" />
+                  </ul>
+                  <button id="next-slide" class="slide-button material-symbols-rounded">></button>
+                </div>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+        
+
 
         <section class="technology-watch" id="technology-watch">
             <div class="technology-watch-background">
