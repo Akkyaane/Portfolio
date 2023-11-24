@@ -10,12 +10,11 @@
     <script defer src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
 </head>
 <body onload="loop()">
-    <video autoplay loop muted playsinline poster="/content/video.mp4">
-        <source src="content/video.mp4" type="video/mp4"/>
-        <source src="content/video.webm" type="video/webm"/>  
+    <video autoplay loop muted>
+        <source src="content/images/video.mp4" type="video/mp4"/>
     </video>
     <header>
-        <a href="#home"><img src="content/logo.gif" alt="logo"></a>
+        <a href="#home"><img src="content/images/logo.gif" alt="logo"></a>
         <div class="laptop-navigation laptop-navigation-hidden">
             <nav>
                 <ul>
@@ -61,7 +60,7 @@
                     </div>
                     <div class="about-info">
                         <div class="about-picture">
-                            <img src="content/photo.JPG" alt="photo">
+                            <img src="content/images/picture-1.jpg" alt="picture-1">
                         </div>
                         <div class="about-resume">
                             <p>
@@ -74,7 +73,7 @@
                                 Après le BTS, j'envisage de continuer mes études en intégrant un Bachelor puis un Mastère en Ingénierie du Web à l'ESGI, dans le cadre de mon projet, c'est-à-dire devenir développeur web et mobile. J'envisage aussi de préparer un double diplôme durant ma dernière année de Mastère en partant étudier à l'étranger de façon à élargir les opportunités professionnelles.
                                 <br>
                                 <br>
-                                Pour en savoir plus, n'hésitez pas à consulter mon <a href="files/curriculum-vitae-fr.pdf">CV</a>.
+                                Pour en savoir plus, n'hésitez pas à consulter mon <a href="content/files/curriculum-vitae-fr.pdf">CV</a>.
                             </p>
                         </div>
                     </div>
@@ -85,32 +84,41 @@
         <section class="projects" id="projects">
             <div class="projects-box">
                 <div class="slider-wrapper">
-                  <button id="previous-slide" class="slide-button material-symbols-rounded"><</button>
-                  <ul class="image-list">
-                    <div class="card">
-                        <img class="image-item" src="content/projet-1.jpg" alt="projet-1">
-                        <div class="content">
-                            <h2>ChatBot TARS</h2>
-                            <div class="line"></div>
-                            <p>Conception d'un chatbot pour l'entreprise Kozea Group dans le cadre du stage de première année de BTS SIO</p>
-                            <button data-modal-target="#modal">En savoir plus</button>
-                        </div>
-                        <div class="modal" id="modal">
-                            <div class="modal-header">
-                              <div class="title">Example Modal</div>
-                              <button data-close-button class="close-button">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+                    <button id="prev-slide" class="slide-button material-symbols-rounded">
+                    <
+                    </button>
+                    <ul class="image-list">
+                        <div class="card">
+                            <h2>Projet TARS</h2>
+                            <div class="overlay">
+                                <h2>Projet TARS</h2>
+                                <p>Conception d'un chatbot pour l'entreprise Kozea Group<br>
+                                    Stage de 1ère année
+                                </p>
                             </div>
                         </div>
-                        <div id="overlay"></div>
-                    </div>
-                    <img class="image-item" src="content/projet-1.jpg" alt="projet-1" />
-                    <img class="image-item" src="content/projet-1.jpg" alt="projet-1" />
-                    <img class="image-item" src="content/projet-1.jpg" alt="projet-1" />
-                  </ul>
-                  <button id="next-slide" class="slide-button material-symbols-rounded">></button>
+                        <div class="card">
+                            <div class="overlay">
+                                <h2>Projet TARS</h2>
+                                <p>Conception d'un chatbot pour l'entreprise Kozea Group<br>
+                                    Stage de 1ère année
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="overlay">
+                                <h2>Projet TARS</h2>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="overlay">
+                                <h2>Projet TARS</h2>
+                            </div>
+                        </div>
+                    </ul>
+                    <button id="next-slide" class="slide-button material-symbols-rounded">
+                    >
+                    </button>
                 </div>
                 <div class="slider-scrollbar">
                     <div class="scrollbar-track">
@@ -154,10 +162,10 @@
         </div>
         <div class="footer-button">
             <button class="link1">
-                <a href="https://www.linkedin.com/in/jeremiebayon/"><img src="content/logo-linkedin.webp" alt="logo linkedin"></a>
+                <a href="https://www.linkedin.com/in/jeremiebayon/"><img src="content/images/linkedin-logo.webp" alt="logo linkedin"></a>
             </button>
             <button class="link2">
-                <a href="https://github.com/Akkyaane"><img src="content/logo-github.png" alt="logo github"></a>
+                <a href="https://github.com/Akkyaane"><img src="content/images/github-logo.png" alt="logo github"></a>
             </button>
         </div>
     </footer>
