@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio - Jérémie Bayon</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="style/script.js"></script>
     <script defer src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
 </head>
@@ -80,53 +81,99 @@
                 </div>
             </div>
         </section>
-
+      
         <section class="projects" id="projects">
-            <div class="projects-box">
-                <div class="slider-wrapper">
-                    <button id="prev-slide" class="slide-button material-symbols-rounded"><</button>
-                    <ul class="image-list">
-                        <div class="card">
-                            <h2>TARS</h2>
-                            <div class="overlay">
-                                <p>Conception d'un chatbot pour l'entreprise Kozea Group<br>
-                                    Stage - 1re année
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h2>Indisponible</h2>
-                            <div class="overlay">
-                                <p>Conception d'un chatbot pour l'entreprise Kozea Group<br>
-                                    Stage - 2e année
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h2>GSB</h2>
-                            <div class="overlay">
-                                <p>Conception d'une application web et mobile pour l'entreprise fictive GSB<br>
-                                    2e année
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <h2>Dopamine</h2>
-                            <div class="overlay">
-                                <p>Conception d'un site internet no-code pour l'entreprise fictive Dopamine<br>
-                                    Workshop - 2e année
-                                </p>
-                            </div>
-                        </div>
-                    </ul>
-                    <button id="next-slide" class="slide-button material-symbols-rounded">></button>
-                </div>
-                <div class="slider-scrollbar">
-                    <div class="scrollbar-track">
-                        <div class="scrollbar-thumb"></div>
+            <h2 class="projects-title hidden-y">Mes projets</h2>
+            <div class="wrapper">
+                <i id="left" class="fa fa-chevron-left"></i>
+                <ul class="carousel">
+                  <li class="card">
+                    <div class="img"><img src="content/images/picture-2.jpg" alt="img" draggable="false"></div>
+                    <div class="info">
+                        <h2>TARS</h2>
+                        <p>Conception d'un chatbot pour l'entreprise Kozea Group</p>
+                        <p>Stage - 1re année</p>
+                        <button>En savoir plus</button>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="content/images/picture-2.jpg" alt="img" draggable="false"></div>
+                    <div class="info">
+                        <h2>?</h2>
+                        <p>???</p>
+                        <p>Stage - 2e année</p>
+                        <button>En savoir plus</button>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="content/images/picture-2.jpg" alt="img" draggable="false"></div>
+                    <div class="info">
+                        <h2>GSB</h2>
+                        <p>Conception d'une application web et mobile pour l'entreprise fictive GSB</p>
+                        <p>2e année</p>
+                        <button>En savoir plus</button>
+                    </div>
+                  </li>
+                  <li class="card">
+                    <div class="img"><img src="content/images/picture-2.jpg" alt="img" draggable="false"></div>
+                    <div class="info">
+                        <h2>DOPAMINE</h2>
+                        <p>Conception d'un site web no code pour l'entreprise fictive Dopamine</p>
+                        <p>Workshop - 2e année</p>
+                        <button>En savoir plus</button>
+                    </div>
+                  </li>
+                </ul>
+                <i id="right" class="fa fa-chevron-right"></i>
+              </div>
+            <!-- <div class="slider hidden-x">
+                <div class="controls">
+                    <div class="up">
+                        <i class="fa fa-chevron-up"></i>
+                    </div>
+                    <div class="down">
+                        <i class="fa fa-chevron-down"></i>
                     </div>
                 </div>
-            </div>
+                <div class="wrapper">
+                    <div class="left">
+                        <div>
+                            <h3>TARS</h3>
+                            <p>Conception d'un chatbot pour l'entreprise Kozea Group</p>
+                            <p>Stage - 1re année</p>
+                        </div>
+                        <div>
+                            <h3>?</h3>
+                            <p>???</p>
+                            <p>Stage - 2e année</p>
+                        </div>
+                        <div>
+                            <h3>GSB</h3>
+                            <p>Conception d'une application web et mobile pour l'entreprise fictive GSB</p>
+                            <p>2e année</p>
+                        </div>
+                        <div>
+                            <h3>Dopamine</h3>
+                            <p>Conception d'un site web no code pour l'entreprise fictive Dopamine</p>
+                            <p>Stage - 1re année</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div>
+                            <img src="content/images/picture-2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="content/images/picture-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="content/images/picture-2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img src="content/images/picture-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </section>
 
 

@@ -690,208 +690,122 @@ footer {
   }
 }
 
-.projects-box {
-  width: 70%;
-  overflow: visible;
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.slider-wrapper {
+.projects-title {
+  font-family: "Library3am", Tahoma, Arial;
+  font-size: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+i { color: black}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
   position: relative;
   overflow: visible;
 }
-
-.slider-wrapper .slide-button {
-  position: absolute;
+.wrapper i {
   top: 50%;
-  outline: none;
-  border: none;
   height: 50px;
   width: 50px;
-  z-index: 2;
-  display: flex;
   cursor: pointer;
-  font-size: 3vw;
-  background: #000;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
   border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
   transform: translateY(-50%);
+  transition: transform 0.1s linear;
 }
-
-.slider-wrapper .slide-button:hover {
-  background: #303030;
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
 }
-
-.slider-wrapper .slide-button#prev-slide {
-  left: -80px;
-  display: none;
+.wrapper i:first-child{
+  left: -22px;
 }
-
-.slider-wrapper .slide-button#next-slide {
-  right: -80px;
+.wrapper i:last-child{
+  right: -22px;
 }
-
-.slider-wrapper .image-list {
+.wrapper .carousel{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
-  font-size: 0;
-  list-style: none;
-  margin-bottom: 30px;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
   overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
   scrollbar-width: none;
 }
-
-.slider-wrapper .image-list::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
   display: none;
 }
-
-.slider-wrapper .image-list .card {
-  width: 300px;
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
   height: 400px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.carousel .card .img {
+  height: 50%;
+  width: 100%;
+}
+
+.carousel .card .info {
+  width: 100%;
+  height: 50%;
+  font-family: "Pro-pixie", Tahoma, Arial;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  background-color: #000;
+}
+.card .img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.projects-box .slider-scrollbar {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
+.carousel .card button {
+  background: none;
+  border: white solid;
+  padding: 5px 20px;
 }
 
-.slider-scrollbar .scrollbar-track {
-  background: #ffffff;
-  width: 100%;
-  height: 3px;
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  position: relative;
-}
-
-.slider-scrollbar:hover .scrollbar-track {
-  height: 4px;
-}
-
-.slider-scrollbar .scrollbar-thumb {
-  position: absolute;
-  background: #000;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  height: 100%;
-  cursor: grab;
-  border-radius: inherit;
-}
-
-.slider-scrollbar .scrollbar-thumb:active {
-  cursor: grabbing;
-  height: 8px;
-  top: -2px;
-}
-
-.slider-scrollbar .scrollbar-thumb::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -10px;
-  bottom: -10px;
-}
-
-.card {
-  position: relative;
-  margin: 10px;
-  color: white;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: rgba(10, 10, 10, 0.95);
-  background-size: cover;
-  background-image: url(../content/images/pngwing.com.png);
-  border: solid white;
-}
-
-.card h2 {
-  font-size: 2vw;
-  text-align: center;
-  font-family: "Pro-Pixie", Tahoma, Arial;
-}
-
-.card .overlay {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0);
-  opacity: 0;
-  transition: 0.3s;
-  border-radius: 18px;
-  font-size: 20px;
-}
-
-.card:hover .overlay {opacity: 1;}
-
-.card .btn {
-  padding: 0.6em 1.3em;
-  text-decoration: none;
-  color: white;
-  border: 2px white solid;
-  letter-spacing: 1px;
-  border-radius: 8px;
-}
-
-.card .overlay p {
-  font-size: 20px;
-  font-family: "Pro-Pixie", Tahoma, Arial;
-  padding: 50px;
-}
-
-.card .overlay h2 {
-  font-size: 40px;
-  font-family: "Pro-Pixie", Tahoma, Arial;
-}
-
-.card .btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.card .btn {
-  transition: 0.3s;
-  transform: translateY(-20px);
-}
-
-.card:hover .btn {
-  transform: translateY(0);
-}
-
-/* Styles for mobile and tablets */
-/* @media only screen and (max-width: 1023px) {
-  .slider-wrapper .slide-button {
-    display: none !important;
-  }
-
-  .slider-wrapper .image-list {
-    gap: 10px;
-    margin-bottom: 15px;
-    scroll-snap-type: x mandatory;
-  }
-
-  .slider-wrapper .image-list .image-item {
-    width: 280px;
-    height: 380px;
-  }
-
-  .slider-scrollbar .scrollbar-thumb {
-    width: 20%;
-  }
-} */
 
 
