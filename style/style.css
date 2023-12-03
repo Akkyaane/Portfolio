@@ -453,59 +453,66 @@ section {
   }
 }
 
-/* Contact */
+/* Main - Contact */
 
 .contact {
-  font-family: "Pro-Pixie", Tahoma, Arial;
-  font-size: 3rem;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
-.contact p {
-  padding: 40px;
+.contact-box {
+  width: 100%;
 }
 form {
+  width: 100%;
+  font-family: "Pro-Pixie", Tahoma, Arial;
+}
+form .half {
   display: flex;
   flex-direction: column;
+  align-items: left;
   justify-content: center;
-  align-items: center;
+  width: 100%;
 }
-
-input {
+form .half .item input {
+  border: 1px solid white;
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding: 20px;
   font-family: "Pro-Pixie", Tahoma, Arial;
-  margin: 20px;
-  font-size: 1rem;
-  padding: 20px 40px;
-  border: #000000 solid;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: start;
+  outline: none;
 }
-
-textarea {
-  font-family: "Pro-Pixie", Tahoma, Arial;
-  margin: 20px;
-  font-size: 1rem;
-  padding: 20px 40px;
-  border: #000000 solid;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: start;
-}
-
-input::placeholder{
+form .half .item input::placeholder {
   color: rgb(255, 255, 255);
 }
-
-textarea::placeholder{
+form .full textarea{
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-family: "Pro-Pixie", Tahoma, Arial;
+  outline: none;
+  padding: 20px;
+  width: 100%;
+}
+form .full textarea::placeholder{
   color: rgb(255, 255, 255);
 }
-
-
-
+form .action input{
+  background: rgb(255, 255, 255);
+  border: 1px solid white;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  font-family: "Pro-Pixie", Tahoma, Arial;
+  border-radius: 10px;
+}
+form .half .item input:focus, form .full textarea:focus, form .icons a:hover{
+  border: solid rgb(255, 255, 255) 2.5px;
+}
 
 /* Footer */
+
 footer {
   align-items: end;
   bottom: 0;
@@ -514,15 +521,7 @@ footer {
   height: auto;
   justify-content: space-between;
   position: fixed;
-  width: 100vw;
-}
-.footer-button img {
-  height: 50px;
-  width: 50px;
-}
-.footer-button .link1 img {
-  height: 60px;
-  width: 60px;
+  width: 100%;
 }
 .footer-button button {
   background: none;
@@ -532,27 +531,14 @@ footer {
 .footer-button {
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px;
-  padding-left: 40px;
+  padding-bottom: 2.5%;
+  padding-right: 2.5%;
 }
 .copyright {
+  padding-bottom: 3%;
+  padding-left: 3%;
   font-size: 1rem;
-  padding-bottom: 20px;
-  padding-left: 40px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Extra small devices */
 @media only screen and (max-width: 600px) {
@@ -665,18 +651,35 @@ footer {
     font-size: 1rem;
     width: 80vw;
   }
-
-
-
-
-
-
-
-
-
-
-
-
+  form{
+    padding: 10%;
+  }
+  form .title h2{
+    margin-bottom: 2.5%;
+    font-size: 1.5rem;
+  }
+  form .half .item {
+  margin: 2.5% 0;
+  }
+  form .half .item input {
+  font-size: 1.05rem;
+  }
+  form .full{
+    margin-bottom: 2.5%;
+    margin-top: 2.5%;
+  }
+  form .full textarea{
+    height: 100px;
+    font-size: 1.05rem;
+  }
+  form .action input{
+    font-size: 1.05rem;
+    padding: 10px 30px;
+  }
+  .footer-button {
+    display: flex;
+    flex-direction: row;
+  }
   .footer-button img {
     height: 40px;
     width: 40px;
@@ -685,32 +688,7 @@ footer {
     height: 50px;
     width: 50px;
   }
-  .footer-button {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 5px;
-    padding-right: 30px;
-  }
-  .copyright {
-    padding-bottom: 10px;
-    padding-left: 30px;
-    margin-top: 5px;
-  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Small devices */
 @media only screen and (min-width: 600px) {
@@ -823,45 +801,43 @@ footer {
     font-size: 1.25rem;
     width: 70vw;
   }
-
-
- 
-
-
+  .contact-box {
+    width: 80%;
+  }
+  form .title h2{
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+  }
+  form .half .item {
+    margin: 2% 0;
+  }
+  form .half .item input {
+    font-size: 1.05rem;
+  }
+  form .full{
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  form .full textarea{
+    height: 100px;
+    font-size: 1.05rem;
+  }
+  form .action input{
+    font-size: 1.05rem;
+    padding: 10px 30px;
+  }
   .footer-button {
     display: flex;
-    padding-bottom: 10px;
-    padding-right: 30px;
   }
-  .copyright {
-    padding-bottom: 10px;
-    padding-left: 30px;
+  .footer-button img {
+    height: 40px;
+    width: 40px;
+  }
+  .footer-button .link1 img {
+    height: 50px;
+    width: 50px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Medium-min devices */
 @media only screen and (min-width: 768px) {
@@ -974,16 +950,41 @@ footer {
     font-size: 1.5rem;
     width: 60vw;
   }
-
-
-
-
-
-
-
-
+  .contact-box {
+    width: 70%;
+  }
+  form .title h2{
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+  }
+  form .half .item {
+    margin: 2% 0;
+  }
+  form .half .item input {
+    font-size: 1.05rem;
+  }
+  form .full{
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  form .full textarea{
+    height: 100px;
+    font-size: 1.05rem;
+  }
+  form .action input{
+    font-size: 1.05rem;
+    padding: 10px 30px;
+  }
   .footer-button {
     display: flex;
+  }
+  .footer-button img {
+    height: 50px;
+    width: 50px;
+  }
+  .footer-button .link1 img {
+    height: 60px;
+    width: 60px;
   }
 }
 
@@ -1096,14 +1097,41 @@ footer {
     font-size: 1.75rem;
     width: 60vw;
   }
-
-
-
-
-
-
+  .contact-box {
+    width: 60%;
+  }
+  form .title h2{
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+  }
+  form .half .item {
+    margin: 2% 0;
+  }
+  form .half .item input {
+    font-size: 1.05rem;
+  }
+  form .full{
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  form .full textarea{
+    height: 100px;
+    font-size: 1.05rem;
+  }
+  form .action input{
+    font-size: 1.05rem;
+    padding: 10px 30px;
+  }
   .footer-button {
     display: flex;
+  }
+  .footer-button img {
+    height: 50px;
+    width: 50px;
+  }
+  .footer-button .link1 img {
+    height: 60px;
+    width: 60px;
   }
 }
 
@@ -1211,16 +1239,41 @@ footer {
     font-size: 1.5rem;
     width: 50vw;
   }
-
-
-
-
-
-
-
-
+  .contact-box {
+    width: 50%;
+  }
+  form .title h2{
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+  }
+  form .half .item {
+    margin: 2% 0;
+  }
+  form .half .item input {
+    font-size: 1.05rem;
+  }
+  form .full{
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  form .full textarea{
+    height: 100px;
+    font-size: 1.05rem;
+  }
+  form .action input{
+    font-size: 1.05rem;
+    padding: 10px 30px;
+  }
   .footer-button {
     display: flex;
+  }
+  .footer-button img {
+    height: 50px;
+    width: 50px;
+  }
+  .footer-button .link1 img {
+    height: 60px;
+    width: 60px;
   }
 }
 
@@ -1336,25 +1389,41 @@ footer {
     font-size: 1.5rem;
     width: 60vw;
   }
-
-
-
-
-
-
-
-
-
-
-
+  .contact-box {
+    width: 50%;
+  }
+  form .title h2{
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+  }
+  form .half .item {
+    margin: 2% 0;
+  }
+  form .half .item input {
+    font-size: 1.05rem;
+  }
+  form .full{
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  form .full textarea{
+    height: 100px;
+    font-size: 1.05rem;
+  }
+  form .action input{
+    font-size: 1.05rem;
+    padding: 10px 30px;
+  }
   .footer-button {
     display: flex;
-    padding-bottom: 30px;
-    padding-right: 50px;
   }
-  .copyright {
-    padding-bottom: 30px;
-    padding-left: 50px;
+  .footer-button img {
+    height: 50px;
+    width: 50px;
+  }
+  .footer-button .link1 img {
+    height: 60px;
+    width: 60px;
   }
 }
 
@@ -1470,30 +1539,40 @@ footer {
     font-size: 1.5rem;
     width: 50vw;
   }
-
- 
-
-
-
-
-
-
-
-  .footer-button img {
-    height: 60px;
-    width: 60px;
+  .contact-box {
+    width: 40%;
   }
-  .footer-button .link1 img {
-    height: 70px;
-    width: 70px;
+  form .title h2{
+    margin-bottom: 2%;
+    font-size: 1.5rem;
+  }
+  form .half .item {
+    margin: 2% 0;
+  }
+  form .half .item input {
+    font-size: 1.05rem;
+  }
+  form .full{
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  form .full textarea{
+    height: 100px;
+    font-size: 1.05rem;
+  }
+  form .action input{
+    font-size: 1.05rem;
+    padding: 10px 30px;
   }
   .footer-button {
     display: flex;
-    padding-bottom: 40px;
-    padding-right: 60px;
   }
-  .copyright {
-    padding-bottom: 40px;
-    padding-left: 60px;
+  .footer-button img {
+    height: 50px;
+    width: 50px;
+  }
+  .footer-button .link1 img {
+    height: 60px;
+    width: 60px;
   }
 }
