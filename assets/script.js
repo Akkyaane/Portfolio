@@ -1,4 +1,4 @@
-function showNavbar() {
+function openNavbar() {
     const hamburger = document.querySelector('.hamburger').classList.toggle('open');
     const mobileNav = document.querySelector('.mobile-navbar').classList.toggle('active');
 }
@@ -8,16 +8,17 @@ function closeNavbar() {
     const mobileNav = document.querySelector('.mobile-navbar').classList.remove('active');
 }
 
-const mobileNavbarLinks = document.querySelectorAll('.mobile-navbar nav a');
+function showMobileNavbar() {
+    const mobileNavbarLinks = document.querySelectorAll('.mobile-navbar nav a');
 
-mobileNavbarLinks.forEach(link => {
-    link.addEventListener('click', closeNavbar);
-});
+    mobileNavbarLinks.forEach(link => {
+        link.addEventListener('click', closeNavbar);
+    });
+}
 
 function changeNavBarStyleOnScroll() {
     document.addEventListener("DOMContentLoaded", function () {
-        let navbar = document.getElementById("header");
-        let logo = document.getElementById("logo");
+        const navbar = document.getElementById("header");
 
         window.addEventListener("scroll", function () {
             if (window.scrollY > 0) {
@@ -29,45 +30,44 @@ function changeNavBarStyleOnScroll() {
     });
 }
 
-changeNavBarStyleOnScroll()
+function svgAnimations() {
+    const linkedin_logo_animation_1 = bodymovin.loadAnimation({
+        container: document.getElementById('linkedin-logo-animation-home-container'),
+        path: '../assets/content/animations/linkedin-logo.json',
+        render: 'svg',
+        loop: true,
+        autoplay: true,
+        name: 'Linkedin Logo Animation'
+    });
+    const github_logo_animation_1 = bodymovin.loadAnimation({
+        container: document.getElementById('github-logo-animation-home-container'),
+        path: '../assets/content/animations/github-logo.json',
+        render: 'svg',
+        loop: true,
+        autoplay: true,
+        name: 'Github Logo Animation'
+    });
+    const linkedin_logo_animation_2 = bodymovin.loadAnimation({
+        container: document.getElementById('linkedin-logo-animation-footer-container'),
+        path: '../assets/content/animations/linkedin-logo.json',
+        render: 'svg',
+        loop: true,
+        autoplay: true,
+        name: 'Linkedin Logo Animation'
+    });
+    const github_logo_animation_2 = bodymovin.loadAnimation({
+        container: document.getElementById('github-logo-animation-footer-container'),
+        path: '../assets/content/animations/github-logo.json',
+        render: 'svg',
+        loop: true,
+        autoplay: true,
+        name: 'Github Logo Animation'
+    });
+}
 
 AOS.init({
     duration: 2000,
     once: true,
 });
 
-let linkedin_logo_animation_1 = bodymovin.loadAnimation({
-    container: document.getElementById('linkedin-logo-animation-home-container'),
-    path: '../assets/content/animations/linkedin-logo.json',
-    render: 'svg',
-    loop: true,
-    autoplay: true,
-    name: 'Linkedin Logo Animation'
-});
-let github_logo_animation_1 = bodymovin.loadAnimation({
-    container: document.getElementById('github-logo-animation-home-container'),
-    path: '../assets/content/animations/github-logo.json',
-    render: 'svg',
-    loop: true,
-    autoplay: true,
-    name: 'Github Logo Animation'
-});
-let linkedin_logo_animation_2 = bodymovin.loadAnimation({
-    container: document.getElementById('linkedin-logo-animation-footer-container'),
-    path: '../assets/content/animations/linkedin-logo.json',
-    render: 'svg',
-    loop: true,
-    autoplay: true,
-    name: 'Linkedin Logo Animation'
-});
-let github_logo_animation_2 = bodymovin.loadAnimation({
-    container: document.getElementById('github-logo-animation-footer-container'),
-    path: '../assets/content/animations/github-logo.json',
-    render: 'svg',
-    loop: true,
-    autoplay: true,
-    name: 'Github Logo Animation'
-});
-
-let copy = document.querySelector(".slider").cloneNode(true);
-document.querySelector(".logos").appendChild(copy);
+changeNavBarStyleOnScroll()
