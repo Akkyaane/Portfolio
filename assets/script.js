@@ -33,7 +33,7 @@ function changeNavBarStyleOnScroll() {
 function svgAnimations() {
     const linkedin_logo_animation_1 = bodymovin.loadAnimation({
         container: document.getElementById('linkedin-logo-animation-home-container'),
-        path: '../assets/content/animations/linkedin-logo.json',
+        path: '../assets/content/animations/linkedin-logo-white.json',
         render: 'svg',
         loop: true,
         autoplay: true,
@@ -41,7 +41,7 @@ function svgAnimations() {
     });
     const github_logo_animation_1 = bodymovin.loadAnimation({
         container: document.getElementById('github-logo-animation-home-container'),
-        path: '../assets/content/animations/github-logo.json',
+        path: '../assets/content/animations/github-logo-white.json',
         render: 'svg',
         loop: true,
         autoplay: true,
@@ -49,7 +49,7 @@ function svgAnimations() {
     });
     const linkedin_logo_animation_2 = bodymovin.loadAnimation({
         container: document.getElementById('linkedin-logo-animation-footer-container'),
-        path: '../assets/content/animations/linkedin-logo.json',
+        path: '../assets/content/animations/linkedin-logo-black.json',
         render: 'svg',
         loop: true,
         autoplay: true,
@@ -57,7 +57,7 @@ function svgAnimations() {
     });
     const github_logo_animation_2 = bodymovin.loadAnimation({
         container: document.getElementById('github-logo-animation-footer-container'),
-        path: '../assets/content/animations/github-logo.json',
+        path: '../assets/content/animations/github-logo-black.json',
         render: 'svg',
         loop: true,
         autoplay: true,
