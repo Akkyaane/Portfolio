@@ -70,4 +70,14 @@ AOS.init({
     once: true,
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('load', function () {
+        document.querySelector('.loading-screen').style.display = 'none';
+        document.querySelector('.data-loader').style.display = 'none';
+
+        document.body.style.overflow = 'visible';
+        document.documentElement.style.overflow = 'visible';
+    });
+});
+
 changeNavBarStyleOnScroll()
