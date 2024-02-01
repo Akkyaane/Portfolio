@@ -13,9 +13,11 @@
       src: url(content/fonts//Cocogoose\ Pro\ Regular\ Trial.ttf);
 }
 
-body,
-html {
-  overflow: hidden;
+html,
+body {
+      background-color: #ffffff;
+      overflow: hidden;
+      overflow-x: hidden;
 }
 
 *,
@@ -45,18 +47,12 @@ html {
       background: #111111;
 }
 
-body {
-      background: url(content/images/picture-2.jpg);
-      background-attachment: fixed;
-      background-size: cover;
-      overflow-x: hidden;
-}
-
 section {
       height: 100svh;
       width: 100svw;
 }
 
+/* Header */
 header {
       align-items: center;
       background: none;
@@ -196,14 +192,12 @@ header {
       display: flex;
       height: 100%;
       justify-content: center;
-      width: 100%;
 }
 
 .mobile-navbar nav ul {
       align-items: center;
       display: flex;
       flex-direction: column;
-      height: 100%;
       justify-content: center;
       width: 100%;
 }
@@ -226,17 +220,17 @@ header {
 }
 
 .loading-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      align-items: center;
       background: #fff;
       display: flex;
+      height: 100%;
       justify-content: center;
-      align-items: center;
+      left: 0;
+      overflow: hidden !important;
+      position: fixed;
+      top: 0;
+      width: 100%;
       z-index: 1000;
-      overflow: hidden !important; /* prevent scrolling */
 }
 
 .data-loader {
@@ -329,7 +323,7 @@ header {
 }
 
 .home-container {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.25));
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -404,28 +398,24 @@ header {
 }
 
 .home-link-1 {
-      background-color: #ffffff;
+      background-color: #00a7e1;
       border: none;
       border-radius: 5px;
       box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
       display: inline-block;
 }
 
-.home-link-1:hover {
-      background-color: #00a7e1;
-      transition: all .1s ease-in-out;
-}
-
 .home-link-1-a {
       background-color: transparent;
       border: none;
       border-radius: 5px;
+      color: #ffffff;
       display: block;
       font-weight: 900;
 }
 
-.home-link-1-a:hover {
-      color: #ffffff;
+.home-link-1:hover {
+      background-color: #0bb4ed;
       transition: all .1s ease-in-out;
 }
 
@@ -438,7 +428,6 @@ header {
 /* About */
 .about {
       align-items: center;
-      background-color: #ffffff;
       display: flex;
       height: auto;
       justify-content: center;
@@ -455,13 +444,16 @@ header {
       align-items: center;
       display: flex;
       justify-content: center;
-      padding: 2rem 0;
 }
 
 .about-title h2 {
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
       font-weight: 900;
       text-align: center;
+}
+
+.about-content {
+      padding: 2rem 0;
 }
 
 .about-content a {
@@ -471,6 +463,7 @@ header {
 
 .about-content a:after {
       background-color: #00a7e1;
+      bottom: -2.5px;
       content: "";
       height: 2px;
       left: 0;
@@ -491,7 +484,6 @@ header {
 /* Skills and projects */
 .skills-and-projects {
       align-items: center;
-      background-color: #ffffff;
       display: flex;
       flex-direction: column;
       height: auto;
@@ -506,7 +498,6 @@ header {
 }
 
 .skills-title h2 {
-      color: #000000;
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
       text-align: center;
 }
@@ -542,7 +533,7 @@ header {
 
 .logos {
       align-items: center;
-      animation: 35s slideshow infinite linear;
+      animation: 45s slideshow infinite linear;
       display: flex;
       height: 100%;
 }
@@ -564,7 +555,6 @@ header {
 .projects-cards {
       display: grid;
       gap: 20px;
-      grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
@@ -591,9 +581,9 @@ header {
 
 .card p {
       color: #ffffff;
+      font-weight: 600;
       padding-bottom: 3rem;
       text-align: center;
-      font-weight: 600;
 }
 
 .card button {
@@ -624,7 +614,12 @@ header {
 
 .technology-watch-container h2 {
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
+      padding-bottom: 2rem;
       text-align: center;
+}
+
+.technology-watch-container p {
+      padding: 1rem 0;
 }
 
 .details {
@@ -633,7 +628,7 @@ header {
       width: 100%;
 }
 
-.technology-watch-container .letter {
+.letter {
       color: #00a7e1;
       font-weight: 900;
 }
@@ -655,6 +650,7 @@ header {
 
 .technology-watch-container a:after {
       background-color: #00a7e1;
+      bottom: 2.5px;
       content: "";
       height: 2px;
       left: 0;
@@ -672,10 +668,13 @@ header {
       justify-content: center;
 }
 
+.contact-container {
+      padding: 2rem 0;
+}
+
 .contact-title h2 {
       color: #ffffff;
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
-      font-size: 2rem;
       padding: 1rem;
       text-align: center;
 }
@@ -686,31 +685,28 @@ header {
       width: 100%;
 }
 
-.contact-input-container .contact-item input {
-      background: rgba(0, 0, 0, 0.35);
+.contact-item input {
+      background: rgba(0, 0, 0, 0.2);
       border: 2px solid #ffffff;
       border-radius: 5px;
       color: #ffffff;
       width: 100%;
 }
 
-.contact-input-container .contact-item input::placeholder {
-      color: rgba(255, 255, 255, 0.8);
+.contact-item input::placeholder,
+.contact-textarea-container textarea::placeholder {
+      color: #ffffff;
 }
 
 .contact-textarea-container textarea {
-      background: rgba(0, 0, 0, 0.35);
+      background: rgba(0, 0, 0, 0.2);
       border: 2px solid #ffffff;
       border-radius: 5px;
       color: #ffffff;
       width: 100%;
 }
 
-.contact-textarea-container textarea::placeholder {
-      color: rgba(255, 255, 255, 0.8);
-}
-
-.contact-input-container .contact-item input:focus,
+.contact-item input:focus,
 .contact-textarea-container textarea:focus {
       outline: 2px solid #ffffff !important;
 }
@@ -719,7 +715,6 @@ header {
       background: #ffffff;
       border: 2px solid #ffffff;
       border-radius: 5px;
-      color: #000000;
       cursor: pointer;
       font-weight: 900;
 }
@@ -732,7 +727,6 @@ header {
 /* Footer */
 footer {
       align-items: center;
-      background: #ffffff;
       display: flex;
       height: auto;
       justify-content: space-between;
@@ -749,13 +743,13 @@ footer {
 }
 
 .copyright p {
-      color: #000000;
-      font-size: 1rem;
       font-weight: 900;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) {
+
+      /* Header */
       .laptop-navbar {
             display: none;
       }
@@ -767,7 +761,7 @@ footer {
       /* Home */
       .home-container {
             align-items: left;
-            padding: 1rem;
+            padding: 0 1rem;
       }
 
       .home-container h1 {
@@ -785,7 +779,7 @@ footer {
       .home-carousel-wrapper span {
             font-size: 1.75rem;
             height: 50px;
-            padding-left: 0.75rem;
+            padding-left: 0.6rem;
       }
 
       .home-links {
@@ -793,28 +787,24 @@ footer {
       }
 
       .home-link-1-a {
-            font-size: 0.8rem;
-            padding: 0.5rem;
+            font-size: 0.9rem;
+            padding: 0.6rem;
       }
 
       #linkedin-logo-animation-home-container {
-            height: 30px;
-            margin-left: 5px;
-            width: 40px;
+            height: 35px;
+            margin-left: 4.5px;
+            width: 45px;
       }
 
       #github-logo-animation-home-container {
-            height: 40px;
-            width: 40px;
+            height: 45px;
+            width: 45px;
       }
 
       /* About */
       .about-container {
-            padding: 1rem 2rem;
-      }
-
-      .about-title {
-            padding: 1.25rem;
+            padding: 2rem;
       }
 
       .about img {
@@ -822,7 +812,7 @@ footer {
       }
 
       .about-title h2 {
-            font-size: 1.75rem;
+            font-size: 2rem;
       }
 
       .about-content {
@@ -836,21 +826,16 @@ footer {
 
       .about-content a {
             font-size: 1.15rem;
-            position: relative;
       }
 
       .about-content span {
             font-size: 1.15rem;
       }
 
-      .about-content a:after {
-            bottom: -2.5px;
-      }
-
       /* Skills and projects */
       .skills-container {
-            height: 40svh;
-            padding: 1rem;
+            height: 30svh;
+            padding: 0 1rem;
       }
 
       .skills-title h2 {
@@ -868,8 +853,7 @@ footer {
 
       .logos img {
             height: 40px;
-            margin: 0 2rem;
-            padding: 0 1rem;
+            padding: 0 3rem;
       }
 
       .projects-container {
@@ -886,23 +870,20 @@ footer {
 
       /* Technology Watch */
       .technology-watch-container {
-            padding: 1rem 2rem;
+            padding: 2rem;
       }
 
       .technology-watch-container h2 {
             font-size: 1.75rem;
-            padding: 1rem;
       }
 
       .technology-watch-container p {
             font-size: 1.15rem;
             line-height: 2.15rem;
-            padding: 1.25rem 0;
       }
 
       .technology-watch-container .details {
-            font-size: 1rem;
-            padding: 0.25rem 0;
+            font-size: 1.05rem;
       }
 
       .technology-watch-container .letter {
@@ -911,18 +892,15 @@ footer {
 
       .technology-watch-container a {
             font-size: 1.15rem;
-            position: relative;
       }
 
       /* Contact */
       .contact-container {
-            padding: 1.25rem 0;
             width: 300px;
       }
 
       .contact-title h2 {
             font-size: 1.5rem;
-            padding: 1.25rem;
       }
 
       form .contact-input-container .contact-item input {
@@ -949,7 +927,6 @@ footer {
 
       #linkedin-logo-animation-footer-container {
             height: 30px;
-            margin-left: 5px;
             width: 40px;
       }
 
@@ -959,11 +936,13 @@ footer {
       }
 
       .copyright p {
-            font-size: 1rem;
+            font-size: 0.90rem;
       }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+      /* Header */
       .laptop-navbar {
             display: none;
       }
@@ -982,7 +961,7 @@ footer {
       }
 
       .home-carousel-wrapper {
-            height: 70px;
+            height: 60px;
       }
 
       .home-carousel-wrapper p {
@@ -991,7 +970,7 @@ footer {
 
       .home-carousel-wrapper span {
             font-size: 3rem;
-            height: 80px;
+            height: 70px;
             padding-left: 1rem;
       }
 
@@ -1005,24 +984,20 @@ footer {
       }
 
       #linkedin-logo-animation-home-container {
-            height: 30px;
-            margin-left: 5px;
-            width: 40px;
+            height: 35px;
+            margin-left: 4.5px;
+            width: 45px;
       }
 
       #github-logo-animation-home-container {
-            height: 40px;
-            width: 40px;
+            height: 45px;
+            width: 45px;
       }
 
       /* About */
       .about-container {
-            padding: 1.25rem 0;
+            padding: 2rem 0;
             width: 600px;
-      }
-
-      .about-title {
-            padding: 1.25rem;
       }
 
       .about img {
@@ -1030,11 +1005,7 @@ footer {
       }
 
       .about-title h2 {
-            font-size: 1.75rem;
-      }
-
-      .about-content {
-            padding: 1.25rem 0;
+            font-size: 2rem;
       }
 
       .about-content p {
@@ -1044,25 +1015,19 @@ footer {
 
       .about-content a {
             font-size: 1.15rem;
-            position: relative;
       }
 
       .about-content span {
             font-size: 1.15rem;
       }
 
-      .about-content a:after {
-            bottom: -2.5px;
-      }
-
       /* Skills and projects */
       .skills-container {
-            height: 30svh;
-            padding-top: 2rem;
+            height: 25svh;
       }
 
       .skills-title h2 {
-            font-size: 1.75rem;
+            font-size: 2rem;
       }
 
       .skills-slider {
@@ -1071,13 +1036,12 @@ footer {
 
       .skills-slider::before,
       .skills-slider::after {
-            width: 125px;
+            width: 150px;
       }
 
       .logos img {
             height: 50px;
-            margin: 0 2.25rem;
-            padding: 0 1.25rem;
+            padding: 0 4rem;
       }
 
       .projects-container {
@@ -1094,48 +1058,38 @@ footer {
 
       /* Technology Watch */
       .technology-watch-container {
-            padding: 4rem;
+            padding: 2rem 0;
             width: 600px;
       }
 
       .technology-watch-container h2 {
-            font-size: 1.75rem;
-            padding: 1.25rem;
+            font-size: 2rem;
       }
 
       .technology-watch-container p {
             font-size: 1.15rem;
             line-height: 2.15rem;
-            padding: 1.25rem 0;
       }
 
       .technology-watch-container .details {
-            font-size: 1rem;
-            padding: 0.25rem 0;
+            font-size: 1.05rem;
       }
 
       .technology-watch-container .letter {
-            font-size: 1.75rem;
+            font-size: 2rem;
       }
 
       .technology-watch-container a {
             font-size: 1.15rem;
-            position: relative;
-      }
-
-      .technology-watch-container a:after {
-            bottom: 2.5px;
       }
 
       /* Contact */
       .contact-container {
-            padding: 1.25rem 0;
             width: 350px;
       }
 
       .contact-title h2 {
             font-size: 1.5rem;
-            padding: 1.25rem;
       }
 
       form .contact-input-container .contact-item input {
@@ -1157,12 +1111,11 @@ footer {
 
       /* Footer */
       footer {
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.5rem;
       }
 
       #linkedin-logo-animation-footer-container {
             height: 30px;
-            margin-left: 5px;
             width: 40px;
       }
 
@@ -1177,6 +1130,8 @@ footer {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+      /* Header */
       .laptop-navbar {
             display: block;
       }
@@ -1195,7 +1150,7 @@ footer {
       }
 
       .home-carousel-wrapper {
-            height: 70px;
+            height: 60px;
       }
 
       .home-carousel-wrapper p {
@@ -1204,7 +1159,7 @@ footer {
 
       .home-carousel-wrapper span {
             font-size: 3rem;
-            height: 80px;
+            height: 70px;
             padding-left: 1rem;
       }
 
@@ -1218,28 +1173,26 @@ footer {
       }
 
       #linkedin-logo-animation-home-container {
-            height: 30px;
-            margin-left: 5px;
-            width: 40px;
+            height: 35px;
+            margin-left: 4.5px;
+            width: 45px;
       }
 
       #github-logo-animation-home-container {
-            height: 40px;
-            width: 40px;
+            height: 45px;
+            width: 45px;
       }
 
       /* About */
       .about-container {
-            padding: 1.25rem 0;
+            padding: 2rem 0;
             width: 600px;
       }
 
-      .about-title {
-            padding: 1.25rem;
-      }
-
       .about img {
+            display: flex;
             height: 200px;
+            margin-left: -200px;
             width: 200px;
       }
 
@@ -1249,8 +1202,8 @@ footer {
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             color: #ffffff;
-            font-size: 1.75rem;
-            padding: 0.5rem 1.5rem;
+            font-size: 2rem;
+            padding: 0.25rem 1.25rem;
       }
 
       .about-content p {
@@ -1267,18 +1220,13 @@ footer {
             font-size: 1.15rem;
       }
 
-      .about-content a:after {
-            bottom: -2.5px;
-      }
-
       /* Skills and projects */
       .skills-container {
             height: 40svh;
-            padding-top: 2rem;
       }
 
       .skills-title h2 {
-            font-size: 1.75rem;
+            font-size: 2rem;
       }
 
       .skills-slider {
@@ -1287,13 +1235,12 @@ footer {
 
       .skills-slider::before,
       .skills-slider::after {
-            width: 125px;
+            width: 150px;
       }
 
       .logos img {
             height: 50px;
-            margin: 0 2.25rem;
-            padding: 0 1.25rem;
+            padding: 0 4rem;
       }
 
       .projects-container {
@@ -1310,28 +1257,25 @@ footer {
 
       /* Technology Watch */
       .technology-watch-container {
-            padding: 4rem;
+            padding: 2rem 0;
             width: 600px;
       }
 
       .technology-watch-container h2 {
-            font-size: 1.75rem;
-            padding: 1.25rem;
+            font-size: 2rem;
       }
 
       .technology-watch-container p {
             font-size: 1.15rem;
             line-height: 2.15rem;
-            padding: 1.25rem 0;
       }
 
       .technology-watch-container .details {
             font-size: 1.05rem;
-            padding: 0.25rem 0;
       }
 
       .technology-watch-container .letter {
-            font-size: 1.75rem;
+            font-size: 2rem;
       }
 
       .technology-watch-container a {
@@ -1339,19 +1283,13 @@ footer {
             position: relative;
       }
 
-      .technology-watch-container a:after {
-            bottom: 2.5px;
-      }
-
       /* Contact */
       .contact-container {
-            padding: 1.25rem 0;
             width: 350px;
       }
 
       .contact-title h2 {
             font-size: 1.5rem;
-            padding: 1.25rem;
       }
 
       form .contact-input-container .contact-item input {
@@ -1373,12 +1311,11 @@ footer {
 
       /* Footer */
       footer {
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.5rem;
       }
 
       #linkedin-logo-animation-footer-container {
             height: 30px;
-            margin-left: 5px;
             width: 40px;
       }
 
@@ -1393,6 +1330,8 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+      /* Header */
       .laptop-navbar {
             display: block;
       }
@@ -1411,7 +1350,7 @@ footer {
       }
 
       .home-carousel-wrapper {
-            height: 90px;
+            height: 80px;
       }
 
       .home-carousel-wrapper p {
@@ -1420,7 +1359,7 @@ footer {
 
       .home-carousel-wrapper span {
             font-size: 4rem;
-            height: 100px;
+            height: 90px;
             padding-left: 1.25rem;
       }
 
@@ -1429,7 +1368,6 @@ footer {
       }
 
       .home-link-1-a {
-            font-size: 1rem;
             padding: 0.6rem;
       }
 
@@ -1446,12 +1384,8 @@ footer {
 
       /* About */
       .about-container {
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             width: 700px;
-      }
-
-      .about-title {
-            padding: 1.5rem;
       }
 
       .about img {
@@ -1467,7 +1401,7 @@ footer {
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
             color: #ffffff;
-            font-size: 2rem;
+            font-size: 2.5rem;
             padding: 0.5rem 1.5rem;
       }
 
@@ -1485,18 +1419,13 @@ footer {
             font-size: 1.25rem;
       }
 
-      .about-content a:after {
-            bottom: -2.5px;
-      }
-
       /* Skills and projects */
       .skills-container {
-            height: 30svh;
-            padding-top: 2rem;
+            height: 35svh;
       }
 
       .skills-title h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
       }
 
       .skills-slider {
@@ -1505,13 +1434,12 @@ footer {
 
       .skills-slider::before,
       .skills-slider::after {
-            width: 150px;
+            width: 175px;
       }
 
       .logos img {
             height: 55px;
-            margin: 0 2.5rem;
-            padding: 0 1.5rem;
+            padding: 0 4.5rem;
       }
 
       .projects-container {
@@ -1528,28 +1456,25 @@ footer {
 
       /* Technology Watch */
       .technology-watch-container {
-            padding: 4rem;
+            padding: 2rem 0;
             width: 700px;
       }
 
       .technology-watch-container h2 {
-            font-size: 2rem;
-            padding: 1.5rem;
+            font-size: 2.5rem;
       }
 
       .technology-watch-container p {
             font-size: 1.25rem;
             line-height: 2.25rem;
-            padding: 1.5rem 0;
       }
 
       .technology-watch-container .details {
             font-size: 1.15rem;
-            padding: 0.25rem 0;
       }
 
       .technology-watch-container .letter {
-            font-size: 2rem;
+            font-size: 2.5rem;
       }
 
       .technology-watch-container a {
@@ -1557,19 +1482,13 @@ footer {
             position: relative;
       }
 
-      .technology-watch-container a:after {
-            bottom: 2.5px;
-      }
-
       /* Contact */
       .contact-container {
-            padding: 1.5rem 0;
             width: 400px;
       }
 
       .contact-title h2 {
-            font-size: 1.75rem;
-            padding: 1.5rem;
+            font-size: 2rem;
       }
 
       form .contact-input-container .contact-item input {
@@ -1596,7 +1515,6 @@ footer {
 
       #linkedin-logo-animation-footer-container {
             height: 40px;
-            margin-left: 5px;
             width: 50px;
       }
 
@@ -1611,6 +1529,8 @@ footer {
 }
 
 @media only screen and (min-width: 1400px) {
+
+      /* Header */
       .laptop-navbar {
             display: block;
       }
@@ -1647,7 +1567,6 @@ footer {
       }
 
       .home-link-1-a {
-            font-size: 1rem;
             padding: 0.6rem;
       }
 
@@ -1666,10 +1585,6 @@ footer {
       .about-container {
             padding: 2rem 0;
             width: 800px;
-      }
-
-      .about-title {
-            padding: 2rem 0;
       }
 
       .about img {
@@ -1703,14 +1618,9 @@ footer {
             font-size: 1.5rem;
       }
 
-      .about-content a:after {
-            bottom: -2.5px;
-      }
-
       /* Skills and projects */
       .skills-container {
-            height: 30svh;
-            padding-top: 2rem;
+            height: 25svh;
       }
 
       .skills-title h2 {
@@ -1728,8 +1638,7 @@ footer {
 
       .logos img {
             height: 60px;
-            margin: 0 3rem;
-            padding: 0 2rem;
+            padding: 0 5rem;
       }
 
       .projects-container {
@@ -1752,18 +1661,15 @@ footer {
 
       .technology-watch-container h2 {
             font-size: 3rem;
-            padding: 2rem;
       }
 
       .technology-watch-container p {
             font-size: 1.5rem;
             line-height: 2.5rem;
-            padding: 1rem 0;
       }
 
       .technology-watch-container .details {
             font-size: 1.25rem;
-            padding: 0.25rem 0;
       }
 
       .technology-watch-container .letter {
@@ -1775,19 +1681,13 @@ footer {
             position: relative;
       }
 
-      .technology-watch-container a:after {
-            bottom: 2.5px;
-      }
-
       /* Contact */
       .contact-container {
-            padding: 2rem 0;
             width: 500px;
       }
 
       .contact-title h2 {
             font-size: 2rem;
-            padding: 1rem;
       }
 
       form .contact-input-container .contact-item input {
@@ -1814,7 +1714,6 @@ footer {
 
       #linkedin-logo-animation-footer-container {
             height: 40px;
-            margin-left: 5px;
             width: 50px;
       }
 
