@@ -1,35 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Étudiant en informatique">
     <title>Projet TARS</title>
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="../../assets/css/projects.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="../../assets/content/images/icon.png" type="icon" />
+    <script defer src="../../assets/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 </head>
-<body>
-    <h2>Projet TARS</h2>
-    <p>
-        A l'occasion du premier stage de BTS SIO, nécessaire pour valider la formation, qui s'est déroulé du 30 mai 2023 au 28 juillet 2023, j'ai eu l'opportunité de travailler sur le développement d'un chatbot nommé Tars au sein de l'entreprise Kozea Group. L'entreprise, spécialisée dans le milieu médical, a coeur à accompagner et faciliter le travail des professionnels de santé et leur permettre de se recentrer sur leur coeur de métier, en proposant de nombreux services digitaux tels que la création et la promotion de sites internet pour les établissements de santé incluant différentes fonctionnalités (envoi d'ordonnances, vente de produits, Click and Collect, prise de rendez-vous), la gestion du tiers-payant et la gestion des réseaux sociaux.
-    </p>
-    <p>
-        L'objectif du chatbot TARS était de permettre aux employés d'obtenir un gain de temps lors de la recherche d'une information concernant l'entreprise en interrogeant les données à sa disposition.
-    </p>
-    <p>
-        Le projet a necessité l'utilisation de divers outils de développement : Python, Flask, Llama Index, Langchain, Pinecone, etc.
-    </p>
-    <p>
-        Développé en python, ce stage a été l'occassion pour moi d'apprendre ce langage et de comprendre et mettre en applications les différentes connaissances apprises à l'école (structure du code, créations et appels de fonctions, création du jeu du Morpion, création d'un blog, etc.)
-    </p>
-    <p>
-        Concernant le rendu visuel du chatbot, j'ai eu la possibilité d'utiliser Flask, un <a href="https://www.vigicorp.fr/qu-est-ce-qu-un-framework/">framework</a> Python, et de découvrir les différentes fonctionnalités proposées (html escaping, unique URLs, rendering templates, redirects, etc.)
-    </p>
-    <p>
-        Pour faire fonctionner TARS, il est nécessaire de lier un drive tel que Google Drive ou déposer des documents dans la <a href="https://www.cloudflare.com/fr-fr/learning/ai/what-is-vector-database/">base de données vectorielle</a> Pinecone, qui se charge de construire un index dans lequel elle transforme les données en vecteurs. Cet index est ensuite utilisé pour répondre aux requêtes de l'utilisateur en mesurant la similarité entre les éléments grâce à leurs caractéristiques. L'API, construite en Python, se charge ensuite de récupérer l'index et de traiter les reqûetes. Via les frameworks d'intelligence artificelle Llama Index et Langchain, les données récupérées sont découpées en nodes, c'est-à-dire des petits morceaux de textes, sur lesquels le chatbot, basé sur la logique de ChatGPT, va utiliser, en plus du prompt (instructions), pour répondre à l'utilisateur de la manière la plus précise et la plus pertinente possible.
-    </p>
-    <p>
-        Par ailleurs, j'ai également découvert très rapidement quelques commandes Git, la logique de GitHub, et le langage React.
-    </p>
-    <p>
-        En conclusion, ce stage m'a permis de solidifier ma vision et mes idées de développeur, de réellement découvrir comment une entreprise fonctionnait en internet, de découvrir d'autres métiers informatiques ou non et de me consituter un premier réseau.
-    </p>
-</body>
+
+<body onload="svgAnimations()">
+    <header id="header">
+        <a href="../../index.html#home" id="logo" class="logo">jb</a>
+        <div class="laptop-navbar">
+            <nav>
+                <ul>
+                    <li><a href="../../index.html#about" class="element">À propos</a></li>
+                    <li><a href="../../index.html#skills-and-projects" class="element">Projets</a></li>
+                    <li><a href="../../index.html#technology-watch" class="element">Veille</a></li>
+                    <li><a href="../../index.html#contact" class="element">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-navbar">
+            <nav onclick="showMobileNavbar()">
+                <button class="hamburger" onclick="openNavbar()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </button>
+                <ul>
+                    <li><a href="../../index.html#about">À propos</a></li>
+                    <li><a href="../../index.html#skills-and-projects">Projets</a></li>
+                    <li><a href="../../index.html#technology-watch">Veille</a></li>
+                    <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="about-chatbot-tars-project">
+            <div class="about-chatbot-tars-project-container">
+                <h2>Projet TARS</h2>
+                <p>
+                    A l'occasion du premier stage de BTS SIO, nécessaire pour valider la formation, qui s'est déroulé du 30 mai
+                    2023
+                    au 28 juillet 2023, j'ai eu l'opportunité de travailler sur le développement d'un chatbot nommé Tars au sein
+                    de
+                    l'entreprise Kozea Group. L'entreprise, spécialisée dans le milieu médical, a coeur à accompagner et
+                    faciliter
+                    le travail des professionnels de santé et leur permettre de se recentrer sur leur coeur de métier, en
+                    proposant
+                    de nombreux services digitaux tels que la création et la promotion de sites internet pour les établissements
+                    de
+                    santé incluant différentes fonctionnalités (envoi d'ordonnances, vente de produits, Click and Collect, prise
+                    de
+                    rendez-vous), la gestion du tiers-payant et la gestion des réseaux sociaux.
+                </p>
+                <p>
+                    L'objectif du chatbot TARS était de permettre aux employés d'obtenir un gain de temps lors de la recherche
+                    d'une
+                    information concernant l'entreprise en interrogeant les données à sa disposition.
+                </p>
+                <p>
+                    Le projet a necessité l'utilisation de divers outils de développement : Python, Flask, Llama Index,
+                    Langchain,
+                    Pinecone, etc.
+                </p>
+                <p>
+                    Développé en python, ce stage a été l'occassion pour moi d'apprendre ce langage et de comprendre et mettre
+                    en
+                    applications les différentes connaissances apprises à l'école (structure du code, créations et appels de
+                    fonctions, création du jeu du Morpion, création d'un blog, etc.)
+                </p>
+                <p>
+                    Concernant le rendu visuel du chatbot, j'ai eu la possibilité d'utiliser Flask, un <a
+                        href="https://www.vigicorp.fr/qu-est-ce-qu-un-framework/">framework</a> Python, et de découvrir les
+                    différentes fonctionnalités proposées (html escaping, unique URLs, rendering templates, redirects, etc.)
+                </p>
+                <p>
+                    Pour faire fonctionner TARS, il est nécessaire de lier un drive tel que Google Drive ou déposer des
+                    documents
+                    dans la <a href="https://www.cloudflare.com/fr-fr/learning/ai/what-is-vector-database/">base de données
+                        vectorielle</a> Pinecone, qui se charge de construire un index dans lequel elle transforme les données
+                    en
+                    vecteurs. Cet index est ensuite utilisé pour répondre aux requêtes de l'utilisateur en mesurant la
+                    similarité
+                    entre les éléments grâce à leurs caractéristiques. L'API, construite en Python, se charge ensuite de
+                    récupérer
+                    l'index et de traiter les reqûetes. Via les frameworks d'intelligence artificelle Llama Index et Langchain,
+                    les
+                    données récupérées sont découpées en nodes, c'est-à-dire des petits morceaux de textes, sur lesquels le
+                    chatbot,
+                    basé sur la logique de ChatGPT, va utiliser, en plus du prompt (instructions), pour répondre à l'utilisateur
+                    de
+                    la manière la plus précise et la plus pertinente possible.
+                </p>
+                <p>
+                    Par ailleurs, j'ai également découvert très rapidement quelques commandes Git, la logique de GitHub, et le
+                    langage React.
+                </p>
+                <p>
+                    En conclusion, ce stage m'a permis de solidifier ma vision et mes idées de développeur, de réellement
+                    découvrir
+                    comment une entreprise fonctionnait en internet, de découvrir d'autres métiers informatiques ou non et de me
+                    consituter un premier réseau.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="copyright">
+            <p>© 2023 J. BAYON</p>
+        </div>
+        <div class="footer-links">
+            <button class="footer-link-2">
+                <a href="https://www.linkedin.com/in/jeremiebayon/" target="_blank">
+                    <div id="linkedin-logo-animation-projects-footer-container"></div>
+                </a>
+            </button>
+            <button class="footer-link-3">
+                <a href="https://github.com/Akkyaane" target="_blank">
+                    <div id="github-logo-animation-projects-footer-container"></div>
+                </a>
+            </button>
+        </div>
+    </footer>
+    </body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </body>
+
 </html>

@@ -1,16 +1,16 @@
 @font-face {
       font-family: "Quicksand";
-      src: url(content/fonts/Quicksand-VariableFont_wght.ttf);
+      src: url(../content/fonts/Quicksand-VariableFont_wght.ttf);
 }
 
 @font-face {
       font-family: "Tropika";
-      src: url(content/fonts/Aiyari\ -\ Tropika\ Island\ Script\ Casual.otf);
+      src: url(../content/fonts/Aiyari\ -\ Tropika\ Island\ Script\ Casual.otf);
 }
 
 @font-face {
       font-family: "Cocogoose";
-      src: url(content/fonts//Cocogoose\ Pro\ Regular\ Trial.ttf);
+      src: url(../content/fonts//Cocogoose\ Pro\ Regular\ Trial.ttf);
 }
 
 html,
@@ -315,7 +315,7 @@ header {
 /* Home */
 .home {
       align-items: center;
-      background: url(content/images/video.gif);
+      background: url(../content/images/video.gif);
       background-position: left;
       background-size: cover;
       display: flex;
@@ -533,7 +533,7 @@ header {
 
 .logos {
       align-items: center;
-      animation: 45s slideshow infinite linear;
+      animation: 40s slideshow infinite linear;
       display: flex;
       height: 100%;
 }
@@ -746,7 +746,6 @@ footer {
       font-weight: 900;
 }
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 767px) {
 
       /* Header */
@@ -815,11 +814,7 @@ footer {
             font-size: 2rem;
       }
 
-      .about-content {
-            padding: 1.25rem 0;
-      }
-
-      .about-content p {
+      y .about-content p {
             font-size: 1.15rem;
             line-height: 2.15rem;
       }
@@ -1373,7 +1368,6 @@ footer {
 
       #linkedin-logo-animation-home-container {
             height: 40px;
-            margin-left: 5px;
             width: 50px;
       }
 
@@ -1572,7 +1566,6 @@ footer {
 
       #linkedin-logo-animation-home-container {
             height: 40px;
-            margin-left: 5px;
             width: 50px;
       }
 

@@ -4,199 +4,257 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Jérémie Bayon</title>
-    <link rel="stylesheet" href="../assets/style.css" />
+    <meta name="description" content="Étudiant en informatique">
+    <title>IA vs. Développeurs : la fin ?</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/article.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="../assets/content/images/icon.png" type="icon" />
     <script defer src="../assets/script.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 </head>
 
-<body>
-    <h2>
-        IA vs. Développeurs : la fin ?
-    </h2>
-    <p>
-        Depuis quelque temps, maintenant, l’intelligence artificielle ou « IA », présentée comme le
-        futur de la technologie, attire les regards de plus en plus de personnes. En 2019,
-        l’entreprise Microsoft a annoncé un plan d’investissement de plusieurs milliards de dollars
-        dans la société OpenAI, qui est à l’origine du célèbre robot conversationnel ChatGPT, pour
-        d’une part, accélérer la recherche en intelligence artificielle, et d’autre part, concurrencer
-        Google en intégrant les inventions d’OpenAI plus facilement dans ses propres
-        technologies tel que le moteur de recherche Bing.
-    </p>
-    <p>
-        Qu’est-ce que l’IA ?
-    </p>
-    <p>
-        L’intelligence artificielle peut être définie comme « l’ensemble de théories et de techniques
-        mises en œuvre en vue de réaliser des machines capables de simuler l’intelligence », selon
-        le Larousse.
-    </p>
-    <p>
-        Au début des années 1950, Alain Turing, professeur de mathématiques à l’Université de
-        Cambridge notamment célèbre pour avoir mis au point un ordinateur capable de
-        décrypter les messages provenant des nazis lors de la Seconde Guerre mondiale, se
-        demande si une machine est capable de penser. Il suggère alors un test dans lequel un
-        ordinateur parvient à se faire passer pour un humain lors d’une conversation : c’est le Test
-        de Turing.
-    </p>
-    <p>
-        L’IA est donc une discipline nouvelle réunissant plusieurs sciences telles que la logique
-        mathématique, les statistiques et les probabilités, l’informatique et la neurobiologie
-        computationnelle*. Le but est de réussir, à travers une machine, à imiter les capacités
-        cognitives d’un humain, autrement dit à répondre comme un humain, et peut-être même
-        réfléchir comme un humain.
-    </p>
-    <p>
-        Il existe plusieurs types d’IA, à savoir l’IA forte, l’IA faible, l’IA symboliste et l’IA
-        connexionniste.
-    </p>
-    <p>
-        L’IA faible est conçue pour accomplir une tâche spécifique. Elle est dite faible parce que
-        limitée à une fonction précise (ex. système de reconnaissance vocale). En revanche, l’IA
-        forte est capable de comprendre, d’apprendre, d’appliquer son apprentissage à diverses
-        tâches tel un être humain et de résoudre des problèmes généraux sans être
-        spécifiquement programmée pour chacun.
-    </p>
-    <p>
-        Sur la base de règles claires inscrites dans le code par les programmeurs, l’IA symbolique
-        ou classique est capable de résoudre des problèmes comme les jeux d’échecs, mais a du
-        mal à apprendre de nouvelles tâches sans programmation préalable. L’IA connexionniste
-        se base plutôt sur des réseaux de neurones artificiels pour apprendre à accomplir des
-        tâches. Elle se rapproche du fonctionnement du cerveau humain, avec des neurones et des
-        synapses qui s’adaptent en fonction des données d’entrée. On parle alors de Machine
-        Learning et de Deep Learning.
-    </p>
-    <p>
-        Qu’est-ce que le Machine Learning et le Deep Learning ?
-    </p>
-    <p>
-        Avec l’arrivée du big data, de l’IoT, de l’industrie 4.0 et du cloud, nous sommes désormais capables d’accéder à
-        un volume important de données et d’accélérer le calcul des algorithmes d’apprentissage, qui permettent à une IA
-        de fonctionner. Le Machine learning (apprentissage automatique) et le Deep learning (apprentissage profond) sont
-        les deux concepts les plus importants qui rendent l’intelligence artificielle possible. Elles ont besoin de
-        disposer d’une importante quantité de données pour apprendre.
-    </p>
-    <p>
-        En 1959, Arthur Samuel définit le Machine Learning comme un « champ d’étude qui donne
-        aux ordinateurs la capacité d’apprendre sans être explicitement programmés à
-        apprendre ».
-    </p>
-    <p>
-        Avec une base de données accessible, les algorithmes du Machine Learning sont capables
-        d’apprendre par eux-mêmes, sans intervention humaine ou reprogrammation logicielle,
-        de s’améliorer progressivement et de façon autonome et de dépasser ainsi les fonctions et
-        les capacités initialement programmées. En classant les données représentées sous forme
-        de vecteurs* (ex. [3, 4, 5] dans un espace à trois dimensions) et en élaborant des modèles
-        mathématiques qui peuvent être appliqués à de nouvelles données, les algorithmes sont
-        capables de réaliser des prédictions. Ces algorithmes peuvent être supervisés ou non
-        supervisés selon si les données sont déjà étiquetées ou nécessitent de l’être.
-    </p>
-    <p>
-        Tandis qu’à l’aide d’un réseau de neurones artificiels imitant le fonctionnement du cerveau
-        humain, les algorithmes du Deep Learning créent une sorte de machine virtuelle
-        composée de milliers d’unités, chacune chargée de petits calculs simples, leur permettant
-        d’automatiser des tâches ou d’accomplir d’autres plus complexes. Elle dépasse même la
-        parité humaine dans certains domaines.
-    </p>
-    <p>
-        Mais quelles différences entre les deux ?
-    </p>
-    <p>
-        Lors de son apprentissage, le Machine Learning requiert les retours du développeur pour
-        pouvoir s’améliorer de façon autonome. Par exemple, en analysant des données
-        structurées provenant d’images d’échographies de seins dont certaines sont atteintes d’un
-        cancer et grâce à des procédés issus des statistiques et des probabilités, l’algorithme est
-        capable de proposer un diagnostic avec un taux d’erreur plus ou moins important au
-        début, qui nécessite une correction humaine. Ce taux d’erreur diminue à force
-        d’entraînement, car l’algorithme peut comprendre comment mieux classer d’autres
-        données similaires, leur attribuer des valeurs et donc proposer de meilleurs diagnostics.
-    </p>
-    <p>
-        Bien que le Deep Learning soit plus autonome que le Machine Learning, ce premier est
-        très gourmand en données. En fonctionnant par bio-mimétisme, les algorithmes sont
-        capables de reproduire le mécanisme des réseaux de neurones. Par exemple, pour la
-        reconnaissance faciale, l’algorithme apprend d’abord à détecter et reconnaître les
-        bordures et lignes d’un visage, puis apprend les parties les plus importantes de celui-ci et
-        en fait une représentation générale. L’entraînement nécessite parfois plusieurs semaines à
-        cause du volume important de données non structurées, de paramètres et de formules
-        mathématiques à prendre en compte, à l’inverse du Machine Learning dont l’entraînement
-        peut se faire en quelques secondes seulement. La probabilité de réussite sera néanmoins
-        différente au final.
-    </p>
-    <p>
-        Enfin, le Machine Learning tend à séparer les données en plusieurs parties lors de l’analyse
-        et les combine ensuite pour proposer un résultat, contrairement au Deep Learning qui
-        considère un problème dans son entièreté.
-    </p>
-    <p>
-        Ayant un fonctionnement différent, ils ont donc des champs d’application différents : le
-        Machine Learning est utilisé pour prédire la météo, le cours des actions sur un marché
-        financier, identifier les spams dans une boîte mail, concevoir des traitements personnalisés
-        pour les malades, proposer des service susceptible de plaire à une clientèle, tandis que le
-        Deep Learning est plutôt utilisé pour identifier les dangers en termes de sécurité d’un
-        système informatique, pour créer des chatbots, pour la reconnaissance faciale et
-        notamment par l’entreprise Tesla dans le développement de véhicules autonomes
-        capables de détecter les dangers sur une route et d’appliquer le code de la route.
-    </p>
-    <p>
-        Une menace pour les développeurs ?
-    </p>
-    <p>
-        On peut penser a priori que l’IA constitue un danger pour les développeurs comme pour
-        d’autres métiers, qui disparaîtront à terme du marché du travail et seront remplacés par
-        cette nouvelle technologie. Pourtant, bien que cette vérité constitue le malheureux destin
-        de certains métiers qui ne requièrent pas ou peu de compétences, ce n’est pas le cas pour
-        les développeurs car l’IA ne les concurrence pas véritablement.
-    </p>
-    <p>
-        Elle vient néanmoins enrichir la palette d’outils du développeur en lui permettant une
-        meilleure productivité : celui-ci gagne du temps sur les tâches à relative faible valeur
-        ajoutée et se concentre sur les tâches plus complexes. Cela permet effectivement de
-        réduire les besoins en ressources sur certains segments de production, comme les
-        développements simples et sans réels besoins de management ou de gestion de projet.
-        Pour expliciter, là où sans IA on aurait besoin de trois développeurs pour rédiger du code
-        à la chaine, aujourd’hui un seul est suffisant. Selon une étude, 44 % des développeurs
-        intègrent l’IA dans leurs processus de développement et 26 % prévoient de l’adopter
-        prochainement.
-    </p>
-    <p>
-        Les développeurs vont devoir s’adapter à l’IA en se formant continuellement pour obtenir
-        de nouvelles compétences toujours plus spécifiques au risque de devenir obsolète sur le
-        marché du travail car moins efficace qu’une IA.
-    </p>
-    <p>
-        Définitions
-    </p>
-    <p>
-        *Neurobiologie computationnelle : champ de recherche des neurosciences s’appliquant à
-        découvrir les principes computationnels (qui utilise les concepts fondamentaux de
-        l’informatique dans la recherche et la démarche scientifique) des fonctions cérébrales et
-        de l'activité neuronale.
-        *Vecteur : liste ordonnée de nombres
-    </p>
-    <p>
-        Références
-    </p>
-    <p>
-        - Le Figaro - Microsoft investit plusieurs milliards de dollars supplémentaires dans le
-        créateur de ChatGPT
-        - Le Monde Informatique - Microsoft investit 10 milliards de dollars dans OpenAI
-        - Conseil de l'Europe - L'IA, c'est quoi ?
-        - Wikitionary - Computationnel
-        - Futura Sciences - Intelligence artificielle : qu'est-ce que c'est ?
-        - Wikipédia - Test de Turing
-        - Microsoft - Intelligence artificielle : tout ce qu’il faut savoir
-        - pandIA - Qu'est-ce qu'un Vecteur (Vector) dans l'Intelligence Artificielle (IA) ?
-        - DataScientest - Machine Learning vs Deep Learning : Quelles différences ?
-        - Ionos - Quelles sont les différences entre le Deep learning et le Machine learning ?
-        - Microsoft - Machine learning et deep learning : quelles différences ?
-        - Microsoft - Apprentissage supervisé et non supervisé : quelles différences ?
-        - Tesla - IA et robotique
-        - Les Numériques - L'intelligence artificielle menace-t-elle les développeurs ?
-        - Alliancy - Quelles compétences l’IA va « prendre » aux développeurs ?
-        - Blog du Modérateur - Étude : comment les développeurs perçoivent les outils IA
-    </p>
-</body>
+<body onload="svgAnimations()">
+    <header id="header">
+        <a href="../index.html#home" id="logo" class="logo">jb</a>
+        <div class="laptop-navbar">
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about" class="element">À propos</a></li>
+                    <li><a href="../index.html#skills-and-projects" class="element">Projets</a></li>
+                    <li><a href="../index.html#technology-watch" class="element">Veille</a></li>
+                    <li><a href="../index.html#contact" class="element">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-navbar">
+            <nav onclick="showMobileNavbar()">
+                <button class="hamburger" onclick="openNavbar()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </button>
+                <ul>
+                    <li><a href="../index.html#about">À propos</a></li>
+                    <li><a href="../index.html#skills-and-projects">Projets</a></li>
+                    <li><a href="../index.html#technology-watch">Veille</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="article">
+            <div class="article-container">
+                <h2>
+                    IA vs. Développeurs : la fin ?
+                </h2>
+                <p>
+                    Depuis quelque temps, maintenant, l’intelligence artificielle ou « IA », présentée comme le
+                    futur de la technologie, attire les regards de plus en plus de personnes. En 2019,
+                    l’entreprise Microsoft a annoncé un plan d’investissement de plusieurs milliards de dollars
+                    dans la société OpenAI, qui est à l’origine du célèbre robot conversationnel ChatGPT, pour
+                    d’une part, accélérer la recherche en intelligence artificielle, et d’autre part, concurrencer
+                    Google en intégrant les inventions d’OpenAI plus facilement dans ses propres
+                    technologies tel que le moteur de recherche Bing.
+                </p>
+                <h4>
+                    Qu’est-ce que l’IA ?
+                </h4>
+                <p>
+                    L’intelligence artificielle peut être définie comme « l’ensemble de théories et de techniques
+                    mises en œuvre en vue de réaliser des machines capables de simuler l’intelligence », selon
+                    le Larousse.
+                </p>
+                <p>
+                    Au début des années 1950, Alain Turing, professeur de mathématiques à l’Université de
+                    Cambridge notamment célèbre pour avoir mis au point un ordinateur capable de
+                    décrypter les messages provenant des nazis lors de la Seconde Guerre mondiale, se
+                    demande si une machine est capable de penser. Il suggère alors un test dans lequel un
+                    ordinateur parvient à se faire passer pour un humain lors d’une conversation : c’est le Test
+                    de Turing.
+                </p>
+                <p>
+                    L’IA est donc une discipline nouvelle réunissant plusieurs sciences telles que la logique
+                    mathématique, les statistiques et les probabilités, l’informatique et la neurobiologie
+                    computationnelle*. Le but est de réussir, à travers une machine, à imiter les capacités
+                    cognitives d’un humain, autrement dit à répondre comme un humain, et peut-être même
+                    réfléchir comme un humain.
+                </p>
+                <p>
+                    Il existe plusieurs types d’IA, à savoir l’IA forte, l’IA faible, l’IA symboliste et l’IA
+                    connexionniste.
+                </p>
+                <p>
+                    L’IA faible est conçue pour accomplir une tâche spécifique. Elle est dite faible parce que
+                    limitée à une fonction précise (ex. système de reconnaissance vocale). En revanche, l’IA
+                    forte est capable de comprendre, d’apprendre, d’appliquer son apprentissage à diverses
+                    tâches tel un être humain et de résoudre des problèmes généraux sans être
+                    spécifiquement programmée pour chacun.
+                </p>
+                <p>
+                    Sur la base de règles claires inscrites dans le code par les programmeurs, l’IA symbolique
+                    ou classique est capable de résoudre des problèmes comme les jeux d’échecs, mais a du
+                    mal à apprendre de nouvelles tâches sans programmation préalable. L’IA connexionniste
+                    se base plutôt sur des réseaux de neurones artificiels pour apprendre à accomplir des
+                    tâches. Elle se rapproche du fonctionnement du cerveau humain, avec des neurones et des
+                    synapses qui s’adaptent en fonction des données d’entrée. On parle alors de Machine
+                    Learning et de Deep Learning.
+                </p>
+                <h4>
+                    Qu’est-ce que le Machine Learning et le Deep Learning ?
+                </h4>
+                <p>
+                    Avec l’arrivée du big data, de l’IoT, de l’industrie 4.0 et du cloud, nous sommes désormais capables d’accéder à
+                    un volume important de données et d’accélérer le calcul des algorithmes d’apprentissage, qui permettent à une IA
+                    de fonctionner. Le Machine learning (apprentissage automatique) et le Deep learning (apprentissage profond) sont
+                    les deux concepts les plus importants qui rendent l’intelligence artificielle possible. Elles ont besoin de
+                    disposer d’une importante quantité de données pour apprendre.
+                </p>
+                <p>
+                    En 1959, Arthur Samuel définit le Machine Learning comme un « champ d’étude qui donne
+                    aux ordinateurs la capacité d’apprendre sans être explicitement programmés à
+                    apprendre ».
+                </p>
+                <p>
+                    Avec une base de données accessible, les algorithmes du Machine Learning sont capables
+                    d’apprendre par eux-mêmes, sans intervention humaine ou reprogrammation logicielle,
+                    de s’améliorer progressivement et de façon autonome et de dépasser ainsi les fonctions et
+                    les capacités initialement programmées. En classant les données représentées sous forme
+                    de vecteurs* (ex. [3, 4, 5] dans un espace à trois dimensions) et en élaborant des modèles
+                    mathématiques qui peuvent être appliqués à de nouvelles données, les algorithmes sont
+                    capables de réaliser des prédictions. Ces algorithmes peuvent être supervisés ou non
+                    supervisés selon si les données sont déjà étiquetées ou nécessitent de l’être.
+                </p>
+                <p>
+                    Tandis qu’à l’aide d’un réseau de neurones artificiels imitant le fonctionnement du cerveau
+                    humain, les algorithmes du Deep Learning créent une sorte de machine virtuelle
+                    composée de milliers d’unités, chacune chargée de petits calculs simples, leur permettant
+                    d’automatiser des tâches ou d’accomplir d’autres plus complexes. Elle dépasse même la
+                    parité humaine dans certains domaines.
+                </p>
+                <h4>
+                    Mais quelles différences entre les deux ?
+                </h4>
+                <p>
+                    Lors de son apprentissage, le Machine Learning requiert les retours du développeur pour
+                    pouvoir s’améliorer de façon autonome. Par exemple, en analysant des données
+                    structurées provenant d’images d’échographies de seins dont certaines sont atteintes d’un
+                    cancer et grâce à des procédés issus des statistiques et des probabilités, l’algorithme est
+                    capable de proposer un diagnostic avec un taux d’erreur plus ou moins important au
+                    début, qui nécessite une correction humaine. Ce taux d’erreur diminue à force
+                    d’entraînement, car l’algorithme peut comprendre comment mieux classer d’autres
+                    données similaires, leur attribuer des valeurs et donc proposer de meilleurs diagnostics.
+                </p>
+                <p>
+                    Bien que le Deep Learning soit plus autonome que le Machine Learning, ce premier est
+                    très gourmand en données. En fonctionnant par bio-mimétisme, les algorithmes sont
+                    capables de reproduire le mécanisme des réseaux de neurones. Par exemple, pour la
+                    reconnaissance faciale, l’algorithme apprend d’abord à détecter et reconnaître les
+                    bordures et lignes d’un visage, puis apprend les parties les plus importantes de celui-ci et
+                    en fait une représentation générale. L’entraînement nécessite parfois plusieurs semaines à
+                    cause du volume important de données non structurées, de paramètres et de formules
+                    mathématiques à prendre en compte, à l’inverse du Machine Learning dont l’entraînement
+                    peut se faire en quelques secondes seulement. La probabilité de réussite sera néanmoins
+                    différente au final.
+                </p>
+                <p>
+                    Enfin, le Machine Learning tend à séparer les données en plusieurs parties lors de l’analyse
+                    et les combine ensuite pour proposer un résultat, contrairement au Deep Learning qui
+                    considère un problème dans son entièreté.
+                </p>
+                <p>
+                    Ayant un fonctionnement différent, ils ont donc des champs d’application différents : le
+                    Machine Learning est utilisé pour prédire la météo, le cours des actions sur un marché
+                    financier, identifier les spams dans une boîte mail, concevoir des traitements personnalisés
+                    pour les malades, proposer des service susceptible de plaire à une clientèle, tandis que le
+                    Deep Learning est plutôt utilisé pour identifier les dangers en termes de sécurité d’un
+                    système informatique, pour créer des chatbots, pour la reconnaissance faciale et
+                    notamment par l’entreprise Tesla dans le développement de véhicules autonomes
+                    capables de détecter les dangers sur une route et d’appliquer le code de la route.
+                </p>
+                <h4>
+                    Une menace pour les développeurs ?
+                </h4>
+                <p>
+                    On peut penser a priori que l’IA constitue un danger pour les développeurs comme pour
+                    d’autres métiers, qui disparaîtront à terme du marché du travail et seront remplacés par
+                    cette nouvelle technologie. Pourtant, bien que cette vérité constitue le malheureux destin
+                    de certains métiers qui ne requièrent pas ou peu de compétences, ce n’est pas le cas pour
+                    les développeurs car l’IA ne les concurrence pas véritablement.
+                </p>
+                <p>
+                    Elle vient néanmoins enrichir la palette d’outils du développeur en lui permettant une
+                    meilleure productivité : celui-ci gagne du temps sur les tâches à relative faible valeur
+                    ajoutée et se concentre sur les tâches plus complexes. Cela permet effectivement de
+                    réduire les besoins en ressources sur certains segments de production, comme les
+                    développements simples et sans réels besoins de management ou de gestion de projet.
+                    Pour expliciter, là où sans IA on aurait besoin de trois développeurs pour rédiger du code
+                    à la chaine, aujourd’hui un seul est suffisant. Selon une étude, 44 % des développeurs
+                    intègrent l’IA dans leurs processus de développement et 26 % prévoient de l’adopter
+                    prochainement.
+                </p>
+                <p>
+                    Les développeurs vont devoir s’adapter à l’IA en se formant continuellement pour obtenir
+                    de nouvelles compétences toujours plus spécifiques au risque de devenir obsolète sur le
+                    marché du travail car moins efficace qu’une IA.
+                </p>
+                <h3>
+                    Définitions
+                </h3>
+                <p>
+                    *Neurobiologie computationnelle : champ de recherche des neurosciences s’appliquant à
+                    découvrir les principes computationnels (qui utilise les concepts fondamentaux de
+                    l’informatique dans la recherche et la démarche scientifique) des fonctions cérébrales et
+                    de l'activité neuronale.
+                    *Vecteur : liste ordonnée de nombres
+                </p>
+                <h3>
+                    Références
+                </h3>
+                <p>
+                    - Le Figaro - Microsoft investit plusieurs milliards de dollars supplémentaires dans le
+                    créateur de ChatGPT<br>
+                    - Le Monde Informatique - Microsoft investit 10 milliards de dollars dans OpenAI<br>
+                    - Conseil de l'Europe - L'IA, c'est quoi ?<br>
+                    - Wikitionary - Computationnel<br>
+                    - Futura Sciences - Intelligence artificielle : qu'est-ce que c'est ?<br>
+                    - Wikipédia - Test de Turing<br>
+                    - Microsoft - Intelligence artificielle : tout ce qu’il faut savoir<br>
+                    - pandIA - Qu'est-ce qu'un Vecteur (Vector) dans l'Intelligence Artificielle (IA) ?<br>
+                    - DataScientest - Machine Learning vs Deep Learning : Quelles différences ?<br>
+                    - Ionos - Quelles sont les différences entre le Deep learning et le Machine learning ?<br>
+                    - Microsoft - Machine learning et deep learning : quelles différences ?<br>
+                    - Microsoft - Apprentissage supervisé et non supervisé : quelles différences ?<br>
+                    - Tesla - IA et robotique<br>
+                    - Les Numériques - L'intelligence artificielle menace-t-elle les développeurs ?<br>
+                    - Alliancy - Quelles compétences l’IA va « prendre » aux développeurs ?<br>
+                    - Blog du Modérateur - Étude : comment les développeurs perçoivent les outils IA<br>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="copyright">
+            <p>© 2023 J. BAYON</p>
+        </div>
+        <div class="footer-links">
+            <button class="footer-link-2">
+                <a href="https://www.linkedin.com/in/jeremiebayon/" target="_blank">
+                    <div id="linkedin-logo-animation-article-footer-container"></div>
+                </a>
+            </button>
+            <button class="footer-link-3">
+                <a href="https://github.com/Akkyaane" target="_blank">
+                    <div id="github-logo-animation-article-footer-container"></div>
+                </a>
+            </button>
+        </div>
+    </footer>
+    </body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    </body>
 
 </html>
+
+<body>
