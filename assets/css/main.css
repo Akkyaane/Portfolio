@@ -630,11 +630,6 @@ header {
       width: 100%;
 }
 
-.letter {
-      color: #00a7e1;
-      font-weight: 900;
-}
-
 .article {
       display: flex;
       justify-content: start;
@@ -816,7 +811,7 @@ footer {
             font-size: 2rem;
       }
 
-      y .about-content p {
+      .about-content p {
             font-size: 1.15rem;
             line-height: 2.15rem;
       }
@@ -877,10 +872,6 @@ footer {
 
       .technology-watch-container .details {
             font-size: 1.05rem;
-      }
-
-      .technology-watch-container .letter {
-            font-size: 1.75rem;
       }
 
       .technology-watch-container a {
@@ -1064,10 +1055,6 @@ footer {
 
       .technology-watch-container .details {
             font-size: 1.05rem;
-      }
-
-      .technology-watch-container .letter {
-            font-size: 2rem;
       }
 
       .technology-watch-container a {
@@ -1261,10 +1248,6 @@ footer {
             font-size: 1.05rem;
       }
 
-      .technology-watch-container .letter {
-            font-size: 2rem;
-      }
-
       .technology-watch-container a {
             font-size: 1.15rem;
             position: relative;
@@ -1456,10 +1439,6 @@ footer {
             font-size: 1.15rem;
       }
 
-      .technology-watch-container .letter {
-            font-size: 2.5rem;
-      }
-
       .technology-watch-container a {
             font-size: 1.25rem;
             position: relative;
@@ -1649,10 +1628,6 @@ footer {
 
       .technology-watch-container .details {
             font-size: 1.25rem;
-      }
-
-      .technology-watch-container .letter {
-            font-size: 3rem;
       }
 
       .technology-watch-container a {
