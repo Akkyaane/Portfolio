@@ -25,7 +25,7 @@ body {
 *:after {
       -webkit-tap-highlight-color: transparent !important;
       box-sizing: border-box;
-      color: #000000;
+      color: #00072d;
       font-family: "Quicksand", Arial, Helvetica, sans-serif;
       font-size: 1rem;
       list-style: none;
@@ -102,25 +102,29 @@ header {
       width: 100%;
 }
 
+.element.active:after {
+      width: 100%;
+}
+
 .scrolled {
       background-color: #ffffff;
       transition: all .3s ease-in-out;
 }
 
 .scrolled .logo {
-      color: #000000;
+      color: #00072d;
 }
 
 .scrolled .element {
-      color: #000000;
+      color: #00072d;
 }
 
 .scrolled .element:hover {
-      color: #000000;
+      color: #00072d;
 }
 
 .scrolled .element:after {
-      background-color: #000000;
+      background-color: #00072d;
 }
 
 .hamburger,
@@ -149,7 +153,7 @@ header {
 }
 
 .scrolled .bar {
-      background: #000000;
+      background: #00072d;
 }
 
 #bar2 {
@@ -161,7 +165,7 @@ header {
 }
 
 .hamburger.open #bar1 {
-      background-color: #000000;
+      background-color: #00072d;
       border-radius: 2px;
       transform: rotate(45deg) translate(6px, 5px);
 }
@@ -172,7 +176,7 @@ header {
 }
 
 .hamburger.open #bar3 {
-      background-color: #000000;
+      background-color: #00072d;
       border-radius: 2px;
       transform: rotate(-45deg) translate(6px, -5px);
 }
@@ -203,7 +207,7 @@ header {
 }
 
 .mobile-navbar nav ul li {
-      border-bottom: 2px solid #000000;
+      border-bottom: 2px solid #00072d;
       padding: 1.5rem 0;
       text-align: center;
       text-transform: uppercase;
@@ -315,7 +319,7 @@ header {
 /* Home */
 .home {
       align-items: center;
-      background: url(../content/images/video.gif);
+      background: url(../content/images/video.webp);
       background-position: left;
       background-size: cover;
       display: flex;
@@ -323,7 +327,7 @@ header {
 }
 
 .home-container {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.25));
+      background: linear-gradient(to bottom, rgba(0, 7, 45, 0.5), rgba(0, 7, 45, 0.25));
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -334,8 +338,6 @@ header {
 .home-container h1 {
       color: #ffffff;
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
-      text-shadow:
-            2.5px 0px 0px #000000;
 }
 
 .home-carousel-wrapper {
@@ -349,8 +351,6 @@ header {
 .home-carousel-wrapper p {
       color: #ffffff;
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
-      text-shadow:
-            5px 0px 0px #000000;
 }
 
 .home-carousel-wrapper span {
@@ -358,8 +358,6 @@ header {
       color: #ffffff;
       display: block;
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
-      text-shadow:
-            5px 0px 0px #000000;
 }
 
 @keyframes spin_words {
@@ -490,13 +488,6 @@ header {
       justify-content: center;
 }
 
-.skills-container {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-}
-
 .skills-title h2 {
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
       text-align: center;
@@ -521,7 +512,7 @@ header {
 
 .skills-slider::before,
 .skills-slider::after {
-      background: linear-gradient(to right, #ffffff 0%, #00000000 100%);
+      background: linear-gradient(to right, #ffffff 0%, #00072d00 100%);
       bottom: 0;
       content: "";
       display: flex;
@@ -577,6 +568,17 @@ header {
       color: #ffffff;
       font-family: "Cocogoose", Arial, Helvetica, sans-serif;
       text-align: center;
+}
+
+.card span {
+      color: #ffffff;
+      font-weight: 900;
+      text-align: center;
+}
+
+.card h3,
+.card span {
+      font-size: 2rem;
 }
 
 .card p {
@@ -686,29 +688,29 @@ header {
 }
 
 .contact-item input {
-      background: rgba(0, 0, 0, 0.2);
+      background: #ffffff;
       border: 2px solid #ffffff;
       border-radius: 5px;
-      color: #ffffff;
       width: 100%;
 }
 
 .contact-item input::placeholder,
 .contact-textarea-container textarea::placeholder {
-      color: #ffffff;
+      color: #00072d;
+      font-weight: 500;
 }
 
 .contact-textarea-container textarea {
-      background: rgba(0, 0, 0, 0.2);
+      background: #ffffff;
       border: 2px solid #ffffff;
       border-radius: 5px;
-      color: #ffffff;
       width: 100%;
 }
 
 .contact-item input:focus,
 .contact-textarea-container textarea:focus {
-      outline: 2px solid #ffffff !important;
+      background-color: #f4fcff;
+      font-weight: 500;
 }
 
 .submit {
@@ -720,8 +722,8 @@ header {
 }
 
 .submit:hover {
-      background-color: #edf8fe;
-      border-color: #edf8fe;
+      background-color: #f4fcff;
+      border-color: #f4fcff;
 }
 
 /* Footer */
@@ -792,7 +794,7 @@ footer {
 
       #linkedin-logo-animation-home-container {
             height: 35px;
-            margin-left: 4.5px;
+            margin-left: 4px;
             width: 45px;
       }
 
@@ -829,8 +831,7 @@ footer {
 
       /* Skills and projects */
       .skills-container {
-            height: 30svh;
-            padding: 0 1rem;
+            padding: 2rem 1rem;
       }
 
       .skills-title h2 {
@@ -838,6 +839,7 @@ footer {
       }
 
       .skills-slider {
+            padding-top: 2rem;
             width: 300px;
       }
 
@@ -857,10 +859,6 @@ footer {
 
       .projects-cards {
             grid-template-columns: repeat(1, 1fr);
-      }
-
-      .card h3 {
-            font-size: 2rem;
       }
 
       /* Technology Watch */
@@ -921,13 +919,13 @@ footer {
       }
 
       #linkedin-logo-animation-footer-container {
-            height: 30px;
-            width: 40px;
+            height: 35px;
+            width: 45px;
       }
 
       #github-logo-animation-footer-container {
-            height: 40px;
-            width: 40px;
+            height: 45px;
+            width: 45px;
       }
 
       .copyright p {
@@ -980,7 +978,7 @@ footer {
 
       #linkedin-logo-animation-home-container {
             height: 35px;
-            margin-left: 4.5px;
+            margin-left: 4px;
             width: 45px;
       }
 
@@ -1018,7 +1016,8 @@ footer {
 
       /* Skills and projects */
       .skills-container {
-            height: 25svh;
+            padding-bottom: 2.5rem;
+            padding-top: 2rem;
       }
 
       .skills-title h2 {
@@ -1026,6 +1025,7 @@ footer {
       }
 
       .skills-slider {
+            padding-top: 2.5rem;
             width: 600px;
       }
 
@@ -1045,10 +1045,6 @@ footer {
 
       .projects-cards {
             grid-template-columns: repeat(2, 1fr);
-      }
-
-      .card h3 {
-            font-size: 2rem;
       }
 
       /* Technology Watch */
@@ -1169,7 +1165,7 @@ footer {
 
       #linkedin-logo-animation-home-container {
             height: 35px;
-            margin-left: 4.5px;
+            margin-left: 4px;
             width: 45px;
       }
 
@@ -1185,6 +1181,10 @@ footer {
       }
 
       .about img {
+            border-bottom: 1px solid #eeeeee;
+            border-left: 1px solid #eeeeee;
+            border-radius: 100%;
+            border-top: 1px solid #eeeeee;
             display: flex;
             height: 200px;
             margin-left: -200px;
@@ -1192,13 +1192,7 @@ footer {
       }
 
       .about-title h2 {
-            background-color: #00a7e1;
-            border: 2px solid #ffffff;
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            color: #ffffff;
             font-size: 2rem;
-            padding: 0.25rem 1.25rem;
       }
 
       .about-content p {
@@ -1217,7 +1211,8 @@ footer {
 
       /* Skills and projects */
       .skills-container {
-            height: 40svh;
+            padding-bottom: 2.5rem;
+            padding-top: 2rem;
       }
 
       .skills-title h2 {
@@ -1225,6 +1220,7 @@ footer {
       }
 
       .skills-slider {
+            padding-top: 2.5rem;
             width: 600px;
       }
 
@@ -1244,10 +1240,6 @@ footer {
 
       .projects-cards {
             grid-template-columns: repeat(2, 1fr);
-      }
-
-      .card h3 {
-            font-size: 2rem;
       }
 
       /* Technology Watch */
@@ -1368,6 +1360,7 @@ footer {
 
       #linkedin-logo-animation-home-container {
             height: 40px;
+            margin-left: 4.5px;
             width: 50px;
       }
 
@@ -1383,6 +1376,10 @@ footer {
       }
 
       .about img {
+            border-bottom: 1px solid #eeeeee;
+            border-left: 1px solid #eeeeee;
+            border-radius: 100%;
+            border-top: 1px solid #eeeeee;
             display: flex;
             height: 225px;
             margin-left: -225px;
@@ -1390,13 +1387,7 @@ footer {
       }
 
       .about-title h2 {
-            background-color: #00a7e1;
-            border: 2px solid #ffffff;
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            color: #ffffff;
             font-size: 2.5rem;
-            padding: 0.5rem 1.5rem;
       }
 
       .about-content p {
@@ -1414,15 +1405,17 @@ footer {
       }
 
       /* Skills and projects */
-      .skills-container {
-            height: 35svh;
-      }
-
       .skills-title h2 {
             font-size: 2.5rem;
       }
 
+      .skills-container {
+            padding-bottom: 3rem;
+            padding-top: 2rem;
+      }
+
       .skills-slider {
+            padding-top: 3rem;
             width: 700px;
       }
 
@@ -1442,10 +1435,6 @@ footer {
 
       .projects-cards {
             grid-template-columns: repeat(3, 1fr);
-      }
-
-      .card h3 {
-            font-size: 2rem;
       }
 
       /* Technology Watch */
@@ -1566,6 +1555,7 @@ footer {
 
       #linkedin-logo-animation-home-container {
             height: 40px;
+            margin-left: 4.5px;
             width: 50px;
       }
 
@@ -1581,6 +1571,10 @@ footer {
       }
 
       .about img {
+            border-bottom: 1px solid #eeeeee;
+            border-left: 1px solid #eeeeee;
+            border-radius: 100%;
+            border-top: 1px solid #eeeeee;
             display: flex;
             height: 300px;
             margin-left: -300px;
@@ -1588,13 +1582,7 @@ footer {
       }
 
       .about-title h2 {
-            background-color: #00a7e1;
-            border: 2px solid #ffffff;
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            color: #ffffff;
             font-size: 3rem;
-            padding: 0.5rem 1.5rem;
       }
 
       .about-content p {
@@ -1613,7 +1601,8 @@ footer {
 
       /* Skills and projects */
       .skills-container {
-            height: 25svh;
+            padding-bottom: 3rem;
+            padding-top: 2rem;
       }
 
       .skills-title h2 {
@@ -1621,6 +1610,7 @@ footer {
       }
 
       .skills-slider {
+            padding-top: 3rem;
             width: 800px;
       }
 
@@ -1640,10 +1630,6 @@ footer {
 
       .projects-cards {
             grid-template-columns: repeat(3, 1fr);
-      }
-
-      .card h3 {
-            font-size: 2rem;
       }
 
       /* Technology Watch */

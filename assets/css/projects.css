@@ -5,48 +5,38 @@ body {
 
 /* Header */
 header {
-    background-color: #00a7e1;
+    background-color: #00072d;
 }
 
 .hamburger.open #bar1 {
-    background-color: #00a7e1;
+    background-color: #00072d;
 }
 
 .hamburger.open #bar3 {
-    background-color: #00a7e1;
-}
-
-.mobile-navbar nav ul li {
-    border-bottom: 2px solid #00a7e1;
-}
-
-.mobile-navbar nav ul li a {
-    color: #00a7e1;
-    font-size: 2rem;
-    font-weight: 900;
+    background-color: #00072d;
 }
 
 .scrolled .logo {
-    color: #00a7e1;
+    color: #00072d;
 }
 
 .scrolled .element {
-    color: #00a7e1;
+    color: #00072d;
 }
 
 .scrolled .element:hover {
-    color: #00a7e1;
+    color: #00072d;
 }
 
 .scrolled .element:after {
-    background-color: #00a7e1;
+    background-color: #00072d;
 }
 
-/* About Chatbot Tars Project */
 .scrolled .bar {
-    background: #00a7e1;
+    background: #00072d;
 }
 
+/* About */
 .about-chatbot-tars-project {
     align-items: center;
     display: flex;
@@ -60,17 +50,18 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem 0;
 }
 
 .about-chatbot-tars-project-container h2 {
-    color: #00a7e1;
     font-family: "Cocogoose", Arial, Helvetica, sans-serif;
     font-weight: 900;
+    padding: 2rem 0;
     text-align: center;
 }
 
 .about-chatbot-tars-project-container p {
-    padding: 2rem 0;
+    padding-bottom: 1.5rem;
 }
 
 .about-chatbot-tars-project-container a {
@@ -81,25 +72,12 @@ header {
 .inavailable {
     align-items: center;
     display: flex;
-    height: 100svh;
-    width: 100svw;
     justify-content: center;
 }
 
 .inavailable h2 {
-    font-size: 2rem;
-    color: #00a7e1;
+    font-size: 1.5rem;
     text-align: center;
-    padding: 2rem;
-}
-
-/* Footer */
-footer {
-    background-color: #00a7e1;
-}
-
-.copyright p {
-    color: #ffffff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -118,16 +96,6 @@ footer {
 
     .about-chatbot-tars-project-container a {
         font-size: 1.15rem;
-    }
-
-    #linkedin-logo-animation-projects-footer-container {
-        height: 30px;
-        width: 40px;
-    }
-
-    #github-logo-animation-projects-footer-container {
-        height: 40px;
-        width: 40px;
     }
 }
 
@@ -149,16 +117,6 @@ footer {
     .about-chatbot-tars-project-container a {
         font-size: 1.15rem;
     }
-
-    #linkedin-logo-animation-projects-footer-container {
-        height: 30px;
-        width: 40px;
-    }
-
-    #github-logo-animation-projects-footer-container {
-        height: 40px;
-        width: 40px;
-    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -178,16 +136,6 @@ footer {
 
     .about-chatbot-tars-project-container a {
         font-size: 1.15rem;
-    }
-
-    #linkedin-logo-animation-projects-footer-container {
-        height: 30px;
-        width: 40px;
-    }
-
-    #github-logo-animation-projects-footer-container {
-        height: 40px;
-        width: 40px;
     }
 }
 
@@ -209,16 +157,6 @@ footer {
     .about-chatbot-tars-project-container a {
         font-size: 1.25rem;
     }
-
-    #linkedin-logo-animation-projects-footer-container {
-        height: 40px;
-        width: 50px;
-    }
-
-    #github-logo-animation-projects-footer-container {
-        height: 50px;
-        width: 50px;
-    }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -238,15 +176,5 @@ footer {
 
     .about-chatbot-tars-project-container a {
         font-size: 1.5rem;
-    }
-
-    #linkedin-logo-animation-projects-footer-container {
-        height: 40px;
-        width: 50px;
-    }
-
-    #github-logo-animation-projects-footer-container {
-        height: 50px;
-        width: 50px;
     }
 }

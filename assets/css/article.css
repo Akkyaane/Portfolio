@@ -5,55 +5,44 @@ body {
 
 /* Header */
 header {
-    background-color: #00a7e1;
+    background-color: #00072d;
 }
 
 .hamburger.open #bar1 {
-    background-color: #00a7e1;
+    background-color: #00072d;
 }
 
 .hamburger.open #bar3 {
-    background-color: #00a7e1;
+    background-color: #00072d;
 }
-
-.mobile-navbar nav ul li {
-    border-bottom: 2px solid #00a7e1;
-}
-
-.mobile-navbar nav ul li a {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #00a7e1;
-}
-
 
 .scrolled .logo {
-    color: #00a7e1;
+    color: #00072d;
 }
 
 .scrolled .element {
-    color: #00a7e1;
+    color: #00072d;
 }
 
 .scrolled .element:hover {
-    color: #00a7e1;
+    color: #00072d;
 }
 
 .scrolled .element:after {
-    background-color: #00a7e1;
+    background-color: #00072d;
 }
 
-/* About Chatbot Tars Project */
 .scrolled .bar {
-    background: #00a7e1;
+    background: #00072d;
 }
 
+/* About */
 .article {
     align-items: center;
     display: flex;
     height: auto;
     justify-content: center;
-    padding-top: 5rem;
+    padding-top: 3.5rem;
 }
 
 .article-container {
@@ -61,28 +50,31 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 2rem 0;
 }
 
 .article-container h2 {
     font-family: "Cocogoose", Arial, Helvetica, sans-serif;
     font-weight: 900;
+    padding: 2rem 0;
     text-align: center;
-    color: #00a7e1;
 }
 
 .article-container h3 {
-    font-weight: 500;
     font-family: "Cocogoose", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 2rem 0;
 }
 
 .article-container h4 {
     font-weight: 900;
+    padding: 2rem 0;
     text-align: center;
     text-decoration: underline;
 }
 
 .article-container p {
-    padding: 2rem 0;
+    padding-bottom: 1.5rem;
 }
 
 .article-container a {
@@ -91,14 +83,6 @@ header {
 }
 
 /* Footer */
-footer {
-    background-color: #00a7e1;
-}
-
-.copyright p {
-    color: #ffffff;
-}
-
 @media only screen and (max-width: 767px) {
     .article-container {
         padding: 2rem;
@@ -115,16 +99,6 @@ footer {
 
     .article-container a {
         font-size: 1.15rem;
-    }
-
-    #linkedin-logo-animation-article-footer-container {
-        height: 30px;
-        width: 40px;
-    }
-
-    #github-logo-animation-article-footer-container {
-        height: 40px;
-        width: 40px;
     }
 }
 
@@ -154,16 +128,6 @@ footer {
     .article-container a {
         font-size: 1.15rem;
     }
-
-    #linkedin-logo-animation-article-footer-container {
-        height: 30px;
-        width: 40px;
-    }
-
-    #github-logo-animation-article-footer-container {
-        height: 40px;
-        width: 40px;
-    }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -191,16 +155,6 @@ footer {
 
     .article-container a {
         font-size: 1.15rem;
-    }
-
-    #linkedin-logo-animation-article-footer-container {
-        height: 30px;
-        width: 40px;
-    }
-
-    #github-logo-animation-article-footer-container {
-        height: 40px;
-        width: 40px;
     }
 }
 
@@ -230,16 +184,6 @@ footer {
     .article-container a {
         font-size: 1.25rem;
     }
-
-    #linkedin-logo-animation-projects-footer-container {
-        height: 40px;
-        width: 50px;
-    }
-
-    #github-logo-animation-projects-footer-container {
-        height: 50px;
-        width: 50px;
-    }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -267,15 +211,5 @@ footer {
 
     .article-container a {
         font-size: 1.5rem;
-    }
-
-    #linkedin-logo-animation-article-footer-container {
-        height: 40px;
-        width: 50px;
-    }
-
-    #github-logo-animation-article-footer-container {
-        height: 50px;
-        width: 50px;
     }
 }

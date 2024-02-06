@@ -8,7 +8,7 @@
   <title>Portfolio - Jérémie Bayon</title>
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="icon" href="assets/content/images/icon.png" type="icon"/>
+  <link rel="icon" href="assets/content/images/icon.png" type="icon" />
   <script defer src="assets/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 </head>
@@ -19,10 +19,10 @@
     <div class="laptop-navbar">
       <nav>
         <ul>
-          <li><a href="#about" class="element">À propos</a></li>
-          <li><a href="#skills-and-projects" class="element">Projets</a></li>
-          <li><a href="#technology-watch" class="element">Veille</a></li>
-          <li><a href="#contact" class="element">Contact</a></li>
+          <li><a href="#about" class="element" onclick="setActiveLink(this)">À propos</a></li>
+          <li><a href="#skills-and-projects" class="element" onclick="setActiveLink(this)">Projets</a></li>
+          <li><a href="#technology-watch" class="element" onclick="setActiveLink(this)">Veille</a></li>
+          <li><a href="#contact" class="element" onclick="setActiveLink(this)">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -88,12 +88,13 @@
             Maestris BTS (Campus Sciences-U Lyon), je prépare
             actuellement un
             <span><a
-                href="https://www.onisep.fr/ressources/univers-formation/formations/Post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers" target="_blank">BTS
-                SIO</a> (Option SLAM)</span>
+                href="https://www.onisep.fr/ressources/univers-formation/formations/Post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers"
+                target="_blank">BTS
+                SIO</a> </span> (Option SLAM)
             depuis septembre 2022. Au cours de cette formation, j'ai eu
             l'opportunité de mettre en pratique mes connaissances et mes
             compétences en développement web, en réalisant deux stages chez
-            Kozea Group en tant que développeur back-end, durant
+            Kozea group en tant que développeur back-end, durant
             lesquels j'ai travaillé sur des projets impliquant l'intelligence
             artificielle.
           </p>
@@ -101,8 +102,9 @@
           <p>
             En amont du BTS, j'ai eu la possibilité de préparer une
             <span><a
-                href="https://www.onisep.fr/formation/les-principaux-domaines-de-formation/les-licences-de-lettres-et-de-langues/la-licence-lea" target="_blank">Licence
-                LÉA</a> (Anglais et Russe)</span>
+                href="https://www.onisep.fr/formation/les-principaux-domaines-de-formation/les-licences-de-lettres-et-de-langues/la-licence-lea"
+                target="_blank">Licence
+                LÉA</a></span> (Anglais et Russe)
             à l'Université Jean Moulin - Lyon 3 pendant quatre ans, que j'ai
             obtenue en juin 2022.
           </p>
@@ -112,7 +114,7 @@
             intégrant un Bachelor
             puis un
             Mastère en Ingénierie du Web à
-            l'ESGI, dans le cadre de mon projet professionnel de
+            l'ESGI, dans le cadre de
             devenir développeur full-stack. Pour en savoir plus,
             n'hésitez pas à consulter mon
             <a href="assets/content/files/curriculum-vitae-fr.pdf" target="_blank">CV</a>.
@@ -131,7 +133,6 @@
             <img src="assets/content/images/html-logo.png" alt="Logo HTML" />
             <img src="assets/content/images/css-logo.png" alt="Logo CSS" />
             <img src="assets/content/images/js-logo.png" alt="Logo JS" />
-            <img src="assets/content/images/react-logo.png" alt="Logo React" />
             <img src="assets/content/images/flask-logo.png" alt="Logo Flask" />
             <img src="assets/content/images/bootstrap-logo.png" alt="Logo Bootstrap" />
             <img src="assets/content/images/python-logo.png" alt="Logo Python" />
@@ -149,7 +150,6 @@
             <img src="assets/content/images/html-logo.png" alt="Logo HTML" />
             <img src="assets/content/images/css-logo.png" alt="Logo CSS" />
             <img src="assets/content/images/js-logo.png" alt="Logo JS" />
-            <img src="assets/content/images/react-logo.png" alt="Logo React" />
             <img src="assets/content/images/flask-logo.png" alt="Logo Flask" />
             <img src="assets/content/images/bootstrap-logo.png" alt="Logo Bootstrap" />
             <img src="assets/content/images/python-logo.png" alt="Logo Python" />
@@ -169,14 +169,14 @@
         <div class="projects-cards">
           <a href="templates/projects/tars-chatbot.html" data-aos="fade-right">
             <div class="card">
-              <h3>TARS</h3>
+              <h3>TARS <span>1</span></h3>
               <p>Chatbot</p>
               <button>En savoir plus</button>
             </div>
           </a>
           <a href="templates/projects/tars-virtual-assistant.html" data-aos="fade-right">
             <div class="card">
-              <h3>TARS</h3>
+              <h3>TARS <span>2</span></h3>
               <p>Assistant virtuel</p>
               <button>En savoir plus</button>
             </div>
@@ -218,7 +218,7 @@
         <h2>Un peu de veille !</h2>
         <p class="details" data-aos="fade-up">Le 11/11/2023, par Jérémie Bayon</p>
         <p data-aos="fade-up">
-          <span class="letter">D</span>epuis quelque temps, maintenant, l’intelligence artificielle ou « IA
+          Depuis quelque temps, maintenant, l’intelligence artificielle ou « IA
           », présentée comme le futur de la technologie, attire les regards de
           plus en plus de personnes. En 2019, l’entreprise Microsoft a annoncé
           un plan d’investissement de plusieurs milliards de dollars dans la
@@ -263,7 +263,7 @@
 
   <footer>
     <div class="copyright">
-        <p>© 2023 J. BAYON</p>
+      <p>© 2023 J. BAYON</p>
     </div>
     <div class="footer-links">
       <button class="footer-link-2">

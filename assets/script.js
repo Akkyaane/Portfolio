@@ -49,7 +49,9 @@ function svgAnimations() {
     });
     const linkedin_logo_animation_2 = bodymovin.loadAnimation({
         container: document.getElementById('linkedin-logo-animation-footer-container'),
-        path: 'assets/content/animations/linkedin-logo-black.json',
+        path: 'assets/content/animations/linkedin-logo-blue.json',
+        path: '../assets/content/animations/linkedin-logo-blue.json',
+        path: '../../assets/content/animations/linkedin-logo-blue.json',
         render: 'svg',
         loop: true,
         autoplay: true,
@@ -57,39 +59,9 @@ function svgAnimations() {
     });
     const github_logo_animation_2 = bodymovin.loadAnimation({
         container: document.getElementById('github-logo-animation-footer-container'),
-        path: 'assets/content/animations/github-logo-black.json',
-        render: 'svg',
-        loop: true,
-        autoplay: true,
-        name: 'Github Logo Animation'
-    });
-    const linkedin_logo_animation_3 = bodymovin.loadAnimation({
-        container: document.getElementById('linkedin-logo-animation-projects-footer-container'),
-        path: '../../assets/content/animations/linkedin-logo-blue.json',
-        render: 'svg',
-        loop: true,
-        autoplay: true,
-        name: 'Linkedin Logo Animation'
-    });
-    const github_logo_animation_3 = bodymovin.loadAnimation({
-        container: document.getElementById('github-logo-animation-projects-footer-container'),
-        path: '../../assets/content/animations/github-logo-white.json',
-        render: 'svg',
-        loop: true,
-        autoplay: true,
-        name: 'Github Logo Animation'
-    });
-    const linkedin_logo_animation_4 = bodymovin.loadAnimation({
-        container: document.getElementById('linkedin-logo-animation-article-footer-container'),
-        path: '../assets/content/animations/linkedin-logo-blue.json',
-        render: 'svg',
-        loop: true,
-        autoplay: true,
-        name: 'Linkedin Logo Animation'
-    });
-    const github_logo_animation_4 = bodymovin.loadAnimation({
-        container: document.getElementById('github-logo-animation-article-footer-container'),
-        path: '../assets/content/animations/github-logo-white.json',
+        path: 'assets/content/animations/github-logo-blue.json',
+        path: '../assets/content/animations/github-logo-blue.json',
+        path: '../../assets/content/animations/github-logo-blue.json',
         render: 'svg',
         loop: true,
         autoplay: true,
@@ -111,5 +83,18 @@ document.addEventListener("DOMContentLoaded", function () {
         document.documentElement.style.overflow = 'visible';
     });
 });
+
+function setActiveLink(link) {
+    var links = document.querySelectorAll('nav a');
+    links.forEach(function (item) {
+        item.classList.remove('active');
+    });
+
+    link.classList.add('active');
+
+    setTimeout(function () {
+        link.classList.remove('active');
+    }, 5000);
+}
 
 changeNavBarStyleOnScroll()
