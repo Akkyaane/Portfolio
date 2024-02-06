@@ -1299,7 +1299,7 @@ footer {
       }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
 
       /* Header */
       .laptop-navbar {
@@ -1490,7 +1490,7 @@ footer {
       }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1500px) {
 
       /* Header */
       .laptop-navbar {
