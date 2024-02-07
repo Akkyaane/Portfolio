@@ -5,10 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio de Jérémie Bayon, étudiant en informatique à Lyon">
-  <title>Portfolio - Jérémie Bayon</title>
+  <title>Jérémie Bayon - Portfolio</title>
+  <script type="application/ld+json">
+    {
+      "name" : "Jérémie Bayon - Portfolio",
+      "url" : "https://jeremiebayon.fr"
+    }
+  </script>
+  <link rel="icon" href="assets/content/images/icon.png" type="icon" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="icon" href="assets/content/images/icon.png" type="icon" />
   <script defer src="assets/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 </head>
@@ -117,7 +123,12 @@
             l'ESGI, dans le cadre de
             devenir développeur full-stack. Pour en savoir plus,
             n'hésitez pas à consulter mon
-            <a href="assets/content/files/curriculum-vitae-fr.pdf" target="_blank">CV</a>.
+            <a href="assets/content/files/curriculum-vitae-fr.pdf" target="_blank" class="curriculum-vitae"> <svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="curriculum-vitae-svg">
+                <path
+                  d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+              </svg>
+              CV</a>.
           </p>
         </div>
       </div>
@@ -128,6 +139,12 @@
         <div class="skills-title">
           <h2>Mes compétences<br>et projets</h2>
         </div>
+        <a href="assets/content/files/tableau-de-synthese.pdf" target="_blank" class="skills-table"> <svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="skills-table-svg">
+            <path
+              d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+          </svg>
+          Tableau des compétences</a>
         <div class="skills-slider">
           <div class="logos">
             <img src="assets/content/images/html-logo.png" alt="Logo HTML" />
@@ -251,8 +268,7 @@
           </div>
           <div class="contact-textarea-container">
             <div class="contact-item">
-              <textarea name="message" id="message" cols="30" rows="5" placeholder="Entrez votre message..."
-                required></textarea>
+              <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
             </div>
           </div>
           <input type="submit" class="submit" value="Envoyer">
@@ -263,7 +279,7 @@
 
   <footer>
     <div class="copyright">
-      <p>© 2023 J. BAYON</p>
+      <p>© 2024 J. BAYON</p>
     </div>
     <div class="footer-links">
       <button class="footer-link-2">
