@@ -36,7 +36,6 @@ header {
     background: #00072d;
 }
 
-/* About */
 .about-chatbot-tars-project {
     align-items: center;
     display: flex;
@@ -56,18 +55,139 @@ header {
 .about-chatbot-tars-project-container h2 {
     font-family: "Cocogoose", Arial, Helvetica, sans-serif;
     font-weight: 900;
-    padding: 2rem 0;
+    padding: 1rem 0;
     text-align: center;
+    position: relative;
+}
+
+.about-chatbot-tars-project-container h2:after {
+    background-color: #00072d;
+    bottom: 15px !important;
+    content: "";
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .about-chatbot-tars-project-container h3 {
+    font-family: "Cocogoose", Arial, Helvetica, sans-serif;
+    padding: 1rem 0;
+    text-align: left;
+    width: 100%;
+    color: #00a7e1;
+    position: relative;
+    z-index: 1;
+}
+
+.about-chatbot-tars-project-container h3::after {
+    content: '';
+    width: 175px;
+    height: 2rem;
+    position: absolute;
+    top: 15px;
+    left: -15px;
+    z-index: -1;
+    background-color:#edf8fe;
+    transform: rotate(-2.5deg);
+    border-radius: 5px;
+}
+
+.chatbot-tars-project-context {
+    padding-bottom: 2rem;
 }
 
 .about-chatbot-tars-project-container p {
     padding-bottom: 1.5rem;
 }
 
-.about-chatbot-tars-project-container a {
-    color: #00a7e1;
+.about-chatbot-tars-project-container span {
     font-weight: 900;
 }
+
+.about-chatbot-tars-project-container a {
+    font-weight: 900;
+}
+
+.about-chatbot-tars-project-container a:hover {
+    color: #00a7e1;
+}
+
+.zoom-in {
+    background-color: #edf8fe;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.carousel {
+    width: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+  .nav {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .nav a {
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #d9cab3; /* Default background color */
+    color: #5e0b15; /* Default text color */
+    display: inline-block;
+    border-radius: 50%; /* Makes the navigation buttons rounded */
+    transition: background-color 0.3s;
+  }
+  /* Make the first navigation button appear active by default */
+  .nav a:first-child {
+    background-color: #5e0b15; /* Highlight color for active slide */
+    color: #d9cab3; /* Change text color for better visibility */
+  }
+  #slide1:target ~ .nav a[href="#slide1"],
+    #slide2:target ~ .nav a[href="#slide2"],
+    #slide3:target ~ .nav a[href="#slide3"],
+    #slide1:target ~ .nav a:first-child /* Override the default active style when slide1 is targeted */ {
+    background-color: #5e0b15; /* Highlight color for active slide */
+    color: #d9cab3; /* Change text color for better visibility */
+  }
+  /* Override the default active style for the first navigation button when other slides are targeted */
+  #slide2:target ~ .nav a:first-child,
+  #slide3:target ~ .nav a:first-child {
+    background-color: #d9cab3; /* Back to default background color */
+    color: #5e0b15; /* Back to default text color */
+  }
+  #slide1:target ~ .slides {
+    transform: translateX(0%);
+  }
+  #slide2:target ~ .slides {
+    transform: translateX(-100%);
+  }
+  #slide3:target ~ .slides {
+    transform: translateX(-200%);
+  }
+  .credit {
+    text-align: center;
+    margin-top: 20px;
+    font-size:11px;
+    color: #5e0b15;
+  }
+  .credit a {color:#5e0b15;}
+
+
+
 
 .inavailable {
     align-items: center;
@@ -139,7 +259,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
     .about-chatbot-tars-project-container {
         padding: 2rem 0;
         width: 700px;
@@ -147,6 +267,15 @@ header {
 
     .about-chatbot-tars-project-container h2 {
         font-size: 2.5rem;
+    }
+
+    .zoom {
+        font-size: 1rem;
+    }
+
+    .background {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
     }
 
     .about-chatbot-tars-project-container p {
@@ -159,7 +288,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1500px) {
     .about-chatbot-tars-project-container {
         padding: 2rem 0;
         width: 800px;
@@ -169,9 +298,18 @@ header {
         font-size: 3rem;
     }
 
+    .about-chatbot-tars-project-container h3 {
+        font-size: 1.5rem;
+    }
+
+
     .about-chatbot-tars-project-container p {
         font-size: 1.5rem;
         line-height: 2.5rem;
+    }
+
+    .about-chatbot-tars-project-container span {
+        font-size: 1.5rem;
     }
 
     .about-chatbot-tars-project-container a {

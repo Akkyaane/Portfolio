@@ -47,87 +47,82 @@
         <section class="about-chatbot-tars-project">
             <div class="about-chatbot-tars-project-container">
                 <h2>Projet TARS</h2>
+                <div class="chatbot-tars-project-context">
+                    <h3>Contexte</h3>
+                    <p>
+                        À l'occasion du premier stage de BTS SIO, qui s'est déroulé du
+                        30 mai 2023 au 28 juillet 2023, j'ai eu l'opportunité de travailler sur le <span>développement
+                            d'un
+                            chatbot nommé TARS</span> au sein de l'entreprise <a href="https://www.kozea.fr/">Kozea
+                            group</a>. Spécialisée dans le milieu
+                        médical, Kozea group accompagne et facilite le travail des professionnels de santé en proposant
+                        des services digitaux. De la
+                        création et la promotion de sites internet incluant différentes
+                        fonctionnalités (envoi d'ordonnances, vente de produits, Click and Collect, prise de
+                        rendez-vous) pour les établissement de santés à la gestion du tiers-payant ou des réseaux
+                        sociaux : tout est pensé pour permettre aux professionnels de santé
+                        de se recentrer sur leur cœur de métier.
+                    </p>
+                    <p class="zoom-in">
+                        Afin d'optimiser le temps et l'efficacité des employés, le chatbot TARS a pour objectif de
+                        rendre plus simple la recherche d'informations concernant l'entreprise et son activité.
+                    </p>
+                </div>
+                <h3>Technologies</h3>
                 <p>
-                    A l'occasion du premier stage de BTS SIO, nécessaire pour valider la formation, qui s'est déroulé du
-                    30 mai
-                    2023
-                    au 28 juillet 2023, j'ai eu l'opportunité de travailler sur le développement d'un chatbot nommé Tars
-                    au sein
-                    de
-                    l'entreprise Kozea Group. L'entreprise, spécialisée dans le milieu médical, a coeur à accompagner et
-                    faciliter
-                    le travail des professionnels de santé et leur permettre de se recentrer sur leur coeur de métier,
-                    en
-                    proposant
-                    de nombreux services digitaux tels que la création et la promotion de sites internet pour les
-                    établissements
-                    de
-                    santé incluant différentes fonctionnalités (envoi d'ordonnances, vente de produits, Click and
-                    Collect, prise
-                    de
-                    rendez-vous), la gestion du tiers-payant et la gestion des réseaux sociaux.
+                    Le projet a nécessité l'utilisation de divers outils de développement : <span
+                        class="background">Python, Flask, Llama Index,
+                        LangChain et Pinecone</span>.
                 </p>
                 <p>
-                    L'objectif du chatbot TARS était de permettre aux employés d'obtenir un gain de temps lors de la
-                    recherche
-                    d'une
-                    information concernant l'entreprise en interrogeant les données à sa disposition.
-                </p>
-                <p>
-                    Le projet a necessité l'utilisation de divers outils de développement : Python, Flask, Llama Index,
-                    Langchain,
-                    Pinecone, etc.
-                </p>
-                <p>
-                    Développé en python, ce stage a été l'occassion pour moi d'apprendre ce langage et de comprendre et
-                    mettre
-                    en
-                    applications les différentes connaissances apprises à l'école (structure du code, créations et
-                    appels de
-                    fonctions, création du jeu du Morpion, création d'un blog, etc.)
+                    Développé en Python, ce stage a été l'occasion pour moi d'apprendre ce langage et de comprendre et
+                    mettre en application les différentes connaissances apprises à l'école (structure du code, créations
+                    et appels de fonctions, création du jeu du Morpion, création d'un blog, etc.).
                 </p>
                 <p>
                     Concernant le rendu visuel du chatbot, j'ai eu la possibilité d'utiliser Flask, un <a
                         href="https://www.vigicorp.fr/qu-est-ce-qu-un-framework/">framework</a> Python, et de découvrir
-                    les
-                    différentes fonctionnalités proposées (html escaping, unique URLs, rendering templates, redirects,
-                    etc.)
+                    les différentes fonctionnalités proposées (HTML escaping, unique URLs, rendering templates,
+                    redirects, etc.).
                 </p>
+                <div id="carousel" class="carousel">
+                    <span id="slide1"></span>
+                    <span id="slide2"></span>
+                    <span id="slide3"></span>
+                    <div class="slides">
+                      <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736877_1280.jpg" alt="Slide 1"></div>
+                      <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_1280.jpg" alt="Slide 2"></div>
+                      <div class="slide"><img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_640.jpg" alt="Slide 3"></div>
+                    </div>
+                    <div class="nav">
+                      <a href="#slide1">1</a>
+                      <a href="#slide2">2</a>
+                      <a href="#slide3">3</a>
+                    </div>
+                </div>
+                <h3>Fonctionnement</h3>
                 <p>
-                    Pour faire fonctionner TARS, il est nécessaire de lier un drive tel que Google Drive ou déposer des
-                    documents
-                    dans la <a href="https://www.cloudflare.com/fr-fr/learning/ai/what-is-vector-database/">base de
+                    Pour faire fonctionner TARS, il est nécessaire de lier un Drive tel que Google Drive ou de déposer
+                    des documents dans la <a
+                        href="https://www.cloudflare.com/fr-fr/learning/ai/what-is-vector-database/">base de
                         données
                         vectorielle</a> Pinecone, qui se charge de construire un index dans lequel elle transforme les
-                    données
-                    en
-                    vecteurs. Cet index est ensuite utilisé pour répondre aux requêtes de l'utilisateur en mesurant la
-                    similarité
-                    entre les éléments grâce à leurs caractéristiques. L'API, construite en Python, se charge ensuite de
-                    récupérer
-                    l'index et de traiter les reqûetes. Via les frameworks d'intelligence artificelle Llama Index et
-                    Langchain,
-                    les
-                    données récupérées sont découpées en nodes, c'est-à-dire des petits morceaux de textes, sur lesquels
-                    le
-                    chatbot,
-                    basé sur la logique de ChatGPT, va utiliser, en plus du prompt (instructions), pour répondre à
-                    l'utilisateur
-                    de
-                    la manière la plus précise et la plus pertinente possible.
+                    données en vecteurs. Cet index est ensuite utilisé pour répondre aux requêtes de l'utilisateur en
+                    mesurant la similarité entre les éléments grâce à leurs caractéristiques. L'API, construite en
+                    Python, se charge ensuite de récupérer l'index et de traiter les requêtes. Via les frameworks
+                    d'intelligence artificielle Llama Index et Langchain, les données récupérées sont découpées en
+                    nodes, c'est-à-dire des petits morceaux de textes, sur lesquels le chatbot, basé sur la logique de
+                    ChatGPT, va utiliser, en plus du prompt (instructions), pour répondre à l'utilisateur de la manière
+                    la plus précise et la plus pertinente possible.
                 </p>
                 <p>
-                    Par ailleurs, j'ai également découvert très rapidement quelques commandes Git, la logique de GitHub,
-                    et le
-                    langage React.
+                    Par ailleurs, j'ai également pu découvrir très rapidement quelques commandes Git, la logique de
+                    GitHub, et le langage React.
                 </p>
                 <p>
                     En conclusion, ce stage m'a permis de solidifier ma vision et mes idées de développeur, de
-                    réellement
-                    découvrir
-                    comment une entreprise fonctionnait en internet, de découvrir d'autres métiers informatiques ou non
-                    et de me
-                    consituter un premier réseau.
+                    réellement découvrir comment une entreprise fonctionnait en interne, de découvrir d'autres métiers
+                    informatiques ou non et de me constituer un premier réseau.
                 </p>
             </div>
         </section>
