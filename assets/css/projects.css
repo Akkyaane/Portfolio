@@ -49,12 +49,10 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 0;
 }
 
 .about-chatbot-tars-project-container h2 {
     font-family: "Cocogoose", Arial, Helvetica, sans-serif;
-    font-weight: 900;
     padding: 1rem 0;
     text-align: center;
     position: relative;
@@ -73,32 +71,33 @@ header {
   .about-chatbot-tars-project-container h3 {
     font-family: "Cocogoose", Arial, Helvetica, sans-serif;
     padding: 1rem 0;
-    text-align: left;
-    width: 100%;
+    width: auto;
     color: #00a7e1;
     position: relative;
+    display: inline-block;
     z-index: 1;
+    font-weight: 100 !important;
 }
 
 .about-chatbot-tars-project-container h3::after {
     content: '';
-    width: 175px;
+    width: 100%;
     height: 2rem;
     position: absolute;
     top: 15px;
-    left: -15px;
+    left: -5px;
     z-index: -1;
     background-color:#edf8fe;
     transform: rotate(-2.5deg);
     border-radius: 5px;
 }
 
-.chatbot-tars-project-context {
+.about-chatbot-tars-project-context {
     padding-bottom: 2rem;
 }
 
 .about-chatbot-tars-project-container p {
-    padding-bottom: 1.5rem;
+    padding: 1rem;
 }
 
 .about-chatbot-tars-project-container span {
@@ -116,78 +115,63 @@ header {
 .zoom-in {
     background-color: #edf8fe;
     border-radius: 5px;
-    padding: 1rem;
 }
 
-.carousel {
-    width: 400px;
-    overflow: hidden;
-}
-
-.slides {
+.container {
+    padding: 2rem;
+  }
+  
+  .slider__wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+  /*   background-color: blue; */
+  }
+  
+  .slider {
     display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slide {
-    min-width: 100%;
-}
-
-.slide img {
-    width: 100%;
-    display: block;
-}
-  .nav {
-    text-align: center;
-    margin-top: 10px;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 1rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  .nav a {
-    text-decoration: none;
-    margin: 0 5px;
-    padding: 10px 15px;
-    background-color: #d9cab3; /* Default background color */
-    color: #5e0b15; /* Default text color */
-    display: inline-block;
-    border-radius: 50%; /* Makes the navigation buttons rounded */
-    transition: background-color 0.3s;
+  
+  .slider::-webkit-scrollbar{
+    display: none;
   }
-  /* Make the first navigation button appear active by default */
-  .nav a:first-child {
-    background-color: #5e0b15; /* Highlight color for active slide */
-    color: #d9cab3; /* Change text color for better visibility */
+  
+  .slider img{
+    flex: 1 0 100%; /* This will stretch the image*/
+    scroll-snap-align: start;
+    object-fit: cover; /* This will fix the stretch tho the image will be croppped a bit */
   }
-  #slide1:target ~ .nav a[href="#slide1"],
-    #slide2:target ~ .nav a[href="#slide2"],
-    #slide3:target ~ .nav a[href="#slide3"],
-    #slide1:target ~ .nav a:first-child /* Override the default active style when slide1 is targeted */ {
-    background-color: #5e0b15; /* Highlight color for active slide */
-    color: #d9cab3; /* Change text color for better visibility */
+  
+  .slider__nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
   }
-  /* Override the default active style for the first navigation button when other slides are targeted */
-  #slide2:target ~ .nav a:first-child,
-  #slide3:target ~ .nav a:first-child {
-    background-color: #d9cab3; /* Back to default background color */
-    color: #5e0b15; /* Back to default text color */
+  
+  .slider__nav a{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: opacity ease 0.25s;
   }
-  #slide1:target ~ .slides {
-    transform: translateX(0%);
+  
+  .slider__nav a:hover {
+    opacity: 1;
   }
-  #slide2:target ~ .slides {
-    transform: translateX(-100%);
-  }
-  #slide3:target ~ .slides {
-    transform: translateX(-200%);
-  }
-  .credit {
-    text-align: center;
-    margin-top: 20px;
-    font-size:11px;
-    color: #5e0b15;
-  }
-  .credit a {color:#5e0b15;}
-
-
-
 
 .inavailable {
     align-items: center;

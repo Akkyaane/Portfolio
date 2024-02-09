@@ -47,7 +47,7 @@
         <section class="about-chatbot-tars-project">
             <div class="about-chatbot-tars-project-container">
                 <h2>Projet TARS</h2>
-                <div class="chatbot-tars-project-context">
+                <div class="about-chatbot-tars-project-context">
                     <h3>Contexte</h3>
                     <p>
                         À l'occasion du premier stage de BTS SIO, qui s'est déroulé du
@@ -68,53 +68,56 @@
                         rendre plus simple la recherche d'informations concernant l'entreprise et son activité.
                     </p>
                 </div>
-                <h3>Technologies</h3>
-                <p>
-                    Le projet a nécessité l'utilisation de divers outils de développement : <span
-                        class="background">Python, Flask, Llama Index,
-                        LangChain et Pinecone</span>.
-                </p>
-                <p>
-                    Développé en Python, ce stage a été l'occasion pour moi d'apprendre ce langage et de comprendre et
-                    mettre en application les différentes connaissances apprises à l'école (structure du code, créations
-                    et appels de fonctions, création du jeu du Morpion, création d'un blog, etc.).
-                </p>
-                <p>
-                    Concernant le rendu visuel du chatbot, j'ai eu la possibilité d'utiliser Flask, un <a
-                        href="https://www.vigicorp.fr/qu-est-ce-qu-un-framework/">framework</a> Python, et de découvrir
-                    les différentes fonctionnalités proposées (HTML escaping, unique URLs, rendering templates,
-                    redirects, etc.).
-                </p>
-                <div id="carousel" class="carousel">
-                    <span id="slide1"></span>
-                    <span id="slide2"></span>
-                    <span id="slide3"></span>
-                    <div class="slides">
-                      <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736877_1280.jpg" alt="Slide 1"></div>
-                      <div class="slide"><img src="https://cdn.pixabay.com/photo/2015/11/16/14/43/cat-1045782_1280.jpg" alt="Slide 2"></div>
-                      <div class="slide"><img src="https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_640.jpg" alt="Slide 3"></div>
-                    </div>
-                    <div class="nav">
-                      <a href="#slide1">1</a>
-                      <a href="#slide2">2</a>
-                      <a href="#slide3">3</a>
+                <div>
+                    <h3>Technologies</h3>
+                    <p>
+                        Le projet a nécessité l'utilisation de divers outils de développement : <span
+                            class="background">Python, Flask, Llama Index,
+                            LangChain et Pinecone</span>.
+                    </p>
+                    <p>
+                        L'application a été développé en Python, ce stage a été l'occasion pour moi d'apprendre ce langage et de comprendre et
+                        mettre en application les différentes connaissances apprises à l'école (structure du code, créations
+                        et appels de fonctions, création du jeu du Morpion, création d'un blog, etc.).
+                    </p>
+                    <p>
+                        Concernant le rendu visuel du chatbot, j'ai eu la possibilité d'utiliser Flask, un <a
+                            href="https://www.vigicorp.fr/qu-est-ce-qu-un-framework/">framework</a> Python, et de découvrir
+                        les différentes fonctionnalités proposées (HTML escaping, unique URLs, rendering templates,
+                        redirects, etc.).
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="slider__wrapper">
+                        <div class="slider">
+                          <img src="https://source.unsplash.com/mBQIfKlvowM" alt="" id="slide1">
+                          <img src="https://source.unsplash.com/YeBI31kK2_4" alt="" id="slide2">
+                          <img src="https://source.unsplash.com/dSBsCzzlqTU" alt="" id="slide3">
+                        </div>
+                        <div class="slider__nav">
+                          <a id="btn1" href="#slide1"></a>
+                                <a id="btn2" href="#slide2"></a>
+                                <a id="btn3" href="#slide3"></a>
+                        </div>
                     </div>
                 </div>
-                <h3>Fonctionnement</h3>
-                <p>
-                    Pour faire fonctionner TARS, il est nécessaire de lier un Drive tel que Google Drive ou de déposer
-                    des documents dans la <a
-                        href="https://www.cloudflare.com/fr-fr/learning/ai/what-is-vector-database/">base de
-                        données
-                        vectorielle</a> Pinecone, qui se charge de construire un index dans lequel elle transforme les
-                    données en vecteurs. Cet index est ensuite utilisé pour répondre aux requêtes de l'utilisateur en
-                    mesurant la similarité entre les éléments grâce à leurs caractéristiques. L'API, construite en
-                    Python, se charge ensuite de récupérer l'index et de traiter les requêtes. Via les frameworks
-                    d'intelligence artificielle Llama Index et Langchain, les données récupérées sont découpées en
-                    nodes, c'est-à-dire des petits morceaux de textes, sur lesquels le chatbot, basé sur la logique de
-                    ChatGPT, va utiliser, en plus du prompt (instructions), pour répondre à l'utilisateur de la manière
-                    la plus précise et la plus pertinente possible.
-                </p>
+                <div>
+                    <h3>Fonctionnement</h3>
+                    <p>
+                        Pour faire fonctionner TARS, il est nécessaire de lier un Drive tel que Google Drive ou de déposer
+                        des documents dans la <a
+                            href="https://www.cloudflare.com/fr-fr/learning/ai/what-is-vector-database/">base de
+                            données
+                            vectorielle</a> Pinecone, qui se charge de construire un index dans lequel elle transforme les
+                        données en vecteurs. Cet index est ensuite utilisé pour répondre aux requêtes de l'utilisateur en
+                        mesurant la similarité entre les éléments grâce à leurs caractéristiques. L'API, construite en
+                        Python, se charge ensuite de récupérer l'index et de traiter les requêtes. Via les frameworks
+                        d'intelligence artificielle Llama Index et Langchain, les données récupérées sont découpées en
+                        nodes, c'est-à-dire des petits morceaux de textes, sur lesquels le chatbot, basé sur la logique de
+                        ChatGPT, va utiliser, en plus du prompt (instructions), pour répondre à l'utilisateur de la manière
+                        la plus précise et la plus pertinente possible.
+                    </p>
+                </div>
                 <p>
                     Par ailleurs, j'ai également pu découvrir très rapidement quelques commandes Git, la logique de
                     GitHub, et le langage React.
