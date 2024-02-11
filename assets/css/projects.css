@@ -118,20 +118,23 @@ header {
 }
 
 .about-project-context {
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .about-project-technologies {
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.about-project-use {
+    padding-bottom: 1.5rem;
 }
 
 .about-project-conclusion {
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .carousel-container-1 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
 }
 
@@ -194,7 +197,7 @@ header {
 
 iframe {
     border-radius: 5px;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     width: 95%;
 }
 
