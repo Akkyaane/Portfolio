@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Étudiant en informatique">
-    <title>Projet TARS</title>
+    <title>TARS 2</title>
     <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="stylesheet" href="../../assets/css/projects.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -22,7 +22,7 @@
                 <ul>
                     <li><a href="../../index.html#about" class="element">À propos</a></li>
                     <li><a href="../../index.html#skills-and-projects" class="element active">Projets</a></li>
-                    <li><a href="../../index.html#technology-watch" class="element ">Veille</a></li>
+                    <li><a href="../../index.html#technology-watch" class="element">Veille</a></li>
                     <li><a href="../../index.html#contact" class="element">Contact</a></li>
                 </ul>
             </nav>
@@ -44,13 +44,132 @@
         </div>
     </header>
     <main>
-        <section class="inavailable">
-            <h2>Indisponible pour le moment. Veuillez revenir plus tard.</h2>
+        <section class="about-project">
+            <div class="about-project-container">
+                <h2>TARS <em>2</em></h2>
+                <div class="about-project-context">
+                    <h3>Contexte</h3>
+                    <p>
+                        À l'occasion du second stage de BTS SIO, qui s'est déroulé du
+                        08 janvier au 09 février 2024, j'ai eu l'opportunité de travailler sur le <span>développement
+                            d'un
+                            assistant virtuel nommé TARS 2</span> au sein de l'entreprise <a
+                            href="https://www.kozea.fr/" target="_blank">Kozea
+                            group</a>. Spécialisée dans le milieu
+                        médical, Kozea group accompagne et facilite le travail des professionnels de santé en proposant
+                        des services digitaux. De la
+                        création et la promotion de sites internet incluant différentes
+                        fonctionnalités (envoi d'ordonnances, vente de produits, Click and Collect, prise de
+                        rendez-vous) pour les établissements de santé à la gestion du tiers-payant ou des réseaux
+                        sociaux : tout est pensé pour permettre aux professionnels de santé
+                        de se recentrer sur leur cœur de métier.
+                    </p>
+                    <p class="zoom-in">
+                        Afin d'optimiser l'efficacité de la plateforme interne de l'entreprise, l'assistant virtuel TARS
+                        2 a pour objectif de
+                        rendre plus intuitif la recherche et la manipulation des données.
+                    </p>
+                </div>
+                <div class="about-project-technologies">
+                    <h3>Technologies</h3>
+                    <p>
+                        Plusieurs outils de développement ont été utilisés, dont <span>Python,
+                            Flask, SQLAlchemy et Tailwind CSS</span>.
+                    </p>
+                    <p>
+                        Côté <a
+                            href="https://www.wildcodeschool.com/fr-fr/blog/differences-backend-frontend-developpement-web"
+                            target="_blank">back-end</a>, l'application a été développée en Python, basée sur la logique
+                        de ChatGPT 4, et avec SQLAlchemy, ce dernier permettant de manipuler les données d'une <a
+                            href="https://www.oracle.com/fr/database/definition-base-de-donnees/" target="_blank">base
+                            de données</a>.
+                    </p>
+                    <p>
+                        Côté <a
+                            href="https://www.wildcodeschool.com/fr-fr/blog/differences-backend-frontend-developpement-web"
+                            target="_blank">front-end</a>, l'interface a été développée avec Flask, un framework basé
+                        sur le langage
+                        Python. Comme TARS 1, une interface de type chatbot, développée avec la <a
+                            href="https://www.wildcodeschool.com/fr-fr/blog/cest-quoi-une-librairie-en-programmation"
+                            target="_blank">librairie</a> Tailwind CSS, a été intégrée au projet pour mettre en avant le
+                        côté conversationnel entre l'utilisateur et l'intelligence artificielle..
+                    </p>
+                </div>
+                <div class="carousel-container-1">
+                    <div class="carousel-container-2">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <img src="../../assets/content/images/projects/tars2/tars-2-screenshot-1.png"
+                                    alt="Projet TARS 2 - Capture d'écran 1">
+                                <img src="../../assets/content/images/projects/tars2/tars-2-screenshot-2.png"
+                                    alt="Projet TARS 2 - Capture d'écran 2">
+                                <img src="../../assets/content/images/projects/tars2/tars-2-screenshot-3.png"
+                                    alt="Projet TARS 2 - Capture d'écran 3">
+                                <img src="../../assets/content/images/projects/tars2/tars-2-screenshot-4.png"
+                                    alt="Projet TARS 2 - Capture d'écran 4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicator">
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                    </div>
+                    <button class="carousel-prev">&#10094;</button>
+                    <button class="carousel-next">&#10095;</button>
+                </div>
+                <div class="about-project-use">
+                    <h3>Fonctionnement</h3>
+                    <p>
+                        Pour faire fonctionner TARS 2, il est nécessaire de créer des fonctions en amont. Ces fonctions
+                        réalisent des actions précises et requièrent, pour certaines, l'utilisation d'une base de
+                        données pour manipuler certaines données. L'assistant, fonctionnant sur la base de ChatGPT 4,
+                        est conçue pour appeler ces fonctions quand il en a besoin. Considérés comme ses "outils", les
+                        fonctions sont décrites une par une dans un fichier : leur objectif, leurs paramètres, etc.
+                        L'objectif est d'expliciter ses outils pour permettre à l'intelligence artificielle de
+                        comprendre de quoi elle a besoin pour répondre aux requêtes de l'utilisateur. Une fois les
+                        outils en main, il faut créer un assistant selon la documentation de l'API d'OpenAI. Puis, un
+                        thread, autrement dit une liste dans laquelle va se trouver l'ensemble de la conversation entre
+                        l'utilisateur et l'intelligence artificielle, est créé. A chaque message envoyé par
+                        l'utilisateur, l'assistant détermine s'il doit appeler des fonctions ou non pour répondre. Selon
+                        le contexte, il détermine aussi la quantité de fonctions à appeler. Cette base permet ainsi à
+                        l'assistant virtuel d'être opérationnel dans un environnement de travail qui est tel, qu'il peut
+                        interroger, insérer, modifier ou supprimer des données d'une base de données.
+                    </p>
+                </div>
+                <iframe width="100%" src="https://www.youtube.com/embed/6NAVDNg9bd0?si=lL9M2laJUiQ5jhdr"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div class="about-project-conclusion">
+                    <h3>Conclusion</h3>
+                    <p>
+                        Cette seconde expérience, axée aussi bien sur le front que sur le back, m'a permis d'en
+                        apprendre davantage sur le métier de développeur full-stack et de confirmer mon intérêt porté
+                        pour le métier de développeur.
+                    </p>
+                </div>
+                <div class="nav">
+                    <button><a href="../projects/tars-chatbot.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                            </svg></a></button>
+                    <button><a href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path
+                                    d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
+                            </svg></a></button>
+                    <button><a href="../projects/gsb-website.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                            </svg></a></button>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <div class="copyright">
-            <p>© 2023 J. BAYON</p>
+            <p>© 2024 J. BAYON</p>
         </div>
         <div class="footer-links">
             <button class="footer-link-2">
@@ -65,8 +184,8 @@
             </button>
         </div>
     </footer>
-    </body>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    </body>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
 
 </html>

@@ -319,7 +319,7 @@ header {
 /* Home */
 .home {
   align-items: center;
-  background: url(../content/images/video.webp);
+  background: url(../content/images/optimized-video.gif);
   background-position: left;
   background-size: cover;
   display: flex;
