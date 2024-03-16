@@ -44,21 +44,108 @@
         </div>
     </header>
     <main>
-        <section class="inavailable">
-            <h2>Indisponible pour le moment.<br>Veuillez revenir plus tard.</h2>
-            <div class="nav">
-                <button><a href="../projects/tars-virtual-assistant.html"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -960 960 960">
-                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-                        </svg></a></button>
-                <button><a href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                            <path
-                                d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
-                        </svg></a></button>
-                <button><a href="../projects/gsb-mobile.html"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -960 960 960">
-                            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                        </svg></a></button>
+        <section class="about-project">
+            <div class="about-project-container">
+                <h2>GSB - Web</h2>
+                <div class="about-project-context">
+                    <h3>Contexte</h3>
+                    <p>
+                        Dans le cadre du projet personnel encadré annuel de deuxième année de BTS SIO, j'ai eu l'opportunité de travailler sur le développement d'une application web et mobile de gestions de frais pour l'entreprise fictive <a href="https://gsb.romaneledru.fr/"
+                        target="_blank">Galaxy-Swiss Bourdin</a>. Spécialisé dans le milieu médical, GSB est issu de la fusion entre le géant américain Galaxy (travaillant dans le secteur des maladies virales dont le SIDA et les hépatites) et le conglomérat européen Swiss Bourdin (travaillant sur des médicaments plus conventionnels), lui-même déjà union de trois petits laboratoires. Une conséquence de cette fusion est la recherche d'une optimisation de l’activité du groupe ainsi constitué en réalisant des économies d’échelle dans la production et la distribution de médicaments. 
+                    </p>
+                    <p class="zoom-in">
+                        Après deux années de réorganisations internes, tant au niveau du personnel que du fonctionnement administratif, l'entreprise souhaite moderniser l'activité de visite médicale en uniformisant la gestion des fiches de frais.
+                    </p>
+                </div>
+                <div class="about-project-technologies">
+                    <h3>Technologies</h3>
+                    <p>
+                        Plusieurs outils de développement ont été utilisés, dont <span>PHP, SQL,
+                            HTML, CSS, JavaScript, ChartJS, Bootstrap</span>.
+                    </p>
+                    <p>
+                        Côté <a
+                            href="https://www.wildcodeschool.com/fr-fr/blog/differences-backend-frontend-developpement-web"
+                            target="_blank">back-end</a>, l'application a été développée en PHP et SQL et a nécessité la création d'une base de données avec PHPMyAdmin et MySQL.
+                    </p>
+                    <p>
+                        Côté <a
+                            href="https://www.wildcodeschool.com/fr-fr/blog/differences-backend-frontend-developpement-web"
+                            target="_blank">front-end</a>, l'interface a été développée avec PHP, HTML, CSS, JavaScript, et les <a
+                            href="https://www.wildcodeschool.com/fr-fr/blog/cest-quoi-une-librairie-en-programmation"
+                            target="_blank">librairies</a> ChartJS, pour l'affichage des représentations graphiques des statistiques, et Bootstrap.
+                    </p>
+                </div>
+                <div class="carousel-container-1">
+                    <div class="carousel-container-2">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <img src="../../assets/content/images/projects/tars2/tars-2-screenshot-1.png"
+                                    alt="Projet TARS 2 - Capture d'écran 1">
+                                <img src="../../assets/content/images/projects/tars2/tars-2-screenshot-2.png"
+                                    alt="Projet TARS 2 - Capture d'écran 2">
+                                <img src="../../assets/content/images/projects/tars2/tars-2-screenshot-3.png"
+                                    alt="Projet TARS 2 - Capture d'écran 3">
+                                <img src="../../assets/content/images/projects/tars2/tars-2-screenshot-4.png"
+                                    alt="Projet TARS 2 - Capture d'écran 4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicator">
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                    </div>
+                    <button class="carousel-prev">&#10094;</button>
+                    <button class="carousel-next">&#10095;</button>
+                </div>
+                <div class="about-project-use">
+                    <h3>Fonctionnement</h3>
+                    <p>
+                        L
+                        Pour faire fonctionner TARS 2, il est nécessaire de créer des fonctions en amont. Ces fonctions
+                        réalisent des actions précises et requièrent, pour certaines, l'utilisation d'une base de
+                        données pour manipuler certaines données. L'assistant, fonctionnant sur la base de ChatGPT 4,
+                        est conçu pour appeler ces fonctions quand il en a besoin. Considéré comme ses « outils », les
+                        fonctions sont décrites une par une dans un fichier : leur objectif, leurs paramètres, etc.
+                        L'objectif est d'expliciter ses outils pour permettre à l'intelligence artificielle de
+                        comprendre de quoi elle a besoin pour répondre aux requêtes de l'utilisateur. Une fois les
+                        outils en main, il faut créer un assistant selon la documentation de l'API d'OpenAI. Puis, un
+                        thread, autrement dit une liste dans laquelle va se trouver l'ensemble de la conversation entre
+                        l'utilisateur et l'intelligence artificielle, est créé. À chaque message envoyé par
+                        l'utilisateur, l'assistant détermine s'il doit appeler des fonctions ou non pour répondre. Selon
+                        le contexte, il détermine aussi la quantité de fonctions à appeler. Cette base permet ainsi à
+                        l'assistant virtuel d'être opérationnel dans un environnement de travail qui est tel qu'il peut
+                        interroger, insérer, modifier ou supprimer des données d'une base de données.
+                    </p>
+                </div>
+                <iframe width="100%" src="https://www.youtube.com/embed/6NAVDNg9bd0?si=lL9M2laJUiQ5jhdr"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div class="about-project-conclusion">
+                    <h3>Conclusion</h3>
+                    <p>
+                        Cette seconde expérience, axée aussi bien sur le front que sur le back, m'a permis d'en
+                        apprendre davantage sur le métier de développeur full-stack et de confirmer mon intérêt porté
+                        pour le métier de développeur.
+                    </p>
+                </div>
+                <div class="nav">
+                    <button><a href="../projects/tars-virtual-assistant.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                            </svg></a></button>
+                    <button><a href="../../index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path
+                                    d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
+                            </svg></a></button>
+                    <button><a href="../projects/gsb-mobile.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                            </svg></a></button>
+                </div>
             </div>
         </section>
     </main>
