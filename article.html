@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Étudiant en informatique">
+    <title>Article</title>
+    <link rel="icon" href="assets/content/images/logos/logo.png" type="icon" sizes="528x528" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/article.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="assets/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body onload="showSvgAnimations()">
+    <header id="header">
+        <a href="../index.html" id="logo" class="logo">jb</a>
+        <div class="laptop-navbar">
+            <nav>
+                <ul>
+                    <li><a href="../index.html#about" class="element">À propos</a></li>
+                    <li><a href="../index.html#skills-and-projects" class="element">Projets</a></li>
+                    <li><a href="../index.html#technology-watch" class="element active">Veille</a></li>
+                    <li><a href="../index.html#contact" class="element">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-navbar">
+            <nav onclick="useMobileNavbar()">
+                <button class="hamburger" onclick="openMobileNavbar()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </button>
+                <ul>
+                    <li><a href="../index.html#about">À propos</a></li>
+                    <li><a href="../index.html#skills-and-projects">Projets</a></li>
+                    <li><a href="../index.html#technology-watch">Veille</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-article">
+            <div class="about-article-container">
+                <h2>
+                    IA vs. Développeurs : la fin ?
+                </h2>
+                <p>
+                    Depuis quelque temps maintenant, l’intelligence artificielle ou plus communément appelée « IA »,
+                    présentée comme le futur de la technologie, attire les regards de plus en plus de personnes. En
+                    2023, l’entreprise Microsoft a annoncé un plan d’investissement de plusieurs milliards de dollars
+                    dans la société OpenAI, étant à l’origine du célèbre robot conversationnel ChatGPT, pour d’une part,
+                    accélérer la recherche en intelligence artificielle, et d’autre part, concurrencer Google en
+                    intégrant les inventions d’OpenAI plus facilement dans ses propres technologies telles que le moteur
+                    de recherche Bing. Cette invention est sur le point de marquer un tournant majeur dans la société
+                    contemporaine et sur l’évolution de centaines de métiers dont celui de développeur.
+                </p>
+                <h3>
+                    Mais qu’est-ce que c’est l’IA ?
+                </h3>
+                <p>
+                    Au début des années 1950, Alan Turing, professeur de mathématiques à l’Université de Cambridge, déjà
+                    célèbre pour avoir élaboré le concept d’une machine à calculer « universelle » pouvant résoudre des
+                    algorithmes, c’est-à-dire un « ensemble de règles opératoires dont l'application permet de résoudre
+                    un problème énoncé au moyen d'un nombre fini d'opérations » selon le dictionnaire Larousse, et pour
+                    avoir apporté son aide auprès du service britannique en décryptant les messages allemands de la
+                    machine Enigma lors de la Seconde Guerre mondiale, se demande si une machine est capable de penser.
+                    Il suggère alors un test dans lequel un ordinateur doit parvenir à se faire passer pour un humain
+                    lors d’une conversation : c’est le Test de Turing.
+                </p>
+                <p>
+                    L’IA est définie comme « l’ensemble de théories et de techniques mises en œuvre en vue de réaliser
+                    des machines capables de simuler l'intelligence humaine ». Le but est de réussir, à travers une
+                    machine, à imiter les capacités cognitives d’un humain, autrement dit à répondre comme un humain, et
+                    peut-être même réfléchir comme un humain.
+                </p>
+                <p>
+                    C’est une discipline nouvelle réunissant plusieurs sciences telles que la logique mathématique, les
+                    statistiques et probabilités, l’informatique et la neurobiologie computationnelle, qui correspond à
+                    l’étude du système nerveux.
+                </p>
+                <p>
+                    On en distingue trois types : l’IA faible ou étroite, l’IA forte ou super IA, et l’IA générale.
+                </p>
+                <p>
+                    Selon Microsoft, l’IA faible ou étroite fait référence à la « capacité d’un système informatique à
+                    effectuer une tâche précisément définie mieux qu’un être humain ne pourrait le faire. » Elle
+                    représente le niveau le plus élevé dans l’histoire du développement de l’IA exploitée par l’être
+                    humain aujourd’hui et est utilisée notamment pour la construction de véhicules autonomes (Ex. Tesla)
+                    ou d’assistants personnels (Ex. Siri, Alexa, Google Assistant). Elle permet de réfléchir en temps
+                    réel en prenant des décisions dans un cadre prédéfini. Elle implique ni l’utilisation d’une
+                    conscience, ni le ressenti d’un quelconque sentiment.
+                </p>
+                <p>
+                    L’IA forte ou ASI fait référence à la « capacité d’un système informatique à surpasser les êtres
+                    humains dans n’importe quelle tâche intellectuelle ». Elle permettrait de résoudre des problèmes
+                    complexes, de juger, de comprendre, d’apprendre, et d’appliquer son apprentissage à travers
+                    différentes tâches sans être spécifiquement programmée pour chacune. Elle implique une créativité et
+                    une imagination similaires à celles d’un être humain, une conscience propre et des sentiments. Selon
+                    les chercheurs en IA, ce type est impossible à créer actuellement, si ce n’est dans un scénario de
+                    science-fiction, car les systèmes mathématiques, fonctionnant avec des symboles et des calculs, ne
+                    le permettent pas.
+                </p>
+                <p>
+                    Quant à l’IA générale ou profonde, celle-ci fait référence à la capacité d’un système informatique à
+                    réaliser n’importe quelle tâche cognitive comme le ferait un être humain ou un animal. Les
+                    scientifiques s’interrogent sur l’apparition de ChatGPT-4 et la probabilité qu’il s’agisse d’une
+                    première forme d’IA générale, jusqu’alors hypothétique. Ils estiment que l’humanité possède la
+                    technologie nécessaire pour créer ce type d’IA grâce aux réseaux de neurones.
+                </p>
+                <p>
+                    De manière générale, l’IA est construite selon deux modèles d’apprentissage : le Machine Learning ou
+                    apprentissage automatique, et le Deep Learning.
+                </p>
+                <h3>
+                    À quoi correspondent ces modèles d’apprentissage ?
+                </h3>
+                <p>
+                    Avec l’arrivée du big data, de l’internet des objets ou « IoT », de l’industrie 4.0 et du cloud,
+                    nous sommes désormais capables d’accéder à un volume important de données et d’accélérer le calcul
+                    des algorithmes d’apprentissage, qui permettent à une IA de fonctionner.
+                </p>
+                <p>
+                    En 1959, l’informaticien et pionner de l’IA, Arthur Samuel définit le Machine Learning comme un «
+                    champ d’étude qui donne aux ordinateurs la capacité d’apprendre sans être explicitement programmés à
+                    apprendre ».
+                </p>
+                <p>
+                    C’est un processus utilisé par les systèmes informatiques, qui utilise des algorithmes afin
+                    d’identifier les modèles de données exploitables pour en créer d’autres ayant la capacité de
+                    réaliser des prédictions. Une fois le modèle d’apprentissage suffisamment entraîné pour effectuer
+                    une tâche de façon rapide et précise tout en étant efficace et digne de confiance, on obtient une IA
+                    étroite.
+                </p>
+                <p>
+                    À l’aide d’une base de données, les algorithmes du Machine Learning sont capables d’apprendre par
+                    eux-mêmes sans intervention humaine ou reprogrammation logicielle, de s’améliorer progressivement de
+                    façon autonome et de dépasser ainsi les fonctions et les capacités initialement programmées. En
+                    classant les données représentées sous forme de vecteurs, c’est-à-dire une liste ordonnée de nombres
+                    dans un espace à trois dimensions (Ex. [3, 4, 5]) et en élaborant des modèles mathématiques qui
+                    peuvent être appliqués à de nouvelles données, les algorithmes sont capables de réaliser des
+                    prédictions. Ces algorithmes peuvent être supervisés ou non supervisés selon si les données sont
+                    déjà étiquetées ou nécessitent de l’être.
+                </p>
+                <p>
+                    Un réseau neuronal profond possède des nœuds neuronaux imbriqués et chaque question à laquelle il
+                    répond génère un ensemble de questions associées. C’est sur cette base que les algorithmes du Deep
+                    Learning se construisent. Inspirés des réseaux neuronaux définissant la structure du cerveau humain,
+                    le Deep Learning créé une sorte de machine virtuelle composée de milliers d’unités, chacune chargée
+                    de petits calculs simples lui permettant d’automatiser des tâches ou d’en accomplir d’autres plus
+                    complexes. Ce processus nécessite généralement un jeu de données volumineux lors de l’entraînement.
+                    Une fois formé, l’algorithme peut gérer plus d’ambiguïté qu’un réseau superficiel et être utilisé
+                    notamment pour les applications, telles que la reconnaissance d’images, où l’IA doit rechercher les
+                    bords d’une forme avant de pouvoir identifier le contenu de l’image. Une IA créée grâce au modèle du
+                    Deep Learning est capable de surpasser les compétences humaines dans des jeux complexes comme les
+                    échecs.
+                </p>
+                <h3>
+                    Et quelles différences entre les deux ?
+                </h3>
+                <p>
+                    Lors de son apprentissage, le Machine Learning requiert les retours du développeur pour pouvoir
+                    s’améliorer de façon autonome. Par exemple, en analysant des données structurées provenant d’images
+                    d’échographies de seins dont certaines sont atteintes d’un cancer et grâce à des procédés issus des
+                    statistiques et probabilités, l’algorithme est capable de proposer un diagnostic avec un taux
+                    d’erreur plus ou moins important au début qui nécessite d’être corrigé. À force d’entraînement, ce
+                    taux d’erreur diminue car l’algorithme comprend comment mieux classer d’autres données similaires,
+                    leur attribuer des valeurs et proposer à terme de meilleurs diagnostics.
+                </p>
+                <p>
+                    Tandis que le Deep Learning est déjà très autonome lors de son apprentissage, car il nécessite
+                    parfois de disposer de plusieurs millions de données. Cependant, l’entraînement est parfois plus
+                    long, à savoir plusieurs semaines, à cause de l’utilisation des données non structurées, des
+                    paramètres et des formules mathématiques qu’il faut prendre en compte, à l’inverse du Machine
+                    Learning dont l’entraînement peut se faire en quelques secondes seulement. La probabilité de
+                    réussite sera néanmoins différente entre les deux.
+                </p>
+                <p>
+                    Enfin, pour proposer un résultat, le Machine Learning tend à classer puis combiner les données lors
+                    de son analyse, à l’inverse du Deep Learning qui considère le problème dans son entièreté.
+                </p>
+                <p>
+                    Ayant un fonctionnement différent, ils ont alors des champs d’application différents. Le Machine
+                    Learning est utilisé pour prédire la météo, le cours des actions sur un marché financier, identifier
+                    les spams dans une boîte mail, concevoir des traitements personnalisés contre certaines maladies,
+                    proposer des service susceptible de plaire à une clientèle. Le Deep Learning est plutôt utilisé pour
+                    identifier les dangers compromettant la sécurité d’un système informatique, créer des chatbots, dans
+                    le développement de la reconnaissance faciale (ex. FaceID) et de véhicules autonomes capables de
+                    détecter les dangers sur la route et d’y appliquer le code.
+                </p>
+                <h3>
+                    Est-ce que l’IA représente une menace pour les développeurs ?
+                </h3>
+                <p>
+                    On peut penser a priori que l’IA constitue un danger pour les développeurs comme pour d’autres
+                    métiers, qui disparaîtront à terme du marché du travail et seront remplacés par cette nouvelle
+                    technologie. Pourtant, bien que cette vérité constitue le malheureux destin de certains métiers qui
+                    ne requièrent pas ou peu de compétences, ce n’est pas le cas pour les développeurs car l’IA ne les
+                    concurrence pas véritablement.
+                </p>
+                <p>
+                    Elle vient néanmoins enrichir la palette d’outils du développeur en lui permettant une meilleure
+                    productivité. Automatiser les tâches répétitives et fastidieuses comme la vérification du code, la
+                    gestion des bases de données ou la génération de mises en pages standardisées représentant un frein
+                    à l’efficacité du développeur, permet de gagner du temps et de se concentrer sur d’autres tâches
+                    plus intéressantes et plus complexes. L’IA pourrait aussi détecter les erreurs, les bugs et les
+                    vulnérabilités en analysant le code et en fournissant des suggestions pour augmenter la qualité et
+                    la fiabilité du code ou optimiser les performances des sites web (Ex. vitesse de chargement,
+                    expérience utilisateur, optimisation du référencement ou SEO) de manière à proposer une utilisation
+                    fluide et rapide.
+                </p>
+                <p>
+                    En clair, utiliser l’IA comme outil permet de réduire les besoins en ressources sur certains
+                    segments de production, comme les développements simples et sans réels besoins de management ou de
+                    gestion de projet. À une époque ou sans IA on avait besoin de trois développeurs pour rédiger du
+                    code à la chaîne, aujourd’hui un seul est suffisant. Selon une étude, 44 % des développeurs
+                    intègrent l’IA dans leurs processus de développement et 26 % prévoient de l’adopter prochainement.
+                </p>
+                <p>
+                    Cependant, l’IA a aussi des limites qu’il faut prendre en compte. Elle est incapable pour le moment
+                    de développer un programme entier de façon autonome car elle nécessite de suivre des directives d’un
+                    développeur déjà qualifié. Elle est également incapable de proposer une solution pertinente qui
+                    correspond au besoin de l’utilisateur, n’étant pas en mesure de comprendre parfaitement le contexte
+                    impliqué et les goûts et préférences du client. De plus, elle nécessite de vastes quantités de
+                    données pour fonctionner efficacement et donc des coûts importants, pas toujours abordables pour les
+                    entreprises.
+                </p>
+                <p>
+                    In fine, les développeurs vont devoir s’adapter à l’IA en se formant continuellement pour obtenir de
+                    nouvelles compétences toujours plus spécifiques pour ne pas se voir dépasser par l’IA et devenir
+                    obsolète sur le marché du travail. Le développement deviendra alors de plus en plus technique et
+                    pour lequel il ne restera plus que des développeurs qualifiés et passionnés.
+                </p>
+                <h3>
+                    Références
+                </h3>
+                <p>
+                    <a href="https://www.semafor.com/article/01/09/2023/microsoft-eyes-10-billion-bet-on-chatgpt" target="_blank">- Semafor
+                        - 10/01/2023 - Microsoft eyes $10 billion bet on ChatGPT</a><br>
+                    <a
+                        href="https://forum.lesnumeriques.com/t/pour-contrer-google-microsoft-veut-investir-10-milliards-dans-openai-et-chatgpt/121073" target="_blank">- Les
+                        Numériques - 11/01/2023 - Pour contrer Google, Microsoft veut investir 10 milliards dans
+                        OpenAI et ChatGPT</a><br>
+                    <a
+                        href="https://www.lefigaro.fr/secteur/high-tech/microsoft-investit-plusieurs-milliards-de-dollars-supplementaires-dans-le-createur-de-chatgpt-20230123#:~:text=Le%20groupe%20tech%20a%20annonc%C3%A9,mati%C3%A8re%20d'intelligence%20artificielle%C2%BB." target="_blank">- Le
+                        Figaro - 23/01/2023 - Microsoft investit plusieurs milliards de dollars supplémentaires dans le
+                        créateur de ChatGPT</a><br>
+                    <a href="https://openai.com/blog/openai-and-microsoft-extend-partnership" target="_blank">- OpenAI - 23/01/2023 -
+                        OpenAI and Microsoft extend partnership</a><br>
+                    <a href="https://blogs.microsoft.com/blog/2023/01/23/microsoftandopenaiextendpartnership/" target="_blank">- Microsoft
+                        - 23/01/2023 - Microsoft and OpenAI extend partnership</a><br>
+                    <a
+                        href="https://www.larousse.fr/encyclopedie/personnage/Alan_Mathison_Turing/147690#:~:text=Math%C3%A9maticien%20britannique%20Londres%201912%2DWilmslow,et%20de%20l'intelligence%20artificielle." target="_blank">- Larousse
+                        - Alan Mathison Turing</a><br>
+                    <a href="https://www.larousse.fr/dictionnaires/francais/algorithme/2238" target="_blank">- Larousse -
+                        Algorithme</a><br>
+                    <a href="https://www.larousse.fr/encyclopedie/divers/intelligence_artificielle/187257" target="_blank">- Larousse -
+                        Intelligence artificielle</a><br>
+                    <a
+                        href="https://www.futura-sciences.com/tech/definitions/informatique-intelligence-artificielle-555/" target="_blank">- Futura
+                        Sciences - 28/10/2023 - Intelligence artificielle : qu'est-ce que c'est ?</a><br>
+                    <a href="https://institutducerveau-icm.org/fr/neurosciences/" target="_blank">- Institut
+                        du Cerveau - Les neurosciences</a><br>
+                    <a
+                        href="https://azure.microsoft.com/fr-fr/resources/cloud-computing-dictionary/what-is-artificial-intelligence#voitures-autonomes" target="_blank">- Microsoft
+                        - Qu’est-ce que l’intelligence artificielle ?</a><br>
+                    <a href="https://datascientest.com/intelligence-artificielle-definition" target="_blank">- DataScienTest
+                        - 08/03/2024 - Intelligence Artificielle : Définition, histoire, enjeux</a><br>
+                    <a
+                        href="https://www.larousse.fr/dictionnaires/francais/vecteur/81231#:~:text=1.,bact%C3%A9rie%2C%20virus%2C%20parasite." target="_blank">- Larousse
+                        - Vecteur</a><br>
+                    <a href="https://datascientest.com/quelle-difference-entre-le-machine-learning-et-deep-learning" target="_blank">- DataScienTest
+                        - 20/07/2020 - Machine Learning vs Deep Learning : Quelles différences ?</a><br>
+                    <a
+                        href="https://www.ionos.fr/digitalguide/web-marketing/search-engine-marketing/deep-learning-vs-machine-learning/" target="_blank">- Ionos
+                        - 22/05/2020 - Quelles sont les différences entre le Deep learning et le Machine
+                        learning</a><br>
+                    <a href="https://www.tesla.com/fr_fr/AI" target="_blank">- Tesla
+                        - IA et robotique</a><br>
+                    <a
+                        href="https://www.solutions-numeriques.com/avec-chatgpt-est-ce-que-le-metier-de-developpeur-est-menace/" target="_blank">- Solutions
+                        numériques et cybersécurité - 22/05/2023 - Avec ChatGPT, est-ce que le métier de
+                        développeur est menacé ?</a><br>
+                    <a
+                        href="https://www.centre-europeen-formation.fr/blog/informatique/intelligence-artificielle-et-developpeur-web/" target="_blank">- Centre
+                        Européen de Formation - 28/06/2023 - Intelligence artificielle et développeur web : quels
+                        impacts sur le secteur ?</a><br>
+                    <a href="https://www.blogdumoderateur.com/etude-comment-developpeurs-percoivent-outils-ia/" target="_blank">- BDM
+                        - 14/06/2023 - Étude : comment les développeurs perçoivent les outils IA</a><br>
+                </p>
+            </div>
+            <div class="nav">
+                <button><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                            <path
+                                d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
+                        </svg></a></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>© 2024 J. BAYON</p>
+        </div>
+        <div class="footer-links">
+            <button class="footer-link-2">
+                <a href="https://www.linkedin.com/in/jeremiebayon/" target="_blank">
+                    <div id="linkedin-logo-animation-footer-container"></div>
+                </a>
+            </button>
+            <button class="footer-link-3">
+                <a href="https://github.com/Akkyaane" target="_blank">
+                    <div id="github-logo-animation-footer-container"></div>
+                </a>
+            </button>
+        </div>
+    </footer>
+</body>
+
+</html>

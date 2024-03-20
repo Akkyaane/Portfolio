@@ -44,12 +44,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #111111;
+  background: #000416;
 }
 
 section {
-  height: 100svh;
-  width: 100svw;
+  height: 100vh;
+  width: 100%;
 }
 
 /* Header */
@@ -249,14 +249,14 @@ header {
   z-index: 1001;
 }
 
-.data-loader > div:last-child {
+.data-loader>div:last-child {
   height: 15px;
   margin: 1em auto;
   position: relative;
   width: 80px;
 }
 
-.data-loader > div:last-child > div {
+.data-loader>div:last-child>div {
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
   background: #00a7e1;
   border-radius: 50%;
@@ -266,22 +266,22 @@ header {
   width: 13px;
 }
 
-.data-loader > div:last-child > div:nth-child(1) {
+.data-loader>div:last-child>div:nth-child(1) {
   animation: data-loader-1 0.6s infinite;
   left: 8px;
 }
 
-.data-loader > div:last-child > div:nth-child(2) {
+.data-loader>div:last-child>div:nth-child(2) {
   animation: data-loader-2 0.6s infinite;
   left: 8px;
 }
 
-.data-loader > div:last-child > div:nth-child(3) {
+.data-loader>div:last-child>div:nth-child(3) {
   animation: data-loader-2 0.6s infinite;
   left: 32px;
 }
 
-.data-loader > div:last-child > div:nth-child(4) {
+.data-loader>div:last-child>div:nth-child(4) {
   animation: data-loader-3 0.6s infinite;
   left: 56px;
 }
@@ -327,16 +327,15 @@ header {
 }
 
 .home-container {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 7, 45, 0.5),
-    rgba(0, 7, 45, 0.25)
-  );
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
   width: 100%;
+
+  background: linear-gradient(to bottom,
+      rgba(0, 7, 45, 0.5),
+      rgba(0, 7, 45, 0.25));
 }
 
 .home-container h1 {
@@ -403,9 +402,10 @@ header {
   background-color: #00a7e1;
   border: none;
   border-radius: 5px;
+  display: inline-block;
+
   box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
     rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-  display: inline-block;
 }
 
 .home-link-1-a {
@@ -621,13 +621,14 @@ header {
   align-items: center;
   background-color: #00a7e1;
   border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   display: flex;
   flex-direction: column;
   height: 200px;
   justify-content: center;
   width: 350px;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .card:hover {
@@ -692,12 +693,6 @@ header {
 
 .technology-watch-container p {
   padding: 1rem 0;
-}
-
-.details {
-  display: flex;
-  justify-content: start;
-  width: 100%;
 }
 
 .article {
@@ -792,7 +787,6 @@ header {
 .submit:hover {
   background-color: #00072d;
   border-color: #00072d;
-
   color: #ffffff;
 }
 
@@ -819,7 +813,6 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-  /* Header */
   .laptop-navbar {
     display: none;
   }
@@ -828,7 +821,6 @@ footer {
     display: block;
   }
 
-  /* Home */
   .home-container {
     align-items: left;
     padding: 0 1rem;
@@ -872,7 +864,6 @@ footer {
     width: 45px;
   }
 
-  /* About */
   .about-container {
     padding: 2rem;
   }
@@ -903,7 +894,6 @@ footer {
     font-size: 1.15rem;
   }
 
-  /* Skills and projects */
   .skills-container {
     padding: 2rem 1rem;
   }
@@ -916,6 +906,7 @@ footer {
     height: 20px;
     width: 20px;
   }
+
   .skills-container a {
     font-size: 1.15rem;
   }
@@ -943,7 +934,6 @@ footer {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  /* Technology Watch */
   .technology-watch-container {
     padding: 2rem;
   }
@@ -957,15 +947,10 @@ footer {
     line-height: 2.15rem;
   }
 
-  .technology-watch-container .details {
-    font-size: 1.05rem;
-  }
-
   .technology-watch-container a {
     font-size: 1.15rem;
   }
 
-  /* Contact */
   .contact-container {
     width: 300px;
   }
@@ -991,7 +976,6 @@ footer {
     padding: 0.25rem 0.75rem;
   }
 
-  /* Footer */
   footer {
     padding: 0.5rem 1rem;
   }
@@ -1012,7 +996,6 @@ footer {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* Header */
   .laptop-navbar {
     display: none;
   }
@@ -1021,7 +1004,6 @@ footer {
     display: block;
   }
 
-  /* Home */
   .home-container {
     align-items: center;
   }
@@ -1064,7 +1046,6 @@ footer {
     width: 45px;
   }
 
-  /* About */
   .about-container {
     padding: 2rem 0;
     width: 600px;
@@ -1096,7 +1077,6 @@ footer {
     font-size: 1.15rem;
   }
 
-  /* Skills and projects */
   .skills-container {
     padding-bottom: 2.5rem;
     padding-top: 2rem;
@@ -1110,6 +1090,7 @@ footer {
     height: 20px;
     width: 20px;
   }
+
   .skills-container a {
     font-size: 1.15rem;
   }
@@ -1137,7 +1118,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Technology Watch */
   .technology-watch-container {
     padding: 2rem 0;
     width: 600px;
@@ -1152,15 +1132,10 @@ footer {
     line-height: 2.15rem;
   }
 
-  .technology-watch-container .details {
-    font-size: 1.05rem;
-  }
-
   .technology-watch-container a {
     font-size: 1.15rem;
   }
 
-  /* Contact */
   .contact-container {
     width: 350px;
   }
@@ -1186,7 +1161,6 @@ footer {
     padding: 0.25rem 0.75rem;
   }
 
-  /* Footer */
   footer {
     padding: 0.5rem 1.5rem;
   }
@@ -1207,7 +1181,6 @@ footer {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  /* Header */
   .laptop-navbar {
     display: block;
   }
@@ -1216,7 +1189,6 @@ footer {
     display: none;
   }
 
-  /* Home */
   .home-container {
     align-items: center;
   }
@@ -1259,7 +1231,6 @@ footer {
     width: 45px;
   }
 
-  /* About */
   .about-container {
     padding: 2rem 0;
     width: 600px;
@@ -1303,7 +1274,6 @@ footer {
     font-size: 1.15rem;
   }
 
-  /* Skills and projects */
   .skills-container {
     padding-bottom: 2.5rem;
     padding-top: 2rem;
@@ -1317,6 +1287,7 @@ footer {
     height: 20px;
     width: 20px;
   }
+
   .skills-container a {
     font-size: 1.15rem;
     position: relative;
@@ -1345,7 +1316,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Technology Watch */
   .technology-watch-container {
     padding: 2rem 0;
     width: 600px;
@@ -1360,16 +1330,11 @@ footer {
     line-height: 2.15rem;
   }
 
-  .technology-watch-container .details {
-    font-size: 1.05rem;
-  }
-
   .technology-watch-container a {
     font-size: 1.15rem;
     position: relative;
   }
 
-  /* Contact */
   .contact-container {
     width: 350px;
   }
@@ -1395,7 +1360,6 @@ footer {
     padding: 0.25rem 0.75rem;
   }
 
-  /* Footer */
   footer {
     padding: 0.5rem 1.5rem;
   }
@@ -1416,7 +1380,6 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1499px) {
-  /* Header */
   .laptop-navbar {
     display: block;
   }
@@ -1425,7 +1388,6 @@ footer {
     display: none;
   }
 
-  /* Home */
   .home-container {
     align-items: center;
   }
@@ -1467,7 +1429,6 @@ footer {
     width: 50px;
   }
 
-  /* About */
   .about-container {
     padding: 2rem 0;
     width: 700px;
@@ -1511,7 +1472,6 @@ footer {
     font-size: 1.25rem;
   }
 
-  /* Skills and projects */
   .skills-title h2 {
     font-size: 2.5rem;
   }
@@ -1525,6 +1485,7 @@ footer {
     height: 22.5px;
     width: 22.5px;
   }
+
   .skills-container a {
     font-size: 1.25rem;
     position: relative;
@@ -1553,7 +1514,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Technology Watch */
   .technology-watch-container {
     padding: 2rem 0;
     width: 700px;
@@ -1568,16 +1528,11 @@ footer {
     line-height: 2.25rem;
   }
 
-  .technology-watch-container .details {
-    font-size: 1.15rem;
-  }
-
   .technology-watch-container a {
     font-size: 1.25rem;
     position: relative;
   }
 
-  /* Contact */
   .contact-container {
     width: 400px;
   }
@@ -1603,7 +1558,6 @@ footer {
     padding: 0.5rem 1rem;
   }
 
-  /* Footer */
   footer {
     padding: 0.5rem 2rem;
   }
@@ -1624,7 +1578,6 @@ footer {
 }
 
 @media only screen and (min-width: 1500px) {
-  /* Header */
   .laptop-navbar {
     display: block;
   }
@@ -1633,7 +1586,6 @@ footer {
     display: none;
   }
 
-  /* Home */
   .home-container {
     align-items: center;
   }
@@ -1675,7 +1627,6 @@ footer {
     width: 50px;
   }
 
-  /* About */
   .about-container {
     padding: 2rem 0;
     width: 800px;
@@ -1719,7 +1670,6 @@ footer {
     font-size: 1.5rem;
   }
 
-  /* Skills and projects */
   .skills-container {
     padding-bottom: 3rem;
     padding-top: 2rem;
@@ -1729,6 +1679,7 @@ footer {
     height: 25px;
     width: 25px;
   }
+
   .skills-container a {
     font-size: 1.5rem;
     position: relative;
@@ -1761,7 +1712,6 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Technology Watch */
   .technology-watch-container {
     padding: 2rem 0;
     width: 800px;
@@ -1776,16 +1726,11 @@ footer {
     line-height: 2.5rem;
   }
 
-  .technology-watch-container .details {
-    font-size: 1.25rem;
-  }
-
   .technology-watch-container a {
     font-size: 1.5rem;
     position: relative;
   }
 
-  /* Contact */
   .contact-container {
     width: 500px;
   }
@@ -1811,7 +1756,6 @@ footer {
     padding: 0.5rem 1rem;
   }
 
-  /* Footer */
   footer {
     padding: 0.5rem 2rem;
   }

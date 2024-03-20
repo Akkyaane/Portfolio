@@ -3,7 +3,6 @@ body {
     overflow: visible;
 }
 
-/* Header */
 header {
     background-color: #ffffff;
 }
@@ -24,180 +23,236 @@ header {
     background: #00072d;
 }
 
-/* About */
-.article {
-    align-items: center;
-    display: flex;
-    height: auto;
-    justify-content: center;
-    padding-top: 3.5rem;
-}
-
-.article-container {
+.about-article {
     align-items: center;
     display: flex;
     flex-direction: column;
+    height: auto;
     justify-content: center;
-    padding: 2rem 0;
+    padding-top: 4rem;
 }
 
-.article-container h2 {
+.about-article-container {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-article-container h2 {
     font-family: "Cocogoose", Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    padding: 2rem 0;
     text-align: center;
 }
 
-.article-container h3 {
-    font-family: "Cocogoose", Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    padding: 2rem 0;
-}
-
-.article-container h4 {
+.about-article-container h3 {
+    display: inline-block;
     font-weight: 900;
-    padding: 2rem 0;
-    text-align: center;
-    text-decoration: underline;
+    padding: 0.5rem 0;
+    position: relative;
+    width: auto;
+    z-index: 1;
 }
 
-.article-container p {
-    padding-bottom: 1.5rem;
+.about-article-container h3::after {
+    background-color: #edf8fe;
+    border-radius: 5px;
+    content: '';
+    height: 25px;
+    left: -5px;
+    position: absolute;
+    top: 5px;
+    transform: rotate(-2.5deg);
+    width: 100%;
+    z-index: -1;
 }
 
-.article-container a {
+.about-article-container p {
+    padding: 1rem;
+}
+
+.about-article-container span {
+    font-weight: 900;
+}
+
+.about-article-container a:hover {
     color: #00a7e1;
-    font-weight: 900;
 }
 
-/* Footer */
+.nav button {
+    background: transparent;
+    border: none;
+    margin: 0 1.5rem;
+}
+
+.nav a:hover:after {
+    width: 0;
+}
+
+button svg {
+    fill: #00a7e1;
+}
+
 @media only screen and (max-width: 767px) {
-    .article-container {
-        padding: 2rem;
+    .about-article-container {
+        padding: 2rem 1rem;
     }
 
-    .article-container h2 {
+    .about-article-container h2 {
         font-size: 2rem;
+        font-style: normal;
     }
 
-    .article-container p {
+    .about-article-container h3 {
+        font-size: 1.15rem;
+    }
+
+    .about-article-container p {
         font-size: 1.15rem;
         line-height: 2.15rem;
     }
 
-    .article-container a {
+    .about-article-container span {
         font-size: 1.15rem;
+    }
+
+    button svg {
+        height: 30px;
+        width: 30px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .article-container {
+    .about-article-container {
         padding: 2rem 0;
         width: 600px;
     }
 
-    .article-container h2 {
+    .about-article-container h2 {
         font-size: 2rem;
+        font-style: normal;
     }
 
-    .article-container h3 {
-        font-size: 1.50rem;
-    }
-
-    .article-container h4 {
+    .about-article-container h3 {
         font-size: 1.15rem;
     }
 
-    .article-container p {
+    .about-article-container p {
         font-size: 1.15rem;
         line-height: 2.15rem;
     }
 
-    .article-container a {
+    .about-article-container span {
         font-size: 1.15rem;
+    }
+
+    .about-article-container a {
+        font-size: 1.15rem;
+    }
+
+    button svg {
+        height: 30px;
+        width: 30px;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .article-container {
+    .about-article-container {
         padding: 2rem 0;
         width: 600px;
     }
 
-    .article-container h2 {
+    .about-article-container h2 {
         font-size: 2rem;
+        font-style: normal;
     }
 
-    .article-container h3 {
-        font-size: 1.50rem;
-    }
-
-    .article-container h4 {
+    .about-article-container h3 {
         font-size: 1.15rem;
     }
 
-    .article-container p {
+    .about-article-container p {
         font-size: 1.15rem;
         line-height: 2.15rem;
     }
 
-    .article-container a {
+    .about-article-container span {
         font-size: 1.15rem;
+    }
+
+    .about-article-container a {
+        font-size: 1.15rem;
+    }
+
+    button svg {
+        height: 30px;
+        width: 30px;
     }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-    .article-container {
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    .about-article-container {
         padding: 2rem 0;
         width: 700px;
     }
 
-    .article-container h2 {
+    .about-article-container h2 {
         font-size: 2.5rem;
+        font-style: normal;
     }
 
-    .article-container h3 {
-        font-size: 1.75rem;
-    }
-
-    .article-container h4 {
+    .about-article-container h3 {
         font-size: 1.25rem;
     }
 
-    .article-container p {
+    .about-article-container p {
         font-size: 1.25rem;
         line-height: 2.25rem;
     }
 
-    .article-container a {
+    .about-article-container span {
         font-size: 1.25rem;
+    }
+
+    .about-article-container a {
+        font-size: 1.25rem;
+    }
+
+    button svg {
+        height: 35px;
+        width: 35px;
     }
 }
 
-@media only screen and (min-width: 1400px) {
-    .article-container {
+@media only screen and (min-width: 1500px) {
+    .about-article-container {
         padding: 2rem 0;
         width: 800px;
     }
 
-    .article-container h2 {
+    .about-article-container h2 {
         font-size: 3rem;
+        font-style: normal;
     }
 
-    .article-container h3 {
-        font-size: 2rem;
-    }
-
-    .article-container h4 {
+    .about-article-container h3 {
         font-size: 1.5rem;
     }
 
-    .article-container p {
+    .about-article-container p {
         font-size: 1.5rem;
         line-height: 2.5rem;
     }
 
-    .article-container a {
+    .about-article-container a {
         font-size: 1.5rem;
+    }
+
+    .about-article-container span {
+        font-size: 1.5rem;
+    }
+
+    button svg {
+        height: 40px;
+        width: 40px;
     }
 }
