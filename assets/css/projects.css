@@ -156,6 +156,7 @@ header {
 .carousel img {
     border-radius: 5px;
     cursor: pointer;
+    flex-shrink: 0;
     width: 100%;
 }
 
