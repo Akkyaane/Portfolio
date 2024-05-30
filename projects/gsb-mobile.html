@@ -28,8 +28,8 @@
             </nav>
         </div>
         <div class="mobile-navbar">
-            <nav onclick="showMobileNavbar()">
-                <button class="hamburger" onclick="openNavbar()">
+            <nav onclick="useMobileNavbar()">
+                <button class="hamburger" onclick="openMobileNavbar()">
                     <div id="bar1" class="bar"></div>
                     <div id="bar2" class="bar"></div>
                     <div id="bar3" class="bar"></div>
@@ -45,20 +45,123 @@
     </header>
 
     <main>
-        <section class="inavailable">
-            <h2>Indisponible pour le moment.<br>Veuillez revenir plus tard.</h2>
-            <div class="nav">
-                <button><a href="gsb-website.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-                        </svg></a></button>
-                <button><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
-                            <path
-                                d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
-                        </svg></a></button>
-                <button><a href="../projects/dopamine.html"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -960 960 960">
-                            <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                        </svg></a></button>
+        <section class="about-project">
+            <div class="about-project-container">
+                <h2>GSB - APP</h2>
+                <div class="about-project-context">
+                    <h3>Contexte</h3>
+                    <p>
+                        Dans le cadre du projet personnel encadré annuel de deuxième année de BTS SIO, j'ai eu
+                        l'opportunité de travailler sur le <span>développement d'une application web et mobile de
+                            gestion de
+                            fiches de frais</span> pour l'entreprise fictive <a>Galaxy-Swiss Bourdin</a>. Spécialisé
+                        dans le milieu médical, GSB est issu de
+                        la fusion entre le géant américain Galaxy (travaillant dans le secteur des maladies virales,
+                        dont
+                        le SIDA et les hépatites) et le conglomérat européen Swiss Bourdin (travaillant sur des
+                        médicaments plus conventionnels), lui-même déjà union de trois petits laboratoires. Une
+                        conséquence de cette fusion est la recherche d'une optimisation de l’activité du groupe ainsi
+                        constitué en réalisant des économies d’échelle dans la production et la distribution de
+                        médicaments.
+                    </p>
+                    <p class="zoom-in">
+                        Après deux années de réorganisations internes, tant au niveau du personnel que du fonctionnement
+                        administratif, l'entreprise souhaite moderniser l'activité de visite médicale en uniformisant la
+                        gestion des fiches de frais grâce au développement d'une application web et mobile capable de
+                        répondre à ce besoin.
+                    </p>
+                </div>
+                <div class="about-project-technologies">
+                    <h3>Technologies</h3>
+                    <ul>
+                        <li>Environnement de développement intégré : <span>Android Studio</span></li>
+                        <li>Environnements : <span>MacOS, Windows</span></li>
+                        <li>Gestion de projet : <span>Trello</span></li>
+                        <li>Interface d'administration de bases de données : <span>PHPMyAdmin</span></li>
+                        <li>Interface de programmation d'application : <span>Postman</span></li>
+                        <li>Langages : <span>Java, PHP, SQL, XML</span></li>
+                        <li>Librairie : <span>Volley</span></li>
+                        <li>Système de gestion de bases de données : <span>MySQL</span></li>
+                        <li>Versioning : <span>Git, GitHub</span></li>
+                        <li>Éditeur de texte : <span>Visual Studio</span></li>
+                    </ul>
+                    <p>
+                        Côté back-end, l'application a été développée en langage Java et à l'aide de la librairie Volley
+                        afin de faciliter les échanges de données entre
+                        celle-ci, l'API et la base de données. La
+                        création et la gestion de l'API ont été réalisées avec PHP, la base de données avec
+                        PHPMyAdmin et MySQL, et
+                        la gestion des requêtes
+                        avec SQL dont le traitement a été testé par l'interface de programmation d'application Postman.
+                    </p>
+                    <p>
+                        Côté front-end, l'interface a été développée avec XML et les outils de design
+                        de l'environnement de développement intégré Android Studio.
+                    </p>
+                </div>
+                <div class="carousel-container-1">
+                    <div class="carousel-container-2">
+                        <div class="carousel-wrapper">
+                            <div class="carousel">
+                                <img src="../assets/content/images/projects/gsb-mobile/gsb-mobile-screenshoot-1.png"
+                                    alt="Projet GSB APP - Capture d'écran 1">
+                                <img src="../assets/content/images/projects/gsb-mobile/gsb-mobile-screenshoot-2.png"
+                                    alt="Projet GSB APP - Capture d'écran 2">
+                                <img src="../assets/content/images/projects/gsb-mobile/gsb-mobile-screenshoot-3.png"
+                                    alt="Projet GSB APP - Capture d'écran 3">
+                                <img src="../assets/content/images/projects/gsb-mobile/gsb-mobile-screenshoot-4.png"
+                                    alt="Projet GSB APP - Capture d'écran 4">
+                                <img src="../assets/content/images/projects/gsb-mobile/gsb-mobile-screenshoot-5.png"
+                                    alt="Projet GSB APP - Capture d'écran 5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicator">
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                        <button class="indicator-button"></button>
+                    </div>
+                    <button class="carousel-prev">&#10094;</button>
+                    <button class="carousel-next">&#10095;</button>
+                </div>
+                <div class="about-project-use">
+                    <h3>Fonctionnement</h3>
+                    <p>
+                        Pour accéder à l'application mobile de gestion de fiches de frais, une connexion est requise.
+                        Les identifiants (adresse e-mail et mot de passe) auront été préalablement enregistrés dans la
+                        base
+                        de données par l'administrateur, responsable de la gestion des données.<br><br>
+                        L'application gère un seul type d'utilisateur, à savoir le
+                        visiteur médical, qui nécessite d'avoir un accès en ligne à l'intranet en tout lieu.<br><br>
+                        Lorsque l'utilisateur entre ses identifiants, celui-ci est redirigé vers son
+                        portail. Depuis cette page, il peut visualiser et interagir avec un certain nombre
+                        d'informations, notamment toutes ses fiches de frais avec leurs informations (date de
+                        création, nombre de nuitées, montant total et statut du traitement). En tant que visiteur,
+                        il peut consulter les détails de chacune de
+                        ses fiches en cliquant dessus, et selon le statut du traitement, les modifier ou les
+                        supprimer. Lorsque l'utilisateur
+                        consulte une fiche, il a accès aux détails des dépenses et justificatifs fournis concernant
+                        chaque catégorie.
+                        À l'aide de la barre de navigation, l'utilisateur peut également créer une fiche de frais ou
+                        accéder à son compte pour modifier ses informations ou se déconnecter.
+                    </p>
+                </div>
+                <a href="#" class="project-link">Accéder au projet</a>
+                <div class="nav">
+                    <button><a href="gsb-website.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+                            </svg></a></button>
+                    <button><a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path
+                                    d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
+                            </svg></a></button>
+                    <button><a href="../projects/dopamine.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960">
+                                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                            </svg></a></button>
+                </div>
             </div>
         </section>
     </main>
@@ -81,5 +184,6 @@
         </div>
     </footer>
 </body>
+
 
 </html>

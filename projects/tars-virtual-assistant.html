@@ -51,10 +51,10 @@
                 <div class="about-project-context">
                     <h3>Contexte</h3>
                     <p>
-                        Dans le cadre du second stage de BTS SIO, qui s'est déroulé du
+                        Dans le cadre du deuxième stage de BTS SIO, qui s'est déroulé du
                         08 janvier au 09 février 2024, j'ai eu l'opportunité de travailler sur le <span>développement
                             d'un
-                            assistant virtuel nommé TARS 2</span> au sein de l'entreprise <a
+                            assistant virtuel</span> nommé <span>TARS 2</span> au sein de l'entreprise <a
                             href="https://www.kozea.fr/" target="_blank">Kozea
                             group</a>. Spécialisé dans le milieu
                         médical, Kozea group accompagne et facilite le travail des professionnels de santé en proposant
@@ -68,41 +68,33 @@
                     <p class="zoom-in">
                         Afin d'optimiser l'efficacité de la plateforme interne de l'entreprise, l'assistant virtuel TARS
                         2 a pour objectif de
-                        rendre plus intuitif la recherche et la manipulation des données.
+                        rendre plus intuitif la recherche et la manipulation des données en étant capable d'altérer ses
+                        données et de répondre aux requêtes utilisateurs.
                     </p>
                 </div>
                 <div class="about-project-technologies">
                     <h3>Technologies</h3>
-                    <p>
-                        Plusieurs outils ont été utilisés :
-                    </p>
                     <ul>
-                        <li>Langages, frameworks et librairies : <span>Python,
-                                HTML, CSS, SQLAlchemy, Flask, Tailwind CSS</span></li>
-                        <li>Éditeur de texte : <span>Visual Studio</span>
-                        <li>Interface d'administration et système de gestion de base de données : <span>DBeaver,
-                                MySQL</span></li>
-                        <li>Versioning : <span>Git, GitHub</span></li>
                         <li>Environnement : <span>Linux</span></li>
+                        <li>Interface d'administration de bases de données : <span>DBeaver</span></li>
+                        <li>Interface de programmation d'application : <span>OpenAI API</span></li>
+                        <li>Frameworks : <span>Flask, SQLAlchemy</span></li>
+                        <li>Langages : <span>CSS, HTML, Python</span></li>
+                        <li>Librairie : <span>Tailwind CSS</span></li>
+                        <li>Système de gestion de bases de données : <span>MySQL</span></li>
+                        <li>Versioning : <span>Git, GitHub</span></li>
+                        <li>Éditeur de texte : <span>Visual Studio</span></li>
                     </ul>
                     <p>
-                        Côté <a
-                            href="https://www.wildcodeschool.com/fr-fr/blog/differences-backend-frontend-developpement-web"
-                            target="_blank">back-end</a>, l'application a été développée en Python, et à l'aide de l'<a
-                            href="https://www.cnil.fr/fr/definition/interface-de-programmation-dapplication-api#:~:text=Une%20API%20(application%20programming%20interface,des%20donn%C3%A9es%20et%20des%20fonctionnalit%C3%A9s."
-                            target="_blank">API</a> d'OpenAI et SQLAlchemy, ce dernier permettant de manipuler les
-                        données d'une <a href="https://www.oracle.com/fr/database/definition-base-de-donnees/"
-                            target="_blank">base
-                            de données</a>.
+                        Côté back-end, l'application a été développée en langage Python et à l'aide du framework Flask
+                        (basé sur Python), ainsi que de l'interface de programmation d'application OpenAI API.
+                        L'application a nécessité l'utilisation et la gestion d'une copie de la base de données de
+                        l'entreprise avec DBeaver et MySQL, et la gestion des requêtes avec SQLAlchemy, un framework
+                        également basé sur Python.
                     </p>
                     <p>
-                        Côté <a
-                            href="https://www.wildcodeschool.com/fr-fr/blog/differences-backend-frontend-developpement-web"
-                            target="_blank">front-end</a>, l'interface a été développée avec Flask, un framework basé
-                        sur le langage
-                        Python. Comme TARS 1, une interface de type chatbot, développée avec la <a
-                            href="https://www.wildcodeschool.com/fr-fr/blog/cest-quoi-une-librairie-en-programmation"
-                            target="_blank">librairie</a> Tailwind CSS, a été intégrée au projet pour mettre en avant le
+                        Comme TARS 1, une interface de type chatbot, développée avec les langages HTML et CSS, ainsi que
+                        la librairie Tailwind CSS, a été intégrée au projet pour mettre en avant le
                         côté conversationnel entre l'utilisateur et l'intelligence artificielle.
                     </p>
                 </div>
@@ -135,27 +127,32 @@
                     <p>
                         Pour faire fonctionner TARS 2, il est nécessaire de créer des fonctions en amont. Ces fonctions
                         réalisent des actions précises et requièrent, pour certaines, l'utilisation d'une base de
-                        données pour manipuler certaines données. L'assistant, fonctionnant sur la base de ChatGPT 4,
-                        est conçu pour appeler ces fonctions quand il en a besoin. Considéré comme ses « outils », les
-                        fonctions sont décrites une par une dans un fichier : leur objectif, leurs paramètres, etc.
-                        L'objectif est d'expliciter ses outils pour permettre à l'intelligence artificielle de
-                        comprendre de quoi elle a besoin pour répondre aux requêtes de l'utilisateur. Une fois les
-                        outils en main, il faut créer un assistant selon la documentation de l'API d'OpenAI. Puis, un
+                        données afin de manipuler certaines données. L'assistant est conçu pour appeler ces fonctions
+                        quand il en a besoin. Considéré comme des outils, les
+                        fonctions sont décrites une par une dans un fichier : leurs objectifs, leurs paramètres, etc.
+                        Le but est d'expliciter ces outils pour permettre à l'intelligence artificielle de
+                        comprendre quelles fonctions utiliser pour répondre aux requêtes de l'utilisateur.<br><br>
+                        Une fois les
+                        outils en main, il faut créer un assistant selon la documentation d'OpenAI API. Un
                         thread, autrement dit une liste dans laquelle va se trouver l'ensemble de la conversation entre
                         l'utilisateur et l'intelligence artificielle, est créé. À chaque message envoyé par
                         l'utilisateur, l'assistant détermine s'il doit appeler des fonctions ou non pour répondre. Selon
-                        le contexte, il détermine aussi la quantité de fonctions à appeler. Cette base permet ainsi à
+                        le contexte, il détermine aussi la quantité de fonctions à appeler.<br><br>
+                        Cette base permet ainsi à
                         l'assistant virtuel d'être opérationnel dans un environnement de travail qui est tel qu'il peut
                         interroger, insérer, modifier ou supprimer des données d'une base de données.
                     </p>
                 </div>
-                <iframe width="100%" src="https://www.youtube.com/embed/odwOWP1c9-k?si=maWCndCLyJnqIL9V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="100%" src="https://www.youtube.com/embed/odwOWP1c9-k?si=maWCndCLyJnqIL9V"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div class="about-project-conclusion">
                     <h3>Conclusion</h3>
                     <p>
                         Cette seconde expérience, axée aussi bien sur le front que sur le back, m'a permis d'en
-                        apprendre davantage sur le métier de développeur full-stack et de confirmer mon intérêt porté
-                        pour le métier de développeur.
+                        apprendre davantage sur le métier de développeur full-stack et de confirmer mon intérêt pour ce
+                        métier.
                     </p>
                 </div>
                 <div class="nav">
